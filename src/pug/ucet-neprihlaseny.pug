@@ -1,0 +1,243 @@
+doctype html
+html(lang="en")
+    head
+        include _variables.pug  
+        meta(charset="utf-8")
+        meta(content="IE=edge" http-equiv="X-UA-Compatible")
+        meta(content="width=device-width, initial-scale=1" name="viewport")
+        title #{title}
+        meta(content="index,follow,snippet,archive" name="robots")
+        meta(content=metaDescription name="description")
+        meta(content=metaKeywords lang="cs" name="keywords")
+        meta(content=metaAuthor name="author")
+        meta(content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport")
+
+        link(rel="canonical" href=metaURL)
+        meta(property="og:locale" content="cs_CZ")
+        meta(property="og:type" content="website")
+        meta(property="og:title" content=title)
+        meta(property="og:description" content=metaDescription)
+        meta(property="og:url" content=metaURL)
+        meta(property="og:site_name" content=metaSitename)
+        meta(name="twitter:card" content="summary")
+        meta(name="twitter:site" content=metaTwitterName)
+        meta(name="twitter:title" content=title)
+        meta(name="twitter:description" content=metaDescription)
+        meta(name="twitter:image" content=metaTwitterImg)
+        include _css-include.pug  
+    body
+        include _nav.pug
+        section.page-heading.post__image-container
+            .container
+                h1.page-heading__title Uživatelský účet
+            img.lazy.post__featured-image(src="http://via.placeholder.com/510x510" data-src=URLbase+"img/user-thumb-large.jpg" alt="#" title="#")
+                
+        include _breadcrumb.pug
+        main
+            .container
+                .row.form-row-wide
+                    .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+                        form(method="post" action="" class="register-form" name="register_form")
+                            h3 Vytvořit nový účet
+                            button.btn.btn-ghost.register-form-toggler(type="button" data-toggle="collapse" data-target="#register-collapse" aria-expanded="false" aria-controls="register-collapse") Vytvořit nový účet
+                            .collapse(id="register-collapse")
+                                .form-group
+                                    label(for="register_form_name") Jméno a příjmení
+                                    input.form-control(type="text" name="register_form_name" id="register_form_name" autocomplete="name" required)
+
+                                .form-group
+                                    label(for="register_form_email") Emailová adresa
+                                    input.form-control(type="email" name="register_form_email" id="register_form_email" autocomplete="email" required)
+
+                                .form-group
+                                    label(for="register-form-password") Heslo
+                                    span(id="show_password_toggler" data-toggle="tooltip" data-placement="top" title="Zobrazit/Skrýt heslo") #[span.fa.fa-eye]
+                                    input.form-control(type="password" name="register_form_password" id="register_form_password" autocomplete="password" required)
+
+                                .form-group
+                                    label(for="register_form_tel") Telefonní číslo #[span (nepovinné)]
+                                    input.form-control(type="tel" name="register_form_tel" id="register_form_tel" autocomplete="tel")
+                          
+                                .form-group
+                                    label(for="route") Ulice
+                                    input.form-control(type="text" name="register-form-route" id="route" autocomplete="street-address" required)
+
+                                .form-group
+                                    label(for="locality") Město
+                                    input.form-control(type="text" name="register-form-locality" id="locality" autocomplete="address-level2" required)
+
+                                .form-group
+                                    label(for="postal_code") PSČ
+                                    input.form-control(type="text" name="register-form-postal_code" id="postal_code" autocomplete="postal-code"  required)
+
+                                .form-group
+                                    label(for="country") Stát
+                                    input.form-control(type="text" name="register-form-country" id="country" autocomplete="country-name"  required)
+
+
+                                .register-form-info-collapse-wrap   
+                                    .form-group
+                                        .form-check
+                                            label.form-check__label.billing-address-toggler
+                                                input.form-check__input(type="checkbox" name="register-form-billing-address") 
+                                                | Vyplnit fakturační adresu
+                                                span.form-check__box.checkbox
+
+
+                                    .billing-address-wrap 
+                                        .form-group
+                                            label(for="register-form-billing-address-name") Jméno a příjmení #[span (nepovinné)]
+                                            input.form-control(type="text" name="register-form-billing-address-name" id="register-form-billing-address-name" autocomplete="name")
+
+                                        .form-group
+                                            label(for="register-form-billing-address-company") Název firmy #[span (nepovinné)]
+                                            input.form-control(type="text" name="register-form-billing-address-company" id="register-form-billing-address-company" autocomplete="org")
+
+                                        .form-group
+                                            label(for="register-form-billing-address-ico") IČO
+                                            input.form-control(type="text" name="register-form-billing-address-ico" id="register-form-billing-address-ico" autocomplete="ico")
+
+                                        .form-group
+                                            label(for="register-form-billing-address-dic") DIČ #[span (nepovinné)]
+                                            input.form-control(type="text" name="register-form-billing-address-dic" id="register-form-billing-address-dic" autocomplete="dic")
+
+                                        .form-group
+                                            label(for="register-form-billing-address-route") Ulice
+                                            input.form-control(type="text" name="register-form-billing-address-route" id="register-form-billing-address-route" autocomplete="street-address")
+
+                                        .form-group
+                                            label(for="register-form-billing-address-locality") Město
+                                            input.form-control(type="text" name="register-form-billing-address-locality" id="register-form-billing-address-locality" autocomplete="address-level2")
+
+                                        .form-group
+                                            label(for="register-form-billing-address-postal-code") PSČ
+                                            input.form-control(type="text" name="register-form-billing-address-postal-code" id="register-form-billing-address-postal-code" autocomplete="postal-code")
+
+                                        .form-group
+                                            label(for="register-form-billing-address-country") Stát
+                                            input.form-control(type="text" name="register-form-billing-address-country" id="register-form-billing-address-country" autocomplete="country-name")
+
+
+                                    .form-group
+                                        .form-check
+                                            label.form-check__label.shipping-address-toggler
+                                                input.form-check__input(type="checkbox" name="register-form-shipping-address")
+                                                | Mám jinou dodací adresu
+                                                span.form-check__box.checkbox
+
+                                    .shipping-address-wrap 
+                                        .form-group
+                                            label(for="register-form-shipping-address-name") Jméno a příjmení #[span (nepovinné)]
+                                            input.form-control(type="text" name="register-form-shipping-address-name" id="register-form-shipping-address-name" autocomplete="name")
+
+                                        .form-group
+                                            label(for="register-form-shipping-address-company") Název firmy #[span (nepovinné)]
+                                            input.form-control(type="text" name="register-form-shipping-address-company" id="register-form-shipping-address-company"  autocomplete="org")
+
+                                        .form-group
+                                            label(for="register-form-shipping-address-route") Ulice
+                                            input.form-control(type="text" name="register-form-shipping-address-route" id="register-form-shipping-address-route" autocomplete="street-address")
+
+                                        .form-group
+                                            label(for="register-form-shipping-address-locality") Město
+                                            input.form-control(type="text" name="register-form-shipping-address-locality" id="register-form-shipping-address-locality" autocomplete="address-level2")
+
+                                        .form-group
+                                            label(for="register-form-shipping-address-postal-code") PSČ
+                                            input.form-control(type="text" name="register-form-shipping-address-postal-code" id="register-form-shipping-address-postal-code" autocomplete="postal-code")
+
+                                        .form-group
+                                            label(for="register-form-shipping-address-country") Stát
+                                            input.form-control(type="text" name="register-form-shipping-address-country" id="register-form-shipping-address-country" autocomplete="country-name")
+
+
+                                .form-group
+                                    .form-check
+                                        label.form-check__label
+                                            input.form-check__input(type="checkbox" name="register-form-email-marketing" checked)
+                                            | Zasílat novinky a propagační materiály na email
+                                            span.form-check__box.checkbox
+
+                                .form-group
+                                    .form-check
+                                        label.form-check__label
+                                            input.form-check__input(type="checkbox" name="register-form-terms" required)
+                                            | Souhlasím se zpracováním osobních údajů
+                                            span.form-check__box.checkbox
+
+                                .form-group
+                                    button.form-control.btn(type="submit" name="register_form_submit" id="register_form_submit") Vytvořit účet
+
+
+                    .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+                        form(method="post" action="" class="login-form" name="login_form")
+                            h3 Přihlásit se k existujícímu účtu
+                            button.btn.btn-ghost.login-form-toggler(type="button" data-toggle="collapse" data-target="#login-collapse" aria-expanded="false" aria-controls="login-collapse") Přihlásit se k existujícímu účtu
+                            .collapse(id="login-collapse")
+                                .form-group
+                                    label(for="login_form-email") Emailová adresa
+                                    input.form-control(type="email" name="login_form_email" id="login_form_email" required autocomplete="email")
+
+                                .form-group
+                                    label(for="login_form_password") Heslo
+                                    input.form-control(type="password" name="login_form_password" id="login_form_password" required autocomplete="password")
+
+                                .form-group
+                                    button.form-control.btn(type="submit" name="login_form_submit" id="login_form_submit") Přihlásit se
+
+
+        include _news-section.pug
+
+        include _footer.pug
+
+        include _js-include.pug
+
+        script.
+            // Wait for the DOM to be ready
+            $(function() {
+              // Initialize form validation on the registration form.
+              // It has the name attribute "registration"
+              $("form[name='register_form']").validate({
+                // Specify validation rules
+                rules: {
+                  // The key name on the left side is the name attribute
+                  // of an input field. Validation rules are defined
+                  // on the right side
+                  register_form_name: "required",      
+                  register_form_email: {
+                    required: true,
+                    email: true
+                  },
+                  register_form_tel: {
+                    required: false,
+                    minlength: 9
+                  },
+                  register_form_password: {
+                    required: true,
+                    minlength: 5
+                  },
+                  register_form_address: {
+                    required: true
+                  },
+                  route: {
+                    required: true
+                  }
+                },
+                // Specify validation error messages
+                messages: {
+                  register_form_name: "Prosím zadejte své celé jméno",
+                  register_form_email: "Prosím zadejte platnou emailovou adresu",
+                  register_form_tel: {required: "Prosím zadejte telefonní číslo", minlength: "Telefonní číslo je neplatné"},
+                  register_form_password: {required: "Prosím zadejte heslo", minlength: "Vaše heslo musí být alespoň 5 znaků dlouhé"},
+                  register_form_address: "Zadejte svou adresu"
+                },
+                // Make sure the form is submitted to the destination defined
+                // in the "action" attribute of the form when valid
+                submitHandler: function(form) {
+                  form.submit();
+                }
+              });
+            });
+            jQuery.extend(jQuery.validator.messages, {
+                required: "Toto pole je povinné"
+            });

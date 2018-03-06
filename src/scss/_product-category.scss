@@ -1,0 +1,40 @@
+.subcategories-grid{
+margin-bottom: 4rem;
+}
+.subcategories-grid__single{
+    background: $dark-grey;
+    display: block;
+    color: $white;
+    padding: 1.5rem 2.5rem;
+    margin: 10px 0;
+
+    &:hover, &:active, &:focus{
+        color: $white;
+        text-decoration: none;
+        background: $darkest-grey;
+    }
+}
+.subcategories-grid__icon{
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+
+    &::before{
+        border-color: $orange-main;
+    }
+    &::after{
+        background: $orange-main;
+    }  
+}
+
+.top-products {
+    margin-bottom: 4rem;
+}
+.top-products__heading {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    font-family: "Roboto Condensed",sans-serif;
+    font-weight: 600;
+}

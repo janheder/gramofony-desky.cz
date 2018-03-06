@@ -1,0 +1,350 @@
+doctype html
+html(lang="en")
+    head
+        include _variables.pug  
+        meta(charset="utf-8")
+        meta(content="IE=edge" http-equiv="X-UA-Compatible")
+        meta(content="width=device-width, initial-scale=1" name="viewport")
+        title #{title}
+        meta(content="index,follow,snippet,archive" name="robots")
+        meta(content=metaDescription name="description")
+        meta(content=metaKeywords lang="cs" name="keywords")
+        meta(content=metaAuthor name="author")
+        meta(content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport")
+
+        link(rel="canonical" href=metaURL)
+        meta(property="og:locale" content="cs_CZ")
+        meta(property="og:type" content="website")
+        meta(property="og:title" content=title)
+        meta(property="og:description" content=metaDescription)
+        meta(property="og:url" content=metaURL)
+        meta(property="og:site_name" content=metaSitename)
+        meta(name="twitter:card" content="summary")
+        meta(name="twitter:site" content=metaTwitterName)
+        meta(name="twitter:title" content=title)
+        meta(name="twitter:description" content=metaDescription)
+        meta(name="twitter:image" content=metaTwitterImg)
+        include _css-include.pug  
+        include _critical-css.pug
+    body
+        include _nav.pug
+        include _modal-add-to-cart.pug
+        include _breadcrumb.pug
+        main
+            .product-detail
+                .container
+                    .row.product-detail-row
+                        .col-12.col-sm-12.col-md-12.col-lg-12.col-xl-12
+                            .product-detail-side-info-name
+                                h1 #{ProductName}
+                                .product-detail-side-info-undername
+                                    .product-detail-side-info-rating
+                                        p Výrobce: Onkyo
+                                    .product-detail-side-info-code
+                                        p Katalogové číslo: TX8270+CH706
+
+
+
+                        .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+                            .product-detail-images
+
+                                .product-tags
+                                    .product-tags__single
+                                        .product-tags__text.new Novinka
+                                    .product-tags__single
+                                        .product-tags__text.top Nejprodávanější
+                                    .product-tags__single
+                                        .product-tags__text.recommended Náš tip
+                                    .product-tags__single
+                                        .product-tags__text.free-shipping Doprava zdarma
+
+                                .product-tags--right
+                                    .product-tags__single
+                                        .product-tags__text.sale.circle -30%
+                                    .product-tags__single
+                                        .product-tags__text.vinyl.circle.bottom Vinyl
+                                    .product-tags__single
+                                        .product-tags__text.cd.circle.bottom CD
+
+                                .product-detail-gallery(itemscope itemtype="http://schema.org/ImageGallery")
+                                    .swiper-container-product
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                .swiper-zoom-container
+                                                    figure.find-them-all(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                                        a(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="1920x1920")
+                                                            img.swiper-lazy(data-src=URLbase+"img/product-thumb-medium.jpg" itemprop="thumbnail" alt="Image description" data-index="1")
+                                                        figcaption(itemprop="caption description") Popis obrázku 1
+                                                    .swiper-lazy-preloader.swiper-lazy-preloader-white
+                                            .swiper-slide
+                                                .swiper-zoom-container
+                                                    figure.find-them-all(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                                        a(href="http://via.placeholder.com/1920x1920" itemprop="contentUrl" data-size="1920x1920")
+                                                            img.swiper-lazy(data-src="http://via.placeholder.com/800x800" itemprop="thumbnail" alt="Image description" data-index="2")
+                                                        figcaption(itemprop="caption description") Popis obrázku 2
+                                                    .swiper-lazy-preloader.swiper-lazy-preloader-white
+                                            .swiper-slide
+                                                .swiper-zoom-container
+                                                    figure.find-them-all(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                                        a(href="http://via.placeholder.com/1920x1920" itemprop="contentUrl" data-size="1920x1920")
+                                                            img.swiper-lazy(data-src="http://via.placeholder.com/800x800" itemprop="thumbnail" alt="Image description" data-index="3")
+                                                        figcaption(itemprop="caption description") Popis obrázku 3
+                                                    .swiper-lazy-preloader.swiper-lazy-preloader-white
+
+                                        .swiper-pagination.swiper-pagination-white.swiper-pagination--product
+                           
+
+                                    .container-product-thumbs
+                                        .container-product-thumbs-single
+                                            figure.find-them-all(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                                a(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="1920x1920")
+                                                    img(src=URLbase+"img/product-thumb-small.jpg" itemprop="thumbnail" alt="Image description" data-index="1")
+                                                figcaption(itemprop="caption description") Popis obrázku 1
+
+                                        .container-product-thumbs-single
+                                            figure.find-them-all(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                                a(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="1920x1920")
+                                                    img(src=URLbase+"img/product-thumb-small.jpg" itemprop="thumbnail" alt="Image description" data-index="2")
+                                                figcaption(itemprop="caption description") Popis obrázku 1
+
+                                        .container-product-thumbs-single
+                                            figure.find-them-all(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                                a(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="1920x1920")
+                                                    img(src=URLbase+"img/product-thumb-small.jpg" itemprop="thumbnail" alt="Image description" data-index="3")
+                                                figcaption(itemprop="caption description") Popis obrázku 1
+
+                                        .container-product-thumbs-single
+                                            figure.find-them-all(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                                a(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="1920x1920")
+                                                    img(src=URLbase+"img/product-thumb-small.jpg" itemprop="thumbnail" alt="Image description" data-index="4")
+                                                figcaption(itemprop="caption description") Popis obrázku 1
+
+                                        .container-product-thumbs-single
+                                            button.container-product-thumbs-toggle(type="button" data-toggle="collapse" data-target="#product-thumbs-toggle" aria-expanded="false" aria-controls="collapseExample") Zobrazit další 4 fotky    
+
+                                        .collapse.container-product-thumbs-hidden(id="product-thumbs-toggle")
+                                            .container-product-thumbs-hidden-wrap
+                                                .container-product-thumbs-single
+                                                    figure.find-them-all(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                                        a(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="1920x1920")
+                                                            img(src=URLbase+"img/product-thumb-small.jpg" itemprop="thumbnail" alt="Image description" data-index="5")
+                                                        figcaption(itemprop="caption description") Popis obrázku 1
+
+                                                .container-product-thumbs-single
+                                                    figure.find-them-all(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                                        a(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="1920x1920")
+                                                            img(src=URLbase+"img/product-thumb-small.jpg" itemprop="thumbnail" alt="Image description" data-index="6")
+                                                        figcaption(itemprop="caption description") Popis obrázku 1
+
+
+                                    .swiper-responsive-thumbs
+                                        .swiper-container-product-thumbs                                        
+                                            .swiper-wrapper
+                                                .swiper-slide
+                                                    img.lazy(src="http://via.placeholder.com/200x200" data-src=URLbase+"img/product-thumb-small.jpg")
+                                                .swiper-slide
+                                                    img.lazy(src="http://via.placeholder.com/200x200" data-src="http://via.placeholder.com/800x800")
+                                                .swiper-slide
+                                                    img.lazy(src="http://via.placeholder.com/200x200" data-src="http://via.placeholder.com/800x800")
+                                                .swiper-slide
+                                                    img.lazy(src="http://via.placeholder.com/200x200" data-src="http://via.placeholder.com/800x800")
+                                                .swiper-slide
+                                                    img.lazy(src="http://via.placeholder.com/200x200" data-src="http://via.placeholder.com/800x800")
+                                                .swiper-slide
+                                                    img.lazy(src="http://via.placeholder.com/200x200" data-src="http://via.placeholder.com/800x800")
+                                                .swiper-slide
+                                                    img.lazy(src="http://via.placeholder.com/200x200" data-src="http://via.placeholder.com/800x800")
+
+
+                        .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+                            .product-detail-side-info
+
+                                .product-detail-side-info-price
+                                    .product-detail-side-info-price-old
+                                        small -20%
+                                        p #[span 14 290 Kč] (ušetříte 6 598 Kč)
+
+                                    .product-detail-side-info-price-main
+                                        h2 8 489 Kč
+                                    .product-detail-side-info-price-dph
+                                        p 7 016 Kč bez DPH   
+
+                                .product-detail-side-info-stock
+                                    p #[span.fas.fa-check-circle] 10 kusů skladem
+                                    .product-detail-side-info-stock-note 
+                                        span #[span.far.fa-clock] Zboží je skladem, může být dodáno následující pracovní den
+
+                                form(method="post" name="product_detail_form")
+                                    .product-detail-side-info-cta
+                                        .product-detail-side-info-cta-number-stepper
+                                            .number-stepper
+                                                input.number-stepper__input(type="number" min="1" max="99" value="1" name="cart-item-single-qty" id="")
+                                                .number-stepper__btn-up
+                                                    span.number-stepper__icon-up
+                                                .number-stepper__btn-down
+                                                    span.number-stepper__icon-down
+
+                                        .product-detail-side-info-cta-button
+                                            button.btn(type="submit" name="buy-button") #[span.btn__icon.cart-icon] Přidat do košíku
+                                .essox-bar
+                                    img.essox-bar__img(src=URLbase+"img/essox-logo.png")
+                                    p.essox-bar__text Nákup na splátky s Essoxem
+
+                                .product-detail-side-info-description
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. #[a(href="#product-detail-description") Celý popis produktu #[span.fa.fa-angle-down]]
+
+                                
+                                .product-detail-side-info-free-delivery
+                                    .product-detail-side-info-free-delivery-wrap
+                                        .product-detail-side-info-free-delivery-img
+                                            span.delivery-icon
+                                        .product-detail-side-info-free-delivery-text
+                                            p Při nákupu nad 5 000 Kč doprava zdarma
+
+                                
+
+                    .product-accessories
+                        h2.product-accessories__heading Doporučené příslušenství
+                        .swiper-container-5-products-wrap
+                            .swiper-container-5-products
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug         
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug
+                            .swiper-button-prev.swiper-button-prev--5
+                            .swiper-button-next.swiper-button-next--5
+
+                    .product-description(id="product-detail-description")
+                        ul.nav.nav-tabs(role="tablist")
+                            li.nav-item
+                                a.nav-link.active(data-toggle="tab" href="#product-description-1" role="tab") Popis produktu
+                            li.nav-item
+                                a.nav-link(data-toggle="tab" href="#product-description-2" role="tab") Technické parametry
+                            li.nav-item
+                                a.nav-link(data-toggle="tab" href="#product-description-3" role="tab") Přílohy produktu
+                        .tab-content
+                            .tab-pane.active(id="product-description-1" role="tabpanel")
+                                .product-description__text
+                                    p Špičkový japonský výrobce elektroniky Onkyo, se více než půl století zabývá produkcí precizních audio komponentů. Během posledního desetiletí si Onkyo získalo zvučné jméno také mezi výrobci systémů domácího kina. Jak naznačují dvě japonská slova (ON - zvuk a KYO - harmonie), ze kterých je název společnosti složen, je to hlavně prvotřídní zvuk, který všechny produkty Onkyo charakterizuje. Šíře sortimentu a design produktů osloví téměř každého. Nabídka obsahuje kromě tradičně velmi úspěšných AV receiverů také mikrosystémy, Blu-Ray přehrávače, sluchátka, systémy pro ozvučení TV a v neposlední řadě vysoce kvalitní Hi-Fi komponenty.
+
+                                    p Zaměřte se na muzikálnost s Onkyo TX-8270, krásným síťovým stereo receiverem, který je připraven přehrát všechno, co na něj hodíte. Společně s linkovými a phono vstupy, je zde k dispozici koaxiální a optický digitální, čtyři vstupy HDMI, USB a dual-band Wi-Fi, pro podporu bezdrátových audio technologií. Mezi ně patří DTS Play-Fi, vestavěný Chromecast, AirPlay, Spotify, audio připojené k síti a streamovací služby. Vychutnejte si všestrannost se snadným vylepšením každodenní televizní zábavy, rádiem DAB+ a FM/RDS a dalšími.
+
+                                    strong Řízení velkých reproduktorů s vitalitou a dynamikou. 
+                                    p Tento zesilovač generuje vysoký proud s masivním transformátorem a zvukovými kondenzátory. Obvod je vybaven diskrétními výstupními tranzistory pro nízké zkreslení a snadnou hnací sílu. Vysoký proud zajišťuje přesné ovládání, obnovuje energii a vitalitu vaší hudby.
+
+                                    strong Stereo receiver, který připojí vše.
+                                    p Krásný stereofonní receiver vytvořený pro milovníky hi-fi, TX-8270 je také exkluzivně vybaven připojením, které mu umožní sloužit jako moderní zesilovač pro televizní zábavu. Spojením analogových, digitálních, phono a USB vstupů jsou HDMI terminály (připojte Apple TV nebo podobně) společně s platformou Next Generation Network Audio.
+
+                                    strong Prémiové digitál/analog zpracování.
+                                    p Digitální/analogový převodník AK4438 384 kHz/32 bit z AKM nabízí unikátní technologie s nízkým zkreslením, ideální pro DSD 5,6 MHz a PCM signály až do 192 kHz/24 bitů. Společně s jedinečným VLSC obvodem, který eliminuje vysokofrekvenční pulsní šum, je přehrávání křišťálově čisté.
+
+                                    strong Snadná hudba s vestavěným Chromecast.
+                                    p Streamujte hudbu jednoduše z vašeho smartphonu, notebooku nebo počítače do vašich reproduktorů. Ovládejte přehrávání pomocí Chromecast podporujících aplikací, které znáte a milujete z vašeho iPhonu, iPadu, Android telefonu nebo tabletu, Mac nebo Windows laptopu nebo Chromebooku.
+
+                                    strong Streamujte vše s DTS Play-Fi.
+                                    p DTS Play-Fi je bezdrátový protokol, který pracuje s jakoukoli aplikací a inteligentním zařízením. Přesuňte vše, co přehráváte, do receiveru, dokonce různé zdroje do různých komponentů najednou.
+
+                                    strong Dual-band Wi-Fi, AirPlay, Spotify.
+                                    p Volitelný kanál Wi-Fi o frekvenci 5 GHz zajišťuje stabilní konektivitu v oblastech s provozním přetížením v pásmu 2,4 GHz. Vychutnejte si plynulé přehrávání přes AirPlay, aplikaci Spotify Connect a další síťové audio služby.
+
+                                    strong Internetové rádio, streaming služby, FM/RDS a DAB/DAB+.
+                                    p TIDAL, Deezer a TuneIn jsou vypáleny do grafického uživatelského rozhraní, což usnadňuje výběr z masivního spektra hudebních a rozhlasových programů. Rádiové tunery jsou také součástí se 40 předvolenými stanicemi. Získejte okamžitý přístup ke čtyřem vašim oblíbeným stanicím pomocí přednastavených tlačítek na předním panelu.
+
+                                    strong Onkyo Controller podporuje síťové audio příští generace.
+                                    p Aplikace Onkyo Controller shromažďuje streaming služby a audio připojené k síti do intuitivního rozhraní. Ovládejte hudbu a distribujte ji po celém domě z jedné snadno použitelné aplikace.
+
+                                    strong Bezdrátové multi-pokojové audio FireConnect.
+                                    p FireConnect zrcadlí síťový zvuk a externí analogové zdroje připojené k hlavnímu komponentu - od streamingových služeb až po vinylové záznamy - na FireConnect kompatibilní reproduktory v jiných místnostech. Výběr hudby, seskupování reproduktorů a správa přehrávání v domácím prostředí jsou zabudovány do aplikace Onkyo Controller pro iOS a Android.
+                            .tab-pane(id="product-description-2" role="tabpanel")
+                                .product-description__parameters
+                                    table.table
+                                        thead
+                                            th Parametr
+                                            th Hodnota
+                                        tbody
+                                            tr
+                                                td Výstupní výkon
+                                                td 160 W/k (6 Ω, 1 kHz, 1%, 1 kanál řízený, IEC); 170 W/k (6 Ω, 1 kHz, 10%, 1 kanál řízený, JEITA)
+
+                    .product-similar
+                        h2.product-accessories__heading Obdobné produkty
+                        .product-grid
+                            include _single-product-cell.pug
+                            include _single-product-cell.pug
+                            include _single-product-cell.pug
+                            include _single-product-cell.pug
+
+                            include _single-product-cell.pug
+                            include _single-product-cell.pug
+                            include _single-product-cell.pug
+                            include _single-product-cell.pug
+
+                            include _single-product-cell.pug
+
+
+
+                .product-detail-responsive
+                    .product-detail-responsive-name
+                        p Sennheiser IE 60 lorem ipsum dolor sit amet
+                        h3 #[span 16 989] Kč
+                    .product-detail-responsive-btn
+                        a.btn(href="#") #[span.cart-icon] Do košíku
+
+
+
+        include _news-section.pug
+
+        include _footer.pug
+
+        include _js-include.pug
+
+        script.
+            //SWIPER PRODUCT
+            var carousel_product = new Swiper('.swiper-container-product', {
+              lazy: true,
+              spaceBetween: 0,
+              grabCursor: true,
+              zoom: true,
+              loop: false,
+              pagination: {
+                el: '.swiper-pagination--product',
+                clickable: true,
+              },
+            navigation: {
+                nextEl: '.swiper-button-next--product',
+                prevEl: '.swiper-button-prev--product',
+                }
+            });
+            var galleryThumbs = new Swiper('.swiper-container-product-thumbs', {
+              spaceBetween: 10,
+              centeredSlides: true,
+              slidesPerView: 'auto',
+              touchRatio: 0.2,
+              slideToClickedSlide: true,
+            });
+            carousel_product.controller.control = galleryThumbs;
+            galleryThumbs.controller.control = carousel_product;
+
+                
+        script.
+            initPhotoSwipeFromDOM('.product-detail-gallery figure');
+             
+            $( ".pswp__button--arrow--left" ).click(function() {
+                $( ".product-detail-images .swiper-button-prev" ).click();
+            });
+            $( ".pswp__button--arrow--right" ).click(function() {
+                $( ".product-detail-images .swiper-button-next" ).click();
+            });

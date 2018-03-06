@@ -1,0 +1,410 @@
+header
+	nav.navbar.navbar-top
+		.container
+			.navbar-top-left
+				p #[span #[span.fas.fa-phone]] +420 777 888 042
+				p #[span #[span.far.fa-clock]] Po-Pá: 8:00 - 16:00
+			.navbar-top-right
+				a(href="#") O nás
+				a(href="#") Poslechová místnost
+				a(href="#") Kamenná prodejna
+				a(href="#") Obchodní podmínky
+				a(href="#") Kontakty
+
+	nav.navbar.navbar-expand-lg.navbar-main
+		.container
+			.navbar-toggler(aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-toggle="collapse" data-target="#navbarNav" role="button")
+				span.hamburger-icon
+				p Menu
+
+			a.navbar-brand(href="#")
+				img(src="images/logo.svg" title="#" alt="#")
+
+			.search-wrap-responsive(id="search-toggler-responsive")
+				span.search-icon
+
+			.search-wrap
+				form(method="POST" id="search-form")
+					span.search-icon
+					.form-group
+						.search-wrap-responsive-close.open(id="search-toggler-responsive-close")
+							span.search-icon
+						input(class="form-control" type="text" name="searchbox" id="searchbox" placeholder="Hledejte název produktu, značku nebo typ...")
+						.search-submit-wrap
+							.search-submit-speech
+								span.fa.fa-microphone.microphone-icon(onclick="startDictation()" title="Vyhledávejte hlasem")
+							button.btn(class="form-control" type="submit" name="search-button" id="search-button") Hledat
+								span.search-icon
+				.search-responsive-content
+					.search-responsive-content-section
+						h5 Zákazníci často vyhledávají:
+						.search-responsive-content-tag-group
+							a.search-responsive-content-tag-single(href="#") Lorem ipsum
+							a.search-responsive-content-tag-single(href="#") Dolor sit amet
+							a.search-responsive-content-tag-single(href="#") Consectetur adipiscing elit
+							a.search-responsive-content-tag-single(href="#") Do eiusmod
+					.search-responsive-content-section
+						h5 Akční nabídka:
+						.search-responsive-content-tag-group
+							a.search-responsive-content-tag-single(href="#") Sed ut perspiciatis
+							a.search-responsive-content-tag-single(href="#") Unde omnis
+							a.search-responsive-content-tag-single(href="#") Iste natus error
+					.search-responsive-content-section
+						h5 Doporučené kategorie:
+						.search-responsive-content-tag-group
+							a.search-responsive-content-tag-single(href="#") Mobily, tablety
+							a.search-responsive-content-tag-single(href="#") PC, notebooky
+							a.search-responsive-content-tag-single(href="#") Komponenty
+			// Přihlášení uživatel
+				.user-wrap
+					.dropdown
+						.dropdown-toggle(id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+							span.user-icon.white
+							.user-text
+								// p Přihlášen jako
+								p Petroslav Novakovič
+							span.caret-icon.white
+						.dropdown-menu.dropdown-menu-right(aria-labelledby="userDropdown")
+							a.dropdown-item(href="#") Detail účtu
+							a.dropdown-item(href="#") Oblíbené
+							a.dropdown-item(href="#") Porovnání zboží
+							a.dropdown-item(href="#") Historie objednávek
+							a.dropdown-item(href="#") Odhlásit
+			.user-wrap
+				a(href="#")
+					span.user-icon.white
+					.user-text
+						p Můj účet
+
+			.cart-wrap
+				a(href="#")
+					span.cart-icon
+						span.cart-number 3
+					.cart-text
+						// p Nákupní košík
+						p 5 899Kč
+					span.caret-icon.white
+
+				.cart-dropdown
+					.cart-dropdown-inner
+						a.cart-dropdown-item(href="#")
+							.cart-dropdown-item-img
+								img(src="http://via.placeholder.com/60x60" data-src="http://via.placeholder.com/60x60" alt="#" title="#")
+							.cart-dropdown-item-text
+								h5 Sennheiser IE 60 lorem ipsum dolor sit amets
+								p 3 kusy
+								.cart-dropdown-item-price
+									.cart-dropdown-item-price-old 1099 Kč
+									.cart-dropdown-item-price-main 899 Kč
+						a.cart-dropdown-item(href="#")
+							.cart-dropdown-item-img
+								img(src="http://via.placeholder.com/60x60" data-src="http://via.placeholder.com/60x60" alt="#" title="#")
+							.cart-dropdown-item-text
+								h5 Sennheiser IE 60 lorem ipsum dolor sit amet
+								p 3 kusy
+								.cart-dropdown-item-price
+									.cart-dropdown-item-price-old 1099 Kč
+									.cart-dropdown-item-price-main 899 Kč
+						a.cart-dropdown-item(href="#")
+							.cart-dropdown-item-img
+								img(src="http://via.placeholder.com/60x60" data-src="http://via.placeholder.com/60x60" alt="#" title="#")
+							.cart-dropdown-item-text
+								h5 Sennheiser IE 60 lorem ipsum dolor sit amet
+								p 3 kusy
+								.cart-dropdown-item-price
+									.cart-dropdown-item-price-old 1099 Kč
+									.cart-dropdown-item-price-main 899 Kč
+						.cart-dropdown-price-summary
+							p Celková cena
+								span Včetně DPH
+							h4 2697 Kč
+						.cart-dropdown-delivery 
+							.cart-dropdown-delivery-free
+								p Nakupte ještě za 303 Kč a máte Dopravu zdarma
+						.cart-dropdown-checkout-btn
+							a.btn.btn-grey.btn-ghost-grey(href="#") #[span.cross-icon] Vyprázdnit
+							a.btn(href="#") Objednat zboží
+								span.arrow-icon.white
+
+				// Prázdný košík
+					.cart-dropdown
+						.cart-dropdown-inner
+							.cart-dropdown-empty-alert
+								h3 Váš košík je prázdný
+								p Před nákupem prosím do svého košíku vložte produkt
+							.cart-dropdown-checkout-btn
+								a.btn.btn-grey.btn-ghost-grey(href="#") #[span.fa.fa-heart-o] Oblíbené
+								a.btn(href="#") Akční nabídka #[span.arrow-icon.white]											
+
+	nav.navbar.navbar-expand-lg.navbar-menu
+		.container
+			.collapse.navbar-collapse(id="navbarNav")
+				ul.navbar-nav
+					li.nav-item
+						.dropdown
+							a.dropdown-toggle.nav-link(id="navDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Akční sety
+							.dropdown-menu(aria-labelledby="navDropdown1")
+								.container
+									.row
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Vítr ve studiu
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Gramofony
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Receiver + CD
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Zesilovač + Repro
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Receiver + Repro
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Předzesilovač + Koncový
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Kino
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Rozbaleno
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Repro + stojany
+					li.nav-item
+						.dropdown
+							a.dropdown-toggle.nav-link(id="navDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Hudební nosiče
+							.dropdown-menu(aria-labelledby="navDropdown1")
+								.container
+									.row
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+					li.nav-item
+						.dropdown
+							a.dropdown-toggle.nav-link(id="navDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Audiophile 
+							.dropdown-menu(aria-labelledby="navDropdown1")
+								.container
+									.row
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Audiophile 	
+					li.nav-item
+						.dropdown
+							a.dropdown-toggle.nav-link(id="navDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Gramofony
+							.dropdown-menu(aria-labelledby="navDropdown1")
+								.container
+									.row
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+					li.nav-item
+						.dropdown
+							a.dropdown-toggle.nav-link(id="navDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Zesilovače
+							.dropdown-menu(aria-labelledby="navDropdown1")
+								.container
+									.row
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+					li.nav-item
+						.dropdown
+							a.dropdown-toggle.nav-link(id="navDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Repro
+							.dropdown-menu(aria-labelledby="navDropdown1")
+								.container
+									.row
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+					li.nav-item
+						.dropdown
+							a.dropdown-toggle.nav-link(id="navDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Hi-Fi
+							.dropdown-menu(aria-labelledby="navDropdown1")
+								.container
+									.row
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+					li.nav-item
+						.dropdown
+							a.dropdown-toggle.nav-link(id="navDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Rádia
+							.dropdown-menu(aria-labelledby="navDropdown1")
+								.container
+									.row
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+					li.nav-item
+						.dropdown
+							a.dropdown-toggle.nav-link(id="navDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Kabely
+							.dropdown-menu(aria-labelledby="navDropdown1")
+								.container
+									.row
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+					li.nav-item
+						.dropdown
+							a.dropdown-toggle.nav-link(id="navDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Sluchátka
+							.dropdown-menu(aria-labelledby="navDropdown1")
+								.container
+									.row
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+										.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+											a.dropdown-item(href="#")
+												h5 Úvodem
+					li.nav-item
+						a.nav-link(href="#") Půjčovna
+
+	// nav.navbar.navbar-expand-lg.navbar-responsive-bottom
+		a.active(href="#")
+			span.fa.fa-home
+			p Domů
+		a(href="#")
+			span.user-icon.white
+			p Můj účet
+		a(href="#")
+			span.fa.fa-heart-o
+			p Oblíbené
+		a(href="#")
+			span.fa.fa-balance-scale
+			p Porovnání
+
+	span(id="dark-overlay" aria-label="Toggle navigation" data-target="#navbarNav" data-toggle="collapse")
+	span(id="dark-overlay-cart")

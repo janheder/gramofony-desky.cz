@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    PAGINATION
+\*------------------------------------*/
+
+.pagination{
+    @include justify-content(center);
+    margin: 2rem 0 4rem 0;
+}
+.page-item{
+    padding: 5px;
+}
+.page-item.active .page-link{
+    background: $orange-main;
+    color: $white;
+}
+.page-link{
+    padding: 10px 15px;
+    color: $dark-grey;
+    border: 0;
+    background: $light-grey;
+    border-radius: $border-radius-primary;
+
+    &:hover, &:active, &:focus{
+        background: $dark-grey;
+        color: $white;
+    }
+}
