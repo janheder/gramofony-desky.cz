@@ -26,6 +26,9 @@
 textarea.form-control{
     height: auto;
 }
+select.form-control:not([size]):not([multiple]) {
+    height: 4.6rem;
+}
 .form-group{
     font-weight: 400;
     padding-bottom: 2rem;  
@@ -202,6 +205,19 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0; 
 }
 
+.form-link__forgotten-pass{
+    display: block;
+    text-align: center;
+}
+.forgotten-password{
+    background: $bg-light;
+    padding: 3rem;
+    text-align: left;
+    margin: 0 auto;
+}
+.forgotten-password_text{
+    margin-bottom: 3rem;
+}
 
 /*------------------------------------*\
      FORMS

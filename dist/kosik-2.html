@@ -493,7 +493,10 @@
                     </div>
                     <div class="form-group">
                       <label for="country">Stát</label>
-                      <input class="form-control" type="text" name="register-form-country" id="country" autocomplete="country-name" value="Česká republika" required>
+                      <select class="form-control" type="text" name="register-form-country" id="country" required>
+                        <option value="cz">Česká republika</option>
+                        <option value="sk">Slovensko</option>
+                      </select>
                     </div>
                     <div class="register-form-info-collapse-wrap">  
                       <div class="form-group">
@@ -534,7 +537,10 @@
                         </div>
                         <div class="form-group">
                           <label for="register-form-billing-address-country">Stát</label>
-                          <input class="form-control" type="text" name="register-form-billing-address-country" id="register-form-billing-address-country" autocomplete="country-name">
+                          <select class="form-control" type="text" name="register-form-billing-address-country" id="register-form-billing-address-country">
+                            <option value="cz">Česká republika</option>
+                            <option value="sk">Slovensko</option>
+                          </select>
                         </div>
                       </div>
                       <div class="form-group">
@@ -567,7 +573,10 @@
                         </div>
                         <div class="form-group">
                           <label for="register-form-shipping-address-country">Stát</label>
-                          <input class="form-control" type="text" name="register-form-shipping-address-country" id="register-form-shipping-address-country" autocomplete="country-name">
+                          <select class="form-control" type="text" name="register-form-shipping-address-country" id="register-form-shipping-address-country">
+                            <option value="cz">Česká republika</option>
+                            <option value="sk">Slovensko</option>
+                          </select>
                         </div>
                       </div>
                       <div class="form-group">
@@ -616,7 +625,7 @@
                     </div>
                     <div class="form-group">
                       <button class="form-control btn" type="submit" name="login_form_submit" id="login_form_submit">Přihlásit se</button>
-                    </div>
+                    </div><a class="form-link__forgotten-pass" href="#">Zapomenuté heslo?</a>
                   </div>
                 </form>
               </div>

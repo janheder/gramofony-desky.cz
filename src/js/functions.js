@@ -253,16 +253,43 @@ var carousel_main = new Swiper('.hero__swiper-wrap', {
   zoom: true,
   loop: true,
   pagination: {
-    el: '.swiper-pagination',
+    el: '.swiper-pagination--hero',
     clickable: true,
   },
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next--hero',
+    prevEl: '.swiper-button-prev--hero',
   },
 });
 
-
+//SWIPER LOGOS
+var carousel_logos = new Swiper('.logos__swiper-wrap', {
+    lazy: true,
+    spaceBetween: 20,
+    slidesPerView: 5,
+    grabCursor: true,
+    zoom: true,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next--logos',
+      prevEl: '.swiper-button-prev--logos',
+    },
+    breakpoints: {
+        1200: {
+          slidesPerView: 4
+        },
+        991: {
+          slidesPerView: 3
+        },
+        500: {
+          slidesPerView: 2
+        },
+        320: {
+          slidesPerView: 1
+        }
+      }
+  });
+  
 
 //SWIPER 4 PRODUCTS
 var carousel_4_products = new Swiper('.swiper-container-4-products', {

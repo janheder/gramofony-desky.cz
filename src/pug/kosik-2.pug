@@ -83,8 +83,9 @@ html(lang="en")
 
                                         .form-group
                                             label(for="country") Stát
-                                            input.form-control(type="text" name="register-form-country" id="country" autocomplete="country-name" value="Česká republika" required)
-
+                                            select.form-control(type="text" name="register-form-country" id="country" required)
+                                                option(value="cz") Česká republika
+                                                option(value="sk") Slovensko
 
                                         .register-form-info-collapse-wrap   
                                             .form-group
@@ -125,8 +126,9 @@ html(lang="en")
 
                                                 .form-group
                                                     label(for="register-form-billing-address-country") Stát
-                                                    input.form-control(type="text" name="register-form-billing-address-country" id="register-form-billing-address-country" autocomplete="country-name")
-
+                                                    select.form-control(type="text" name="register-form-billing-address-country" id="register-form-billing-address-country")
+                                                        option(value="cz") Česká republika
+                                                        option(value="sk") Slovensko
 
                                             .form-group
                                                 .form-check
@@ -155,11 +157,12 @@ html(lang="en")
                                                 .form-group
                                                     label(for="register-form-shipping-address-postal-code") PSČ
                                                     input.form-control(type="text" name="register-form-shipping-address-postal-code" id="register-form-shipping-address-postal-code" autocomplete="postal-code")
-
+                                                
                                                 .form-group
                                                     label(for="register-form-shipping-address-country") Stát
-                                                    input.form-control(type="text" name="register-form-shipping-address-country" id="register-form-shipping-address-country" autocomplete="country-name")
-
+                                                    select.form-control(type="text" name="register-form-shipping-address-country" id="register-form-shipping-address-country")
+                                                        option(value="cz") Česká republika
+                                                        option(value="sk") Slovensko
 
                                             .form-group
                                                 .form-check
@@ -207,6 +210,7 @@ html(lang="en")
                                         .form-group
                                             button.form-control.btn(type="submit" name="login_form_submit" id="login_form_submit") Přihlásit se
 
+                                        a.form-link__forgotten-pass(href="#") Zapomenuté heslo?
 
 
 

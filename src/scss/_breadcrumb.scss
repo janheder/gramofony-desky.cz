@@ -10,12 +10,12 @@
     z-index: 1;
     position: relative;
 }
-.breadcrumb-container{
+.breadcrumb__container{
     @include flexbox();
     @include flex-direction(row);
     @include align-items(center);
 }
-.breadcrumb-item{     
+.breadcrumb__item{     
     font-size: 1.3rem;  
     color: $dark-grey; 
     font-weight: 400;
@@ -26,7 +26,7 @@
     @include flex-direction(row);
     @include align-items(center);
 
-    + .breadcrumb-item::before{
+    + .breadcrumb__item::before{
         content: "";
         height: 6px;
         width: 6px;

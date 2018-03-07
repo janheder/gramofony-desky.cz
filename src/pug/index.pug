@@ -27,7 +27,8 @@ html(lang="en")
         include _css-include.pug  
     body
         include _nav.pug
-        section.hero
+        section.hero.post__image-container
+            img.lazy.post__featured-image(src=URLbase+"img/lazy/lazy-bg-hero.jpg" data-src=URLbase+"img/bg-hero.jpg" alt="#" title="#")
             .container.hero__container
                 .hero__swiper
                     .hero__swiper-wrap
@@ -42,15 +43,34 @@ html(lang="en")
                                 img.swiper-lazy(data-src=URLbase+"http://via.placeholder.com/1220x480")
                                 .swiper-lazy-preloader.swiper-lazy-preloader-white
 
-                        .swiper-pagination.swiper-pagination-white
-                    .swiper-button-prev.swiper-button-prev--5
-                    .swiper-button-next.swiper-button-next--5
+                        .swiper-pagination.swiper-pagination-white.swiper-pagination--hero
+                    .swiper-button-prev.swiper-button-prev--hero
+                    .swiper-button-next.swiper-button-next--hero
 
         section.benefits
-            .container
-                .row
+            .container.benefits__container
+                .benefits__single
+                    .benefits__img-wrap
+                        span.fas.fa-truck.benefits__img
+                    p.benefits__text Doprava zdarma nad 5000 Kč
+
+                .benefits__single
+                    .benefits__img-wrap
+                        span.fas.fa-dropbox.benefits__img
+                    p.benefits__text Doprava zdarma nad 5000 Kč
+
+                .benefits__single
+                    .benefits__img-wrap
+                        span.fas.fa-gift.benefits__img
+                    p.benefits__text Doprava zdarma nad 5000 Kč
+
+                .benefits__single
+                    .benefits__img-wrap
+                        span.fas.fa-map-pin.benefits__img
+                    p.benefits__text Doprava zdarma nad 5000 Kč
 
 
+        include _index-categories.pug
 
         section.index-products
             .container  
@@ -88,8 +108,64 @@ html(lang="en")
                     .swiper-button-prev.swiper-button-prev--5
                     .swiper-button-next.swiper-button-next--5
 
+        section.logos
+            .container.logos__container
+                .logos__swiper  
+                    .logos__swiper-wrap
+                        .swiper-wrapper
+                            .swiper-slide
+                                img.swiper-lazy(data-src=URLbase+"http://via.placeholder.com/170x70")
+                                .swiper-lazy-preloader.swiper-lazy-preloader-white
+                            .swiper-slide
+                                img.swiper-lazy(data-src=URLbase+"http://via.placeholder.com/170x70")
+                                .swiper-lazy-preloader.swiper-lazy-preloader-white
+                            .swiper-slide
+                                img.swiper-lazy(data-src=URLbase+"http://via.placeholder.com/170x70")
+                                .swiper-lazy-preloader.swiper-lazy-preloader-white
+                            .swiper-slide
+                                img.swiper-lazy(data-src=URLbase+"http://via.placeholder.com/170x70")
+                                .swiper-lazy-preloader.swiper-lazy-preloader-white
+                            .swiper-slide
+                                img.swiper-lazy(data-src=URLbase+"http://via.placeholder.com/170x70")
+                                .swiper-lazy-preloader.swiper-lazy-preloader-white
+                            .swiper-slide
+                                img.swiper-lazy(data-src=URLbase+"http://via.placeholder.com/170x70")
+                                .swiper-lazy-preloader.swiper-lazy-preloader-white
+                            .swiper-slide
+                                img.swiper-lazy(data-src=URLbase+"http://via.placeholder.com/170x70")
+                                .swiper-lazy-preloader.swiper-lazy-preloader-white
+                            .swiper-slide
+                                img.swiper-lazy(data-src=URLbase+"http://via.placeholder.com/170x70")
+                                .swiper-lazy-preloader.swiper-lazy-preloader-white
+                            .swiper-slide
+                                img.swiper-lazy(data-src=URLbase+"http://via.placeholder.com/170x70")
+                                .swiper-lazy-preloader.swiper-lazy-preloader-white
 
-        include _index-categories.pug
+                    .swiper-button-prev.swiper-button-prev--logos
+                    .swiper-button-next.swiper-button-next--logos
+
+        section.index-cta
+            .container
+                .row
+                    .col-12.col-sm-12.col-md-8.col-lg-8.col-xl-8
+                        .index-cta__single.post__image-container
+                            img.lazy.post__featured-image(src=URLbase+"img/lazy/lazy-index-cta-poradna.jpg" data-src=URLbase+"img/index-cta-poradna.jpg" alt="#" title="#")
+                            .index-cta__textfield
+                                h4.index-cta__subtitle Potřebujete poradit s výběrem nového zařízení nebo máte jiné dotazy?
+                                h3.index-cta__title Rádi Vám pomůžeme v naší online poradně.
+                                a.btn.btn-ghost-color.index-cta__btn(href="#") Přejít do poradny
+                    .col-12.col-sm-12.col-md-4.col-lg-4.col-xl-4
+                        .index-cta__single.index-cta__single--small.post__image-container
+                            img.lazy.post__featured-image(src=URLbase+"img/lazy/lazy-index-cta-prodejna.jpg" data-src=URLbase+"img/index-cta-prodejna.jpg" alt="#" title="#")
+                            .index-cta__textfield
+                                h3.index-cta__title Kamenná prodejna
+                                .index-cta__text-wrap
+                                    p.index-cta__text Sdružení House Of Music
+                                    p.index-cta__text Podpuklí 288
+                                    p.index-cta__text Frýdek-Místek
+                                    p.index-cta__text 73801
+                                a.btn.btn-ghost-color.index-cta__btn(href="#") Přejít do poradny
+
 
         include _news-section.pug
         

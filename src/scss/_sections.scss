@@ -11,6 +11,7 @@
     @include flexbox;
     @include flex-direction(column);
     @include justify-content(center);
+    background: $bg-darker;
 }
 .hero__title{
     font-weight: 400;
@@ -54,6 +55,7 @@
         height: auto;
     }
 }
+
 @media screen and (max-width:991px){
     .hero {
         padding: 0;
@@ -61,6 +63,84 @@
     .hero__container{
         padding-left: 0;
         padding-right: 0;
+    }
+    .swiper-button-next--hero, .swiper-button-prev--hero{
+        display: none;
+    }
+}
+
+/* ========================================================================== */
+/* BENEFITS */
+/* ========================================================================== */
+
+.benefits{
+    background: $bg-light;
+    padding: 3rem 0;
+}
+.benefits__container{
+    @include flexbox();
+}
+.benefits__single{
+    border-right: 1px solid $border-primary;
+    padding: 0 3rem;
+    @include flexbox();
+    @include flex-direction(row);
+    @include justify-content(center);
+    @include align-items(center);
+    @include flex-grow(1);
+    @include flex-basis(0);
+
+    &:last-child{
+        border-right: none;  
+    }
+}
+.benefits__img-wrap{
+    background: $brand-primary;
+    border-radius: 50%;
+    padding: 10px;
+    height: 64px;
+    width: 64px;
+    @include flexbox();
+    @include flex-direction(row);
+    @include justify-content(center);
+    @include align-items(center);
+    @include flex-shrink(0);
+}
+.benefits__img{
+    color: $text-white;
+    font-size: 3rem;
+}
+.benefits__text{
+    margin: 0;
+    padding-left: 20px;
+    font-family: $font-family-secondary;
+    font-size: 1.8rem;
+}
+@media screen and (max-width:991px){
+    .benefits__container{
+        @include flex-wrap(wrap);
+    }
+    .benefits__single{
+        width: 50%;
+        @include flex-grow(1);
+        @include flex-basis(auto);
+        margin: 10px 0;
+    }
+    &:nth-child(2n+2){
+        border-right: none;  
+    }
+}
+@media screen and (max-width:500px){
+    .benefits{
+        padding: 10px 0;
+    }
+    .benefits__single{
+        @include flex-direction(column);
+        text-align: center;
+        padding: 10px;
+    }
+    .benefits__text{
+        padding: 0;
     }
 }
 
@@ -70,13 +150,18 @@
 
 .index-categories{
     padding: 8rem 0;
-    background: $bg-light;
+    background: $bg-white;
 }
 .index-categories__title{
+    color: $text-primary;
     margin-bottom: 2rem;
-    font-size: 2.6rem;  
+    font-size: 3rem;  
     font-family: $font-family-secondary;
     font-weight: 700;
+    text-align: center;
+}
+.index-categories__single-wrap{
+    margin-bottom: 20px;
 }
 .index-categories__single{
     height: 100%; 
@@ -85,11 +170,12 @@
     padding: 20px;
     position: relative;
     z-index: 1;
+    overflow: hidden;
 }
 .index-categories__img{
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: -35%;
+    bottom: -35%;
     z-index: -1;
 }
 .index-categories__single-title{
@@ -98,6 +184,7 @@
     margin: 0;
     font-family: $font-family-secondary;
     font-weight: 700;
+    font-size: 2.4rem;
 }
 .index-categories__wrap{
     padding-top: 1.5rem;
@@ -107,10 +194,97 @@
     color: $text-primary;
     font-size: 1.5rem;  
     display: block;
+    line-height: 3rem;
 }
-
+.index-categories__caret{
+    height: 6px;
+    display: inline-block;
+    width: 6px;
+    margin-right: 5px;
+    border-top: 2px solid $brand-primary;
+    border-right: 2px solid $brand-primary;
+}
 @media screen and (max-width:768px){
 
+}
+
+/* ========================================================================== */
+/* INDEX PRODUCTS */
+/* ========================================================================== */
+
+.index-products{
+    padding-bottom: 8rem; 
+}
+
+/* ========================================================================== */
+/* INDEX LOGOS */
+/* ========================================================================== */
+
+.logos{
+    padding: 0;
+}
+.logos__swiper{
+    position: relative;
+}
+.logos__swiper-wrap{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.logos__swiper-wrap .swiper-slide{
+    height: auto;
+    text-align: center;
+    padding: 15px;
+    /*
+    &:hover, &:active, &:focus{
+        @include box-shadow(0px,0,10px,$black-transparent-25);
+    }
+    */
+}
+
+/* ========================================================================== */
+/* INDEX CTA */
+/* ========================================================================== */
+.index-cta{
+    background: $bg-white;
+    padding: 8rem 0;
+}
+.index-cta__single{
+    padding: 4rem 0;
+    height: 100%;
+    @include flexbox();
+    @include flex-direction(row);
+    @include align-items(center);
+}
+.index-cta__textfield{
+    background: $black-transparent-50;
+    padding: 3rem;
+    width: 460px;
+    max-width: 100%;;
+}
+.index-cta__subtitle, .index-cta__title{
+    font-family: $font-family-secondary;
+    color: $text-white;
+    font-size: 2.4rem;
+}
+.index-cta__title{
+    font-weight: 700;
+    margin: 2rem 0;
+}
+.index-cta__text-wrap{
+    margin-bottom: 2rem;
+}
+.index-cta__text{
+    font-size: 1.6rem;
+    color: $text-white;
+    line-height: 3rem;
+    margin: 0;
+}
+.index-cta__single--small{
+    .index-cta__textfield{
+        width: 260px;
+    }
 }
 
 /*------------------------------------*\

@@ -444,7 +444,7 @@
       
       --><span id="dark-overlay" aria-label="Toggle navigation" data-target="#navbarNav" data-toggle="collapse"></span><span id="dark-overlay-cart"></span>
     </header>
-    <section class="hero">
+    <section class="hero post__image-container"><img class="lazy post__featured-image" src="img/lazy/lazy-bg-hero.jpg" data-src="img/bg-hero.jpg" alt="#" title="#">
       <div class="container hero__container">
         <div class="hero__swiper">
           <div class="hero__swiper-wrap">
@@ -459,16 +459,56 @@
                 <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
               </div>
             </div>
-            <div class="swiper-pagination swiper-pagination-white"></div>
+            <div class="swiper-pagination swiper-pagination-white swiper-pagination--hero"></div>
           </div>
-          <div class="swiper-button-prev swiper-button-prev--5"></div>
-          <div class="swiper-button-next swiper-button-next--5"></div>
+          <div class="swiper-button-prev swiper-button-prev--hero"></div>
+          <div class="swiper-button-next swiper-button-next--hero"></div>
         </div>
       </div>
     </section>
     <section class="benefits">
+      <div class="container benefits__container">
+        <div class="benefits__single">
+          <div class="benefits__img-wrap"><span class="fas fa-truck benefits__img"></span></div>
+          <p class="benefits__text">Doprava zdarma nad 5000 Kč</p>
+        </div>
+        <div class="benefits__single">
+          <div class="benefits__img-wrap"><span class="fas fa-dropbox benefits__img"></span></div>
+          <p class="benefits__text">Doprava zdarma nad 5000 Kč</p>
+        </div>
+        <div class="benefits__single">
+          <div class="benefits__img-wrap"><span class="fas fa-gift benefits__img"></span></div>
+          <p class="benefits__text">Doprava zdarma nad 5000 Kč</p>
+        </div>
+        <div class="benefits__single">
+          <div class="benefits__img-wrap"><span class="fas fa-map-pin benefits__img"></span></div>
+          <p class="benefits__text">Doprava zdarma nad 5000 Kč</p>
+        </div>
+      </div>
+    </section>
+    <section class="index-categories">
       <div class="container">
-        <div class="row"></div>
+        <h2 class="index-categories__title">Vybrané kategorie</h2>
+        <div class="row">
+          <div class="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4 index-categories__single-wrap">
+            <div class="index-categories__single"><img class="lazy index-categories__img" src="http://via.placeholder.com/280x280" data-src="img/product-thumb-medium.jpg" alt="#" title="#">
+              <h3 class="index-categories__single-title">Mobily, tablety</h3>
+              <div class="index-categories__wrap"><a class="index-categories__link" href="#"><span class="caret-icon right index-categories__caret"></span> Lorem ipsumm</a><a class="index-categories__link" href="#"><span class="caret-icon right index-categories__caret"></span> Sed ut perspiciatis</a><a class="index-categories__link" href="#"><span class="caret-icon right index-categories__caret"></span> Unde omnis</a><a class="index-categories__link" href="#"><span class="caret-icon right index-categories__caret"></span> Iste natus error</a><a class="index-categories__link" href="#"><span class="caret-icon right index-categories__caret"></span> Consectetur adipiscing elit</a></div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4 index-categories__single-wrap">
+            <div class="index-categories__single"><img class="lazy index-categories__img" src="http://via.placeholder.com/280x280" data-src="img/product-thumb-medium.jpg" alt="#" title="#">
+              <h3 class="index-categories__single-title">Mobily, tablety</h3>
+              <div class="index-categories__wrap"><a class="index-categories__link" href="#"><span class="caret-icon right index-categories__caret"></span> Lorem ipsumm</a><a class="index-categories__link" href="#"><span class="caret-icon right index-categories__caret"></span> Sed ut perspiciatis</a><a class="index-categories__link" href="#"><span class="caret-icon right index-categories__caret"></span> Unde omnis</a><a class="index-categories__link" href="#"><span class="caret-icon right index-categories__caret"></span> Iste natus error</a><a class="index-categories__link" href="#"><span class="caret-icon right index-categories__caret"></span> Consectetur adipiscing elit  </a></div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4 index-categories__single-wrap">
+            <div class="index-categories__single"><img class="lazy index-categories__img" src="http://via.placeholder.com/280x280" data-src="img/product-thumb-medium.jpg" alt="#" title="#">
+              <h3 class="index-categories__single-title">Mobily, tablety</h3>
+              <div class="index-categories__wrap"><a class="index-categories__link" href="#"><span class="caret-icon right index-categories__caret"></span> Lorem ipsumm</a><a class="index-categories__link" href="#"><span class="caret-icon right index-categories__caret"></span> Sed ut perspiciatis</a><a class="index-categories__link" href="#"><span class="caret-icon right index-categories__caret"></span> Unde omnis</a><a class="index-categories__link" href="#"><span class="caret-icon right index-categories__caret"></span> Iste natus error</a><a class="index-categories__link" href="#"><span class="caret-icon right index-categories__caret"></span> Consectetur adipiscing elit</a></div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <section class="index-products">
@@ -828,26 +868,67 @@
         </div>
       </div>
     </section>
-    <section class="index-categories">
+    <section class="logos">
+      <div class="container logos__container">
+        <div class="logos__swiper"> 
+          <div class="logos__swiper-wrap">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img class="swiper-lazy" data-src="http://via.placeholder.com/170x70">
+                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+              </div>
+              <div class="swiper-slide"><img class="swiper-lazy" data-src="http://via.placeholder.com/170x70">
+                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+              </div>
+              <div class="swiper-slide"><img class="swiper-lazy" data-src="http://via.placeholder.com/170x70">
+                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+              </div>
+              <div class="swiper-slide"><img class="swiper-lazy" data-src="http://via.placeholder.com/170x70">
+                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+              </div>
+              <div class="swiper-slide"><img class="swiper-lazy" data-src="http://via.placeholder.com/170x70">
+                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+              </div>
+              <div class="swiper-slide"><img class="swiper-lazy" data-src="http://via.placeholder.com/170x70">
+                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+              </div>
+              <div class="swiper-slide"><img class="swiper-lazy" data-src="http://via.placeholder.com/170x70">
+                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+              </div>
+              <div class="swiper-slide"><img class="swiper-lazy" data-src="http://via.placeholder.com/170x70">
+                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+              </div>
+              <div class="swiper-slide"><img class="swiper-lazy" data-src="http://via.placeholder.com/170x70">
+                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev swiper-button-prev--logos"></div>
+          <div class="swiper-button-next swiper-button-next--logos"></div>
+        </div>
+      </div>
+    </section>
+    <section class="index-cta">
       <div class="container">
-        <h2 class="index-categories__title">Vybrané kategorie</h2>
         <div class="row">
-          <div class="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-            <div class="index-categories__single"><img class="index-categories__img" src="http://via.placeholder.com/280x280" data-src="http://via.placeholder.com/280x280">
-              <h3 class="index-categories__single-title">Mobily, tablety</h3>
-              <div class="index-categories__wrap"><a class="index-categories__link" href="#">Lorem ipsumm</a><a class="index-categories__link" href="#">Sed ut perspiciatis</a><a class="index-categories__link" href="#">Unde omnis</a><a class="index-categories__link" href="#">Iste natus error</a><a class="index-categories__link" href="#">Consectetur adipiscing elit</a><a class="index-categories__link" href="#">Dolor sit amet </a></div>
+          <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+            <div class="index-cta__single post__image-container"><img class="lazy post__featured-image" src="img/lazy/lazy-index-cta-poradna.jpg" data-src="img/index-cta-poradna.jpg" alt="#" title="#">
+              <div class="index-cta__textfield">
+                <h4 class="index-cta__subtitle">Potřebujete poradit s výběrem nového zařízení nebo máte jiné dotazy?</h4>
+                <h3 class="index-cta__title">Rádi Vám pomůžeme v naší online poradně.</h3><a class="btn btn-ghost-color index-cta__btn" href="#">Přejít do poradny</a>
+              </div>
             </div>
           </div>
-          <div class="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-            <div class="index-categories-single"><a href="#"><img src="http://via.placeholder.com/800x800" data-src="http://via.placeholder.com/800x800">
-                <h3>Mobily, tablety</h3></a>
-              <div class="index-categories-single-sub"><a href="#">Lorem ipsum</a><a href="#">Sed ut perspiciatis</a><a href="#">Unde omnis</a><a href="#">Iste natus error</a><a href="#">Consectetur adipiscing elit| </a><a href="#">Dolor sit amet</a></div>
-            </div>
-          </div>
-          <div class="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-            <div class="index-categories-single"><a href="#"><img src="http://via.placeholder.com/800x800" data-src="http://via.placeholder.com/800x800">
-                <h3>Mobily, tablety</h3></a>
-              <div class="index-categories-single-sub"><a href="#">Lorem ipsumm</a><a href="#">Sed ut perspiciatis</a><a href="#">Unde omnis</a><a href="#">Iste natus error</a><a href="#">Consectetur adipiscing elit</a><a href="#">Dolor sit amet </a></div>
+          <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+            <div class="index-cta__single index-cta__single--small post__image-container"><img class="lazy post__featured-image" src="img/lazy/lazy-index-cta-prodejna.jpg" data-src="img/index-cta-prodejna.jpg" alt="#" title="#">
+              <div class="index-cta__textfield">
+                <h3 class="index-cta__title">Kamenná prodejna</h3>
+                <div class="index-cta__text-wrap">
+                  <p class="index-cta__text">Sdružení House Of Music</p>
+                  <p class="index-cta__text">Podpuklí 288</p>
+                  <p class="index-cta__text">Frýdek-Místek</p>
+                  <p class="index-cta__text">73801</p>
+                </div><a class="btn btn-ghost-color index-cta__btn" href="#">Přejít do poradny</a>
+              </div>
             </div>
           </div>
         </div>

@@ -1,4 +1,7 @@
-// Descriptive Colors
+/* ========================================================================== */
+/* Descriptive Colors */
+/* ========================================================================== */
+
 $white: #FFFFFF;
 $light-grey: #FAFAFA;
 $medium-grey: #414141;
@@ -24,17 +27,30 @@ $black-transparent-50: rgba(0,0,0,0.5);
 
 $white-transparent: rgba(255,255,255,0.1);
 
+
+/* ========================================================================== */
+/* Variables */
+/* ========================================================================== */
+
 // Border radius
 $border-radius-primary: 3px;
 
+// Border color
 $border-primary: $border-grey;
+$border-dark: $dark-grey;
+$border-white: $white;
 
+// Brand colors
 $brand-primary: $orange-main;
+$brand-primary--dark: $orange-main-dark;
 $brand-secondary: $dark-grey;
 
+// Text colors
 $text-primary: $dark-grey;
 $text-light: $light-grey;
+$text-white: $white;
 
+// Backgorund colors
 $bg-white: $white;
 $bg-light: $light-grey;
 $bg-medium: $medium-grey;

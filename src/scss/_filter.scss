@@ -2,7 +2,7 @@
     margin-bottom: 4rem;
 
     & .nav-tabs{
-        background: $white;
+        background: transparent;
         border: 0;
         border-bottom: 1px solid $border-grey;
         @include justify-content(center);
@@ -14,7 +14,7 @@
             & .nav-link{
             	cursor: pointer;
                 border: 0;
-                background: $white;
+                background: transparent;
                 @include justify-content(center);
                 @include transition(0.3s ease all);
                 
@@ -73,6 +73,7 @@
 .filter-main__single{
     padding: 5px;
     margin: 0;
+    @include flex-grow(1);
 }
 .filter-main__label{
     margin: 0;
@@ -106,7 +107,6 @@
     font-weight: 500;
     font-size: 1.5rem;
     line-height: 1.5;
-    margin-left: 20px;
 }
 .filter-main__collapse{
     width: 100%;
