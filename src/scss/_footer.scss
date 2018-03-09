@@ -105,7 +105,7 @@ footer{
     @include justify-content(center);
     @include flex-grow(1);
     @include flex-basis(0);
-    padding: 30px 0;
+    padding: 30px 20px;
     border-right: 1px solid $white-transparent;
 
     &:last-child{
@@ -196,7 +196,7 @@ footer{
     }
 }
 
-@media screen and (max-width:500px){
+@media screen and (max-width:768px){
     .footer-bar{
         padding: 0;
     }
