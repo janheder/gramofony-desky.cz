@@ -3,7 +3,7 @@
 /* ========================================================================== */
 
 $white: #FFFFFF;
-$light-grey: #FAFAFA;
+$light-grey: #F5F5F5;
 $medium-grey: #414141;
 $border-grey: #E5E5E5;
 $text-grey: #BBBBBB;
@@ -49,14 +49,17 @@ $brand-secondary: $dark-grey;
 $text-primary: $dark-grey;
 $text-light: $light-grey;
 $text-white: $white;
+$text-red: $red-main;
 
 // Backgorund colors
 $bg-white: $white;
 $bg-light: $light-grey;
 $bg-medium: $medium-grey;
+$bg-grey: $border-grey;
 $bg-dark: $dark-grey;
 $bg-darker: $darkest-grey;
 $bg-black: $black;
+$bg-red: $red-main;
 
 // Font family
 $font-family-main: "Roboto", sans-serif;

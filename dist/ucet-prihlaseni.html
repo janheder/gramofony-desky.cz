@@ -442,9 +442,8 @@
     </header>
     <section class="page-heading post__image-container">
       <div class="container">
-        <h1 class="page-heading__title">Lorem ipsum dolor sit amet</h1>
-        <p class="page-heading__subtitle">Napsáno: 7. 2. 2018</p>
-      </div><img class="lazy post__featured-image" src="img/lazy/lazy-news-thumb-large.jpg" data-src="img/news-thumb-large.jpg" alt="#" title="#">
+        <h1 class="page-heading__title">Uživatelský účet</h1>
+      </div><img class="lazy post__featured-image" src="http://via.placeholder.com/510x510" data-src="img/user-thumb-large.jpg" alt="#" title="#">
     </section>
     <nav class="breadcrumb">
       <div class="container breadcrumb__container"><a class="breadcrumb__item" href="#">Lorem ipsum</a><a class="breadcrumb__item" href="#">Dolor sit amet</a><span class="breadcrumb__item active">Bootstrap</span></div>
@@ -452,13 +451,13 @@
     <main>
       <div class="container">
         <div class="print-area">
-          <article class="post">
-            <p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
-            <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+          <article class="page">
+            <div class="page-message">
+              <h3 class="page-message__title"> Přihlášení bylo úspěšné.</h3>
+              <div class="page-message__buttons"><a class="btn page-message__btn" href="#">Začít nakupovat</a><a class="btn btn-ghost page-message__btns" href="#">Detail účtu</a></div>
+            </div>
           </article>
         </div>
-        <div class="post-back-btn"><a class="btn btn-ghost" href="#"><span class="btn__icon arrow-icon left"></span> Zpět na výpis aktualit</a></div>
       </div>
     </main>
     <section class="news-bottom">
@@ -598,5 +597,55 @@
         </div>
       </div>
     </div>
+    <script>
+      // Wait for the DOM to be ready
+      $(function() {
+        // Initialize form validation on the registration form.
+        // It has the name attribute "registration"
+        $("form[name='register_form']").validate({
+          // Specify validation rules
+          rules: {
+            // The key name on the left side is the name attribute
+            // of an input field. Validation rules are defined
+            // on the right side
+            register_form_name: "required",      
+            register_form_email: {
+              required: true,
+              email: true
+            },
+            register_form_tel: {
+              required: false,
+              minlength: 9
+            },
+            register_form_password: {
+              required: true,
+              minlength: 5
+            },
+            register_form_address: {
+              required: true
+            },
+            route: {
+              required: true
+            }
+          },
+          // Specify validation error messages
+          messages: {
+            register_form_name: "Prosím zadejte své celé jméno",
+            register_form_email: "Prosím zadejte platnou emailovou adresu",
+            register_form_tel: {required: "Prosím zadejte telefonní číslo", minlength: "Telefonní číslo je neplatné"},
+            register_form_password: {required: "Prosím zadejte heslo", minlength: "Vaše heslo musí být alespoň 5 znaků dlouhé"},
+            register_form_address: "Zadejte svou adresu"
+          },
+          // Make sure the form is submitted to the destination defined
+          // in the "action" attribute of the form when valid
+          submitHandler: function(form) {
+            form.submit();
+          }
+        });
+      });
+      jQuery.extend(jQuery.validator.messages, {
+          required: "Toto pole je povinné"
+      });
+    </script>
   </body>
 </html>

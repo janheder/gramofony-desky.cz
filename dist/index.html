@@ -72,13 +72,13 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-top">
+      <nav class="navbar navbar--top">
         <div class="container">
-          <div class="navbar-top-left">
-            <p><span><span class="fas fa-phone"></span></span> +420 777 888 042</p>
-            <p><span><span class="far fa-clock"></span></span> Po-Pá: 8:00 - 16:00</p>
+          <div class="navbar--top__left">
+            <p class="navbar--top__text"><span class="navbar--top__icon"><span class="fas fa-phone"></span></span> +420 777 888 042</p>
+            <p class="navbar--top__text"><span class="navbar--top__icon"><span class="far fa-clock"></span></span> Po-Pá: 8:00 - 16:00</p>
           </div>
-          <div class="navbar-top-right"><a href="#">O nás</a><a href="#">Poslechová místnost</a><a href="#">Kamenná prodejna</a><a href="#">Obchodní podmínky</a><a href="#">Kontakty</a></div>
+          <div class="navbar--top__right"><a class="navbar--top__link" href="#">O nás</a><a class="navbar--top__link" href="#">Poslechová místnost</a><a class="navbar--top__link" href="#">Kamenná prodejna</a><a class="navbar--top__link" href="#">Obchodní podmínky</a><a class="navbar--top__link" href="#">Kontakty</a></div>
         </div>
       </nav>
       <nav class="navbar navbar-expand-lg navbar-main">
@@ -113,19 +113,16 @@
               </div>
             </div>
           </div>
-          <!-- Přihlášení uživatel
+          <!-- Přihlášený uživatel
           .user-wrap
           	.dropdown
           		.dropdown-toggle(id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
           			span.user-icon.white
           			.user-text
-          				// p Přihlášen jako
           				p Petroslav Novakovič
           			span.caret-icon.white
-          		.dropdown-menu.dropdown-menu-right(aria-labelledby="userDropdown")
+          		.dropdown-menu.dropdown-menu-left(aria-labelledby="userDropdown")
           			a.dropdown-item(href="#") Detail účtu
-          			a.dropdown-item(href="#") Oblíbené
-          			a.dropdown-item(href="#") Porovnání zboží
           			a.dropdown-item(href="#") Historie objednávek
           			a.dropdown-item(href="#") Odhlásit
           -->
@@ -135,12 +132,11 @@
               </div></a></div>
           <div class="cart-wrap"><a href="#"><span class="cart-icon"><span class="cart-number">3</span></span>
               <div class="cart-text">
-                <!-- p Nákupní košík-->
                 <p>5 899Kč</p>
               </div><span class="caret-icon white"></span></a>
             <div class="cart-dropdown">
               <div class="cart-dropdown-inner"><a class="cart-dropdown-item" href="#">
-                  <div class="cart-dropdown-item-img"><img src="http://via.placeholder.com/60x60" data-src="http://via.placeholder.com/60x60" alt="#" title="#"></div>
+                  <div class="cart-dropdown-item-img"><img class="lazy" src="http://via.placeholder.com/60x60" data-src="http://via.placeholder.com/60x60" alt="#" title="#"></div>
                   <div class="cart-dropdown-item-text">
                     <h5>Sennheiser IE 60 lorem ipsum dolor sit amets</h5>
                     <p>3 kusy</p>
@@ -149,7 +145,7 @@
                       <div class="cart-dropdown-item-price-main">899 Kč</div>
                     </div>
                   </div></a><a class="cart-dropdown-item" href="#">
-                  <div class="cart-dropdown-item-img"><img src="http://via.placeholder.com/60x60" data-src="http://via.placeholder.com/60x60" alt="#" title="#"></div>
+                  <div class="cart-dropdown-item-img"><img class="lazy" src="http://via.placeholder.com/60x60" data-src="http://via.placeholder.com/60x60" alt="#" title="#"></div>
                   <div class="cart-dropdown-item-text">
                     <h5>Sennheiser IE 60 lorem ipsum dolor sit amet</h5>
                     <p>3 kusy</p>
@@ -158,7 +154,7 @@
                       <div class="cart-dropdown-item-price-main">899 Kč</div>
                     </div>
                   </div></a><a class="cart-dropdown-item" href="#">
-                  <div class="cart-dropdown-item-img"><img src="http://via.placeholder.com/60x60" data-src="http://via.placeholder.com/60x60" alt="#" title="#"></div>
+                  <div class="cart-dropdown-item-img"><img class="lazy" src="http://via.placeholder.com/60x60" data-src="http://via.placeholder.com/60x60" alt="#" title="#"></div>
                   <div class="cart-dropdown-item-text">
                     <h5>Sennheiser IE 60 lorem ipsum dolor sit amet</h5>
                     <p>3 kusy</p>
@@ -186,7 +182,7 @@
             			h3 Váš košík je prázdný
             			p Před nákupem prosím do svého košíku vložte produkt
             		.cart-dropdown-checkout-btn
-            			a.btn.btn-grey.btn-ghost-grey(href="#") <span class="fa fa-heart-o"></span> Oblíbené
+            			a.btn.btn-grey.btn-ghost-grey(href="#") Kontakty
             			a.btn(href="#") Akční nabídka <span class="arrow-icon white"></span>											
             
             -->
@@ -449,40 +445,97 @@
         <div class="hero__swiper">
           <div class="hero__swiper-wrap">
             <div class="swiper-wrapper">
-              <div class="swiper-slide"><img class="swiper-lazy" src="http://via.placeholder.com/1220x480">
-                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+              <div class="swiper-slide hero__swiper-slide">
+                <div class="hero__content">
+                  <div class="hero__title">1 CA Aeromax 6 + Yamaha A-S301</div>
+                  <div class="hero__text">Aeromax6+Yas301</div>
+                  <div class="hero__price-old">44 980 Kč</div>
+                  <div class="hero__price">31 780 Kč</div>
+                  <div class="hero__btn"><a class="btn" href="#">Zobrazit nabídku <span class="btn__icon arrow-icon right white"></span></a></div>
+                </div>
+                <div class="hero__image">
+                  <div class="hero__sale-tag">-30%</div><img class="swiper-lazy hero__img" src="img/product-thumb-medium.jpg">
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                </div>
               </div>
-              <div class="swiper-slide"><img class="swiper-lazy" data-src="http://via.placeholder.com/1220x480">
-                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+              <div class="swiper-slide hero__swiper-slide">
+                <div class="hero__content">
+                  <div class="hero__title">2 CA Aeromax 6 + Yamaha A-S301</div>
+                  <div class="hero__text">Aeromax6+Yas301</div>
+                  <div class="hero__price-old">44 980 Kč</div>
+                  <div class="hero__price">31 780 Kč</div>
+                  <div class="hero__btn"><a class="btn" href="#">Zobrazit nabídku <span class="btn__icon arrow-icon right white"></span></a></div>
+                </div>
+                <div class="hero__image">
+                  <div class="hero__sale-tag">-30%</div><img class="swiper-lazy hero__img" src="http://via.placeholder.com/360x360">
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                </div>
               </div>
-              <div class="swiper-slide"><img class="swiper-lazy" data-src="http://via.placeholder.com/1220x480">
-                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+              <div class="swiper-slide hero__swiper-slide">
+                <div class="hero__content">
+                  <div class="hero__title">3 CA Aeromax 6 + Yamaha A-S301</div>
+                  <div class="hero__text">Aeromax6+Yas301</div>
+                  <div class="hero__price-old">44 980 Kč</div>
+                  <div class="hero__price">31 780 Kč</div>
+                  <div class="hero__btn"><a class="btn" href="#">Zobrazit nabídku <span class="btn__icon arrow-icon right white"></span></a></div>
+                </div>
+                <div class="hero__image">
+                  <div class="hero__sale-tag">-30%</div><img class="swiper-lazy hero__img" src="http://via.placeholder.com/360x360">
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                </div>
+              </div>
+              <div class="swiper-slide hero__swiper-slide">
+                <div class="hero__content">
+                  <div class="hero__title">4 CA Aeromax 6 + Yamaha A-S301</div>
+                  <div class="hero__text">Aeromax6+Yas301</div>
+                  <div class="hero__price-old">44 980 Kč</div>
+                  <div class="hero__price">31 780 Kč</div>
+                  <div class="hero__btn"><a class="btn" href="#">Zobrazit nabídku <span class="btn__icon arrow-icon right white"></span></a></div>
+                </div>
+                <div class="hero__image">
+                  <div class="hero__sale-tag">-30%</div><img class="swiper-lazy hero__img" src="http://via.placeholder.com/360x360">
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                </div>
               </div>
             </div>
             <div class="swiper-pagination swiper-pagination-white swiper-pagination--hero"></div>
           </div>
           <div class="swiper-button-prev swiper-button-prev--hero"></div>
-          <div class="swiper-button-next swiper-button-next--hero"></div>
+          <div class="swiper-button-next swiper-button-next--hero"> </div>
+          <div class="hero__swiper-tabs">
+            <div class="hero__tab-single active" id="slide1">
+              <p class="hero__tab-single-text">CA Aeromax 6 + Yamaha A-S301 an lorem ipsum dolor</p>
+            </div>
+            <div class="hero__tab-single" id="slide2">
+              <p class="hero__tab-single-text">CA Aeromax 6 + Yamaha A-S301 an lorem ipsum dolor</p>
+            </div>
+            <div class="hero__tab-single" id="slide3">
+              <p class="hero__tab-single-text">CA Aeromax 6 + Yamaha A-S301 an lorem ipsum dolor</p>
+            </div>
+            <div class="hero__tab-single" id="slide4">
+              <p class="hero__tab-single-text">CA Aeromax 6 + Yamaha A-S301 an lorem ipsum dolor</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
     <section class="benefits">
       <div class="container benefits__container">
         <div class="benefits__single">
-          <div class="benefits__img-wrap"><span class="fas fa-truck benefits__img"></span></div>
+          <div class="benefits__img-wrap"><img class="benefits__img" src="images/benefits-delivery.svg"></div>
           <p class="benefits__text">Doprava zdarma nad 5000 Kč</p>
         </div>
         <div class="benefits__single">
-          <div class="benefits__img-wrap"><span class="fas fa-dropbox benefits__img"></span></div>
-          <p class="benefits__text">Doprava zdarma nad 5000 Kč</p>
+          <div class="benefits__img-wrap"><img class="benefits__img" src="images/benefits-stock.svg"></div>
+          <p class="benefits__text">5727 produktů skladem</p>
         </div>
         <div class="benefits__single">
-          <div class="benefits__img-wrap"><span class="fas fa-gift benefits__img"></span></div>
-          <p class="benefits__text">Doprava zdarma nad 5000 Kč</p>
+          <div class="benefits__img-wrap"><img class="benefits__img" src="images/benefits-gift.svg"></div>
+          <p class="benefits__text">Dárek k objednávce nad 6000 Kč</p>
         </div>
         <div class="benefits__single">
-          <div class="benefits__img-wrap"><span class="fas fa-map-pin benefits__img"></span></div>
-          <p class="benefits__text">Doprava zdarma nad 5000 Kč</p>
+          <div class="benefits__img-wrap"><img class="benefits__img" src="images/benefits-marker.svg"></div>
+          <p class="benefits__text">1400 výdejních míst po celé ČR</p>
         </div>
       </div>
     </section>
@@ -490,19 +543,25 @@
       <div class="container">
         <h2 class="index-categories__title">Vybrané kategorie</h2>
         <div class="row">
-          <div class="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4 index-categories__single-wrap">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 index-categories__single-wrap">
             <div class="index-categories__single"><img class="lazy index-categories__img" src="http://via.placeholder.com/280x280" data-src="img/product-thumb-medium.jpg" alt="#" title="#">
               <h3 class="index-categories__single-title">Mobily, tablety</h3>
               <div class="index-categories__wrap"><a class="index-categories__link" href="#"><span class="caret-icon right index-categories__caret"></span> Lorem ipsumm</a><a class="index-categories__link" href="#"><span class="caret-icon right index-categories__caret"></span> Sed ut perspiciatis</a><a class="index-categories__link" href="#"><span class="caret-icon right index-categories__caret"></span> Unde omnis</a><a class="index-categories__link" href="#"><span class="caret-icon right index-categories__caret"></span> Iste natus error</a><a class="index-categories__link" href="#"><span class="caret-icon right index-categories__caret"></span> Consectetur adipiscing elit</a></div>
             </div>
           </div>
-          <div class="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4 index-categories__single-wrap">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 index-categories__single-wrap">
             <div class="index-categories__single"><img class="lazy index-categories__img" src="http://via.placeholder.com/280x280" data-src="img/product-thumb-medium.jpg" alt="#" title="#">
               <h3 class="index-categories__single-title">Mobily, tablety</h3>
               <div class="index-categories__wrap"><a class="index-categories__link" href="#"><span class="caret-icon right index-categories__caret"></span> Lorem ipsumm</a><a class="index-categories__link" href="#"><span class="caret-icon right index-categories__caret"></span> Sed ut perspiciatis</a><a class="index-categories__link" href="#"><span class="caret-icon right index-categories__caret"></span> Unde omnis</a><a class="index-categories__link" href="#"><span class="caret-icon right index-categories__caret"></span> Iste natus error</a><a class="index-categories__link" href="#"><span class="caret-icon right index-categories__caret"></span> Consectetur adipiscing elit  </a></div>
             </div>
           </div>
-          <div class="col-6 col-sm-4 col-md-4 col-lg-4 col-xl-4 index-categories__single-wrap">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 index-categories__single-wrap">
+            <div class="index-categories__single"><img class="lazy index-categories__img" src="http://via.placeholder.com/280x280" data-src="img/product-thumb-medium.jpg" alt="#" title="#">
+              <h3 class="index-categories__single-title">Mobily, tablety</h3>
+              <div class="index-categories__wrap"><a class="index-categories__link" href="#"><span class="caret-icon right index-categories__caret"></span> Lorem ipsumm</a><a class="index-categories__link" href="#"><span class="caret-icon right index-categories__caret"></span> Sed ut perspiciatis</a><a class="index-categories__link" href="#"><span class="caret-icon right index-categories__caret"></span> Unde omnis</a><a class="index-categories__link" href="#"><span class="caret-icon right index-categories__caret"></span> Iste natus error</a><a class="index-categories__link" href="#"><span class="caret-icon right index-categories__caret"></span> Consectetur adipiscing elit</a></div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 index-categories__single-wrap">
             <div class="index-categories__single"><img class="lazy index-categories__img" src="http://via.placeholder.com/280x280" data-src="img/product-thumb-medium.jpg" alt="#" title="#">
               <h3 class="index-categories__single-title">Mobily, tablety</h3>
               <div class="index-categories__wrap"><a class="index-categories__link" href="#"><span class="caret-icon right index-categories__caret"></span> Lorem ipsumm</a><a class="index-categories__link" href="#"><span class="caret-icon right index-categories__caret"></span> Sed ut perspiciatis</a><a class="index-categories__link" href="#"><span class="caret-icon right index-categories__caret"></span> Unde omnis</a><a class="index-categories__link" href="#"><span class="caret-icon right index-categories__caret"></span> Iste natus error</a><a class="index-categories__link" href="#"><span class="caret-icon right index-categories__caret"></span> Consectetur adipiscing elit</a></div>
@@ -910,7 +969,7 @@
     <section class="index-cta">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+          <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 index-cta__column">
             <div class="index-cta__single post__image-container"><img class="lazy post__featured-image" src="img/lazy/lazy-index-cta-poradna.jpg" data-src="img/index-cta-poradna.jpg" alt="#" title="#">
               <div class="index-cta__textfield">
                 <h4 class="index-cta__subtitle">Potřebujete poradit s výběrem nového zařízení nebo máte jiné dotazy?</h4>
@@ -918,7 +977,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+          <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 index-cta__column">
             <div class="index-cta__single index-cta__single--small post__image-container"><img class="lazy post__featured-image" src="img/lazy/lazy-index-cta-prodejna.jpg" data-src="img/index-cta-prodejna.jpg" alt="#" title="#">
               <div class="index-cta__textfield">
                 <h3 class="index-cta__title">Kamenná prodejna</h3>
@@ -1071,5 +1130,42 @@
         </div>
       </div>
     </div>
+    <script>
+      var carousel_main = new Swiper('.hero__swiper-wrap', {
+      lazy: true,
+      spaceBetween: 0,
+      grabCursor: true,
+      zoom: false,
+      loop: true,
+      pagination: {
+          el: '.swiper-pagination--hero',
+          clickable: true,
+      },
+      navigation: {
+          nextEl: '.swiper-button-next--hero',
+          prevEl: '.swiper-button-prev--hero',
+      },
+      });
+      
+      $('#slide1').click(carousel_main,function(){
+          carousel_main.slideTo(1);
+      })
+      $('#slide2').click(carousel_main,function(){
+          carousel_main.slideTo(2);
+      })
+      $('#slide3').click(carousel_main,function(){
+          carousel_main.slideTo(3);
+      })
+      $('#slide4').click(carousel_main,function(){
+          carousel_main.slideTo(4);
+      })
+      
+      $(".hero__tab-single").click(function() {
+          if ($(".hero__tab-single").removeClass("active")) {
+              $(this).removeClass("active");
+          }
+          $(this).addClass("active");
+      });
+    </script>
   </body>
 </html>

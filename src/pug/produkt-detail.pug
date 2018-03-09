@@ -90,10 +90,54 @@ html(lang="en")
                                                             img.swiper-lazy(data-src="http://via.placeholder.com/800x800" itemprop="thumbnail" alt="Image description" data-index="3")
                                                         figcaption(itemprop="caption description") Popis obrázku 3
                                                     .swiper-lazy-preloader.swiper-lazy-preloader-white
+                                            .swiper-slide
+                                                .swiper-zoom-container
+                                                    figure.find-them-all(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                                        a(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="1920x1920")
+                                                            img.swiper-lazy(data-src=URLbase+"img/product-thumb-medium.jpg" itemprop="thumbnail" alt="Image description" data-index="4")
+                                                        figcaption(itemprop="caption description") Popis obrázku 1
+                                                    .swiper-lazy-preloader.swiper-lazy-preloader-white
+                                            .swiper-slide
+                                                .swiper-zoom-container
+                                                    figure.find-them-all(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                                        a(href="http://via.placeholder.com/1920x1920" itemprop="contentUrl" data-size="1920x1920")
+                                                            img.swiper-lazy(data-src="http://via.placeholder.com/800x800" itemprop="thumbnail" alt="Image description" data-index="5")
+                                                        figcaption(itemprop="caption description") Popis obrázku 2
+                                                    .swiper-lazy-preloader.swiper-lazy-preloader-white
+                                            .swiper-slide
+                                                .swiper-zoom-container
+                                                    figure.find-them-all(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                                        a(href="http://via.placeholder.com/1920x1920" itemprop="contentUrl" data-size="1920x1920")
+                                                            img.swiper-lazy(data-src="http://via.placeholder.com/800x800" itemprop="thumbnail" alt="Image description" data-index="6")
+                                                        figcaption(itemprop="caption description") Popis obrázku 3
+                                                    .swiper-lazy-preloader.swiper-lazy-preloader-white
 
                                         .swiper-pagination.swiper-pagination-white.swiper-pagination--product
                            
 
+                                    .swiper-responsive-thumbs
+                                        .swiper-container-product-thumbs                                        
+                                            .swiper-wrapper
+                                                .swiper-slide
+                                                    .swiper-slide__single
+                                                        img.lazy(src="http://via.placeholder.com/200x200" data-src=URLbase+"img/product-thumb-small.jpg")
+                                                .swiper-slide
+                                                    .swiper-slide__single
+                                                        img.lazy(src="http://via.placeholder.com/200x200" data-src=URLbase+"img/product-thumb-small.jpg")
+                                                .swiper-slide
+                                                    .swiper-slide__single
+                                                        img.lazy(src="http://via.placeholder.com/200x200" data-src=URLbase+"img/product-thumb-small.jpg")
+                                                .swiper-slide
+                                                    .swiper-slide__single
+                                                        img.lazy(src="http://via.placeholder.com/200x200" data-src=URLbase+"img/product-thumb-small.jpg")
+                                                .swiper-slide
+                                                    .swiper-slide__single
+                                                        img.lazy(src="http://via.placeholder.com/200x200" data-src=URLbase+"img/product-thumb-small.jpg")
+                                                .swiper-slide
+                                                    .swiper-slide__single
+                                                        img.lazy(src="http://via.placeholder.com/200x200" data-src=URLbase+"img/product-thumb-small.jpg")
+
+                                .product-detail-gallery2(itemscope itemtype="http://schema.org/ImageGallery")
                                     .container-product-thumbs
                                         .container-product-thumbs-single
                                             figure.find-them-all(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
@@ -135,25 +179,6 @@ html(lang="en")
                                                         a(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="1920x1920")
                                                             img(src=URLbase+"img/product-thumb-small.jpg" itemprop="thumbnail" alt="Image description" data-index="6")
                                                         figcaption(itemprop="caption description") Popis obrázku 1
-
-
-                                    .swiper-responsive-thumbs
-                                        .swiper-container-product-thumbs                                        
-                                            .swiper-wrapper
-                                                .swiper-slide
-                                                    img.lazy(src="http://via.placeholder.com/200x200" data-src=URLbase+"img/product-thumb-small.jpg")
-                                                .swiper-slide
-                                                    img.lazy(src="http://via.placeholder.com/200x200" data-src="http://via.placeholder.com/800x800")
-                                                .swiper-slide
-                                                    img.lazy(src="http://via.placeholder.com/200x200" data-src="http://via.placeholder.com/800x800")
-                                                .swiper-slide
-                                                    img.lazy(src="http://via.placeholder.com/200x200" data-src="http://via.placeholder.com/800x800")
-                                                .swiper-slide
-                                                    img.lazy(src="http://via.placeholder.com/200x200" data-src="http://via.placeholder.com/800x800")
-                                                .swiper-slide
-                                                    img.lazy(src="http://via.placeholder.com/200x200" data-src="http://via.placeholder.com/800x800")
-                                                .swiper-slide
-                                                    img.lazy(src="http://via.placeholder.com/200x200" data-src="http://via.placeholder.com/800x800")
 
 
                         .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
@@ -298,10 +323,10 @@ html(lang="en")
 
                 .product-detail-responsive
                     .product-detail-responsive-name
-                        p Sennheiser IE 60 lorem ipsum dolor sit amet
+                        p #{ProductName}
                         h3 #[span 16 989] Kč
                     .product-detail-responsive-btn
-                        a.btn(href="#") #[span.cart-icon] Do košíku
+                        a.btn(href="#") Do košíku
 
 
 
@@ -317,7 +342,7 @@ html(lang="en")
               lazy: true,
               spaceBetween: 0,
               grabCursor: true,
-              zoom: true,
+              zoom: false,
               loop: false,
               pagination: {
                 el: '.swiper-pagination--product',
@@ -331,7 +356,7 @@ html(lang="en")
             var galleryThumbs = new Swiper('.swiper-container-product-thumbs', {
               spaceBetween: 10,
               centeredSlides: true,
-              slidesPerView: 'auto',
+              slidesPerView: '4',
               touchRatio: 0.2,
               slideToClickedSlide: true,
             });
@@ -340,7 +365,9 @@ html(lang="en")
 
                 
         script.
-            initPhotoSwipeFromDOM('.product-detail-gallery figure');
+            initPhotoSwipeFromDOM('.product-detail-gallery');
+            initPhotoSwipeFromDOM2('.product-detail-gallery2');
+         
              
             $( ".pswp__button--arrow--left" ).click(function() {
                 $( ".product-detail-images .swiper-button-prev" ).click();

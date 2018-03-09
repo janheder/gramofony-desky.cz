@@ -107,6 +107,10 @@
     font-weight: 500;
     font-size: 1.5rem;
     line-height: 1.5;
+    border-radius: $border-radius-primary;
+}
+.filter-main__collapse-toggle[aria-expanded="true"] .filter-main__icon::before{
+    display: none;
 }
 .filter-main__collapse{
     width: 100%;

@@ -176,6 +176,8 @@ html(lang="en")
                             h3 Přihlásit se k existujícímu účtu
                             button.btn.btn-ghost.login-form-toggler(type="button" data-toggle="collapse" data-target="#login-collapse" aria-expanded="false" aria-controls="login-collapse") Přihlásit se k existujícímu účtu
                             .collapse(id="login-collapse")
+                                .alert.alert-danger Zadali jste špatné údaje
+                                .alert.alert-success Úspěch
                                 .form-group
                                     label(for="login_form-email") Emailová adresa
                                     input.form-control(type="email" name="login_form_email" id="login_form_email" required autocomplete="email")
@@ -186,6 +188,8 @@ html(lang="en")
 
                                 .form-group
                                     button.form-control.btn(type="submit" name="login_form_submit" id="login_form_submit") Přihlásit se
+                                    
+                                a.form-link__forgotten-pass(href="#") Zapomenuté heslo?
 
 
         include _news-section.pug

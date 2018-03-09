@@ -28,3 +28,10 @@
         }
     }
 }
+@media screen and (max-width:460px){
+    .nav-tabs{ 
+        & .nav-item{
+            @include flex-grow(1);
+        }
+    }
+}

@@ -203,3 +203,46 @@ article{
         display: block;
     }
 }
+
+.form-link__forgotten-pass{
+    display: block;
+    text-align: center;
+}
+.forgotten-password{
+    background: $bg-light;
+    padding: 3rem;
+    text-align: left;
+    margin: 0 auto;
+}
+.forgotten-password_text{
+    margin-bottom: 3rem;
+}
+
+
+.page-message{
+    display: block;
+    padding: 3rem;
+    text-align: left;
+    margin: 0 auto;
+    background: $bg-light;
+}
+.page-message__title{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    font-family: $font-family-secondary;
+    font-weight: 700;
+}
+.page-message__buttons{
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+.page-message__btn{
+margin: 10px ;
+}
+.page-message__login-form{
+    max-width: 100%;
+    width: 620px;
+    margin: 0 auto;
+}

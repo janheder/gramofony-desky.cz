@@ -13,49 +13,125 @@
     @include justify-content(center);
     background: $bg-darker;
 }
-.hero__title{
-    font-weight: 400;
-    color: $white;
-    font-size: 5.8rem;
-    margin:0;
-    max-width: 90%;
-}
-.hero__text{
-    font-weight: 400;
-    color: $white;
-    font-size: 2rem;
-    margin: 4rem 0 6rem 0;
-    max-width: 90%;
-}
-.hero__price{
-
-}
-.hero__price-old{
-
-}
-.hero__btn{
-
-}
-.hero__img{
-
-}
-.hero__sale-tag{
-
-}
-.hero__swiper{
-    position: relative;
-}
 .hero__swiper-wrap{
     width: 100%;
     height:100%;
     position:relative;
     overflow: hidden;
-
-    & .swiper-slide{
-        height: auto;
-    }
+}
+.hero__swiper-slide{
+    height: auto;
+    @include flexbox();
+    @include flex-direction(row);
+}
+.hero__content{
+    background: $bg-white;
+    @include flexbox();
+    @include flex-grow(1);
+    @include flex-basis(0);
+    @include flex-direction(column);
+    @include justify-content(center);
+    padding: 5rem;
+    padding-right: 0;
+}
+.hero__title{
+    font-weight: 700;
+    font-family: $font-family-secondary;
+    color: $text-primary;
+    font-size: 4rem;
+    margin: 0;
+    line-height: 1.2;
+}
+.hero__text{
+    font-weight: 400;
+    color: $text-grey;
+    font-size: 1.8rem;
+    margin: 1rem 0 3rem 0;
+    max-width: 90%;
+}
+.hero__price-old{
+    font-size: 1.6rem;
+    text-decoration: line-through;
+    color: $text-primary;
+    font-weight: 700;
+}
+.hero__price{
+    font-size: 3rem;
+    font-weight: 700;
+    color: $text-red;
+    margin-bottom: 2rem;
+}
+.hero__image{
+    background: $bg-white;
+    @include flexbox();
+    @include flex-grow(1);
+    @include flex-basis(0);
+    @include justify-content(center);
+    @include align-items(center);
+    padding: 3rem 5rem 3rem 0rem;
+    position: relative;
+}
+.hero__img{
+    max-width: 360px;
+    max-height: 360px;
+}
+.hero__sale-tag{
+    color: $text-white;
+    border-radius: 50%;
+    background: $bg-red;
+    height: 6.2rem;
+    width: 6.2rem;
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    font-weight: 700;
+    position: absolute;
+    top: 6rem;
+    left: 6rem;
+}
+.hero__swiper{
+    position: relative;
+}
+.swiper-pagination--hero{
+    display: none;
 }
 
+.hero__swiper-tabs{
+    background: $bg-white;
+    overflow: hidden;
+    @include flexbox();
+    @include flex-direction(row);
+}
+.hero__tab-single{
+    border-right: 1px solid $border-primary;
+    border-top: 1px solid $border-primary;
+    width: 25%;
+    padding: 2rem;
+    cursor: pointer;
+    position: relative;
+}
+.hero__tab-single-text{
+    color: $text-primary;
+    margin: 0;
+    font-size: 1.6rem;
+    line-height: 2rem;
+}
+.hero__tab-single.active::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: $brand-primary;  
+}
+.hero__tab-single.active .hero__tab-single-text{
+    color: $brand-primary;
+
+}
+.swiper-button-next--hero, .swiper-button-prev--hero{
+    display: none;
+}
 @media screen and (max-width:991px){
     .hero {
         padding: 0;
@@ -64,7 +140,58 @@
         padding-left: 0;
         padding-right: 0;
     }
-    .swiper-button-next--hero, .swiper-button-prev--hero{
+    .swiper-pagination--hero{
+        display: block;
+    }
+    .swiper-pagination--hero .swiper-pagination-bullet-active{
+        background: $brand-primary;
+    }
+}
+@media screen and (max-width:768px){
+    .hero__swiper-tabs{
+        display: none;
+    }
+}
+@media screen and (max-width:600px){
+    .hero__content, .hero__image{
+        padding: 20px;
+        padding-bottom: 40px;
+    }
+    .hero__contant{
+        padding-right: 0px;   
+    }
+    .hero__title{
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
+    .hero__text{
+        display: none;
+    }
+    .hero__sale-tag{
+        top: 30px;
+        left: 30px;
+    }
+}
+@media screen and (max-width:420px){
+    .hero__content, .hero__image{
+        padding: 20px;
+        padding-bottom: 40px;
+    }
+    .hero__contant{
+        padding-right: 0px;   
+    }
+    .hero__title{
+        font-size: 2.4rem;
+        margin-bottom: 10px;
+    }
+    .hero__price{
+        font-size: 2.4rem;
+    }
+    .hero__sale-tag{
+        top: 30px;
+        left: 30px;
+    }
+    .hero__btn .btn__icon{
         display: none;
     }
 }
@@ -108,13 +235,14 @@
 }
 .benefits__img{
     color: $text-white;
-    font-size: 3rem;
+    height: 34px;
 }
 .benefits__text{
     margin: 0;
     padding-left: 20px;
     font-family: $font-family-secondary;
     font-size: 1.8rem;
+    line-height: 2.4rem;
 }
 @media screen and (max-width:991px){
     .benefits__container{
@@ -125,9 +253,10 @@
         @include flex-grow(1);
         @include flex-basis(auto);
         margin: 10px 0;
-    }
-    &:nth-child(2n+2){
-        border-right: none;  
+
+        &:nth-child(2n+2){
+            border-right: none;  
+        }
     }
 }
 @media screen and (max-width:500px){
@@ -174,8 +303,8 @@
 }
 .index-categories__img{
     position: absolute;
-    right: -35%;
-    bottom: -35%;
+    right: -50%;
+    bottom: -50%;
     z-index: -1;
 }
 .index-categories__single-title{
@@ -194,7 +323,11 @@
     color: $text-primary;
     font-size: 1.5rem;  
     display: block;
-    line-height: 3rem;
+    line-height: 1.5;
+    max-width: 50%;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 5px;
 }
 .index-categories__caret{
     height: 6px;
@@ -203,9 +336,25 @@
     margin-right: 5px;
     border-top: 2px solid $brand-primary;
     border-right: 2px solid $brand-primary;
+    margin-left: -20px;
+    position: absolute;
+    top: 10px;
 }
-@media screen and (max-width:768px){
 
+@media screen and (max-width:768px){
+    .index-categories__img{
+        display: block;
+        position: relative;
+        width: 300px;
+        max-width: 100%;
+        right: 0;
+        bottom: 0;
+    }
+}
+@media screen and (min-width:992px){
+    .index-categories__single-wrap:last-child{
+        display: none;
+    }
 }
 
 /* ========================================================================== */
@@ -250,6 +399,9 @@
     background: $bg-white;
     padding: 8rem 0;
 }
+.index-cta__column{
+    padding-bottom: 20px;
+}
 .index-cta__single{
     padding: 4rem 0;
     height: 100%;
@@ -261,7 +413,9 @@
     background: $black-transparent-50;
     padding: 3rem;
     width: 460px;
-    max-width: 100%;;
+    max-width: 100%;
+    border-top-right-radius: $border-radius-primary;
+    border-bottom-right-radius: $border-radius-primary;
 }
 .index-cta__subtitle, .index-cta__title{
     font-family: $font-family-secondary;
@@ -358,7 +512,7 @@
 
 section.news-bottom{
     padding: 8rem 0;
-    background: #fafafa;
+    background: $bg-light;
 
     & h2{
         text-align: center;

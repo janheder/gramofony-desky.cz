@@ -1,15 +1,15 @@
 header
-	nav.navbar.navbar-top
+	nav.navbar.navbar--top
 		.container
-			.navbar-top-left
-				p #[span #[span.fas.fa-phone]] +420 777 888 042
-				p #[span #[span.far.fa-clock]] Po-Pá: 8:00 - 16:00
-			.navbar-top-right
-				a(href="#") O nás
-				a(href="#") Poslechová místnost
-				a(href="#") Kamenná prodejna
-				a(href="#") Obchodní podmínky
-				a(href="#") Kontakty
+			.navbar--top__left
+				p.navbar--top__text #[span.navbar--top__icon #[span.fas.fa-phone]] +420 777 888 042
+				p.navbar--top__text #[span.navbar--top__icon #[span.far.fa-clock]] Po-Pá: 8:00 - 16:00
+			.navbar--top__right
+				a.navbar--top__link(href="#") O nás
+				a.navbar--top__link(href="#") Poslechová místnost
+				a.navbar--top__link(href="#") Kamenná prodejna
+				a.navbar--top__link(href="#") Obchodní podmínky
+				a.navbar--top__link(href="#") Kontakty
 
 	nav.navbar.navbar-expand-lg.navbar-main
 		.container
@@ -55,19 +55,16 @@ header
 							a.search-responsive-content-tag-single(href="#") Mobily, tablety
 							a.search-responsive-content-tag-single(href="#") PC, notebooky
 							a.search-responsive-content-tag-single(href="#") Komponenty
-			// Přihlášení uživatel
+			// Přihlášený uživatel
 				.user-wrap
 					.dropdown
 						.dropdown-toggle(id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
 							span.user-icon.white
 							.user-text
-								// p Přihlášen jako
 								p Petroslav Novakovič
 							span.caret-icon.white
-						.dropdown-menu.dropdown-menu-right(aria-labelledby="userDropdown")
+						.dropdown-menu.dropdown-menu-left(aria-labelledby="userDropdown")
 							a.dropdown-item(href="#") Detail účtu
-							a.dropdown-item(href="#") Oblíbené
-							a.dropdown-item(href="#") Porovnání zboží
 							a.dropdown-item(href="#") Historie objednávek
 							a.dropdown-item(href="#") Odhlásit
 			.user-wrap
@@ -81,7 +78,6 @@ header
 					span.cart-icon
 						span.cart-number 3
 					.cart-text
-						// p Nákupní košík
 						p 5 899Kč
 					span.caret-icon.white
 
@@ -89,7 +85,7 @@ header
 					.cart-dropdown-inner
 						a.cart-dropdown-item(href="#")
 							.cart-dropdown-item-img
-								img(src="http://via.placeholder.com/60x60" data-src="http://via.placeholder.com/60x60" alt="#" title="#")
+								img.lazy(src="http://via.placeholder.com/60x60" data-src="http://via.placeholder.com/60x60" alt="#" title="#")
 							.cart-dropdown-item-text
 								h5 Sennheiser IE 60 lorem ipsum dolor sit amets
 								p 3 kusy
@@ -98,7 +94,7 @@ header
 									.cart-dropdown-item-price-main 899 Kč
 						a.cart-dropdown-item(href="#")
 							.cart-dropdown-item-img
-								img(src="http://via.placeholder.com/60x60" data-src="http://via.placeholder.com/60x60" alt="#" title="#")
+								img.lazy(src="http://via.placeholder.com/60x60" data-src="http://via.placeholder.com/60x60" alt="#" title="#")
 							.cart-dropdown-item-text
 								h5 Sennheiser IE 60 lorem ipsum dolor sit amet
 								p 3 kusy
@@ -107,7 +103,7 @@ header
 									.cart-dropdown-item-price-main 899 Kč
 						a.cart-dropdown-item(href="#")
 							.cart-dropdown-item-img
-								img(src="http://via.placeholder.com/60x60" data-src="http://via.placeholder.com/60x60" alt="#" title="#")
+								img.lazy(src="http://via.placeholder.com/60x60" data-src="http://via.placeholder.com/60x60" alt="#" title="#")
 							.cart-dropdown-item-text
 								h5 Sennheiser IE 60 lorem ipsum dolor sit amet
 								p 3 kusy
@@ -125,7 +121,7 @@ header
 							a.btn.btn-grey.btn-ghost-grey(href="#") #[span.cross-icon] Vyprázdnit
 							a.btn(href="#") Objednat zboží
 								span.arrow-icon.white
-
+								
 				// Prázdný košík
 					.cart-dropdown
 						.cart-dropdown-inner
@@ -133,7 +129,7 @@ header
 								h3 Váš košík je prázdný
 								p Před nákupem prosím do svého košíku vložte produkt
 							.cart-dropdown-checkout-btn
-								a.btn.btn-grey.btn-ghost-grey(href="#") #[span.fa.fa-heart-o] Oblíbené
+								a.btn.btn-grey.btn-ghost-grey(href="#") Kontakty
 								a.btn(href="#") Akční nabídka #[span.arrow-icon.white]											
 
 	nav.navbar.navbar-expand-lg.navbar-menu

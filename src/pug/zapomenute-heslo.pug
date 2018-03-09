@@ -35,16 +35,17 @@ html(lang="en")
         include _breadcrumb.pug
         main
             .container
-                .row
-                    .forgotten-password
-                        form(method="post" action="" class="register-form" name="password_form")
-                            p.forgotten-password_text Pokud jste zapomněli své heslo, pošleme Vám nové na email, který jste uvedli při registraci.
-                            .form-group
-                                label(for="password_form-email") Emailová adresa
-                                input.form-control(type="email" name="password_form_email" id="password_form_email" required autocomplete="email")
+                .print-area
+                    article.page
+                        .forgotten-password
+                            form(method="post" action="" class="register-form" name="password_form")
+                                p.forgotten-password_text Pokud jste zapomněli své heslo, pošleme Vám nové na email, který jste uvedli při registraci.
+                                .form-group
+                                    label(for="password_form-email") Emailová adresa
+                                    input.form-control(type="email" name="password_form_email" id="password_form_email" required autocomplete="email")
 
-                            .form-group
-                                button.form-control.btn(type="submit" name="password_form_submit" id="password_form_submit") Poslat nové heslo
+                                .form-group
+                                    button.form-control.btn(type="submit" name="password_form_submit" id="password_form_submit") Poslat nové heslo
 
 
         include _news-section.pug

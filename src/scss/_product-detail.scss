@@ -90,26 +90,72 @@
             & .swiper-zoom-container{
                 padding-bottom: 100%;
                 height: 0;
+                position: relative;
 
-                & .swiper-lazy-loaded{
-                    @include transition(0.2s ease all);
+                & figure{
                     position: absolute;
-                    top: 0;
+                    bottom: 0;
+                    margin: 0;
+                    height: 100%;
+                    width: 100%;
                     left: 0;
+                }
+                & a{
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    left: 0;
+                }
+                & img{
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    right: 0;
+                    &::before{
+                        height: 100%;
+                        width: 100%;
+                        position: absolute;
+                        right: 0;   
+                    }
+                }   
+                & .swiper-lazy-loaded{
+                    @include transition(0s ease all);
+                    position: absolute;
+                  
+                    @include center(both);
+           
                     cursor: zoom-in;
                 }
             }
         }
         & .swiper-container-product-thumbs {
-            height: 20%;
+            height: 100%;
             box-sizing: border-box;
-            padding: 10px 0;
+            padding: 0;
+            margin: 10px 0;
             overflow: hidden;
 
+            .swiper-slide__single{
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                @include flexbox();
+                @include flex-direction(row);
+                @include align-items(center);
+                @include justify-content(center);
+            }
+            .swiper-slide__single img{
+                max-width: 100%;
+                max-height: 100%;
+            }
             & .swiper-slide{
-                width: 20%;
+                position: relative;
+                
+                width: 120px;
                 min-width: 120px;
-                height: 120px;
+                min-height: 120px;
                 cursor: pointer;
                 opacity: 0.5;
                 background-size: 100%;
@@ -429,7 +475,9 @@
         display: none;
     }
 }
-
+.swiper-pagination--product .swiper-pagination-bullet-active{
+    background: $brand-primary;
+}
 .container-product-thumbs{
     @include flexbox();
     @include flex-direction(row);
@@ -500,6 +548,11 @@
     font-family: $font-family-alt;
     font-weight: 600;
 }
+@media screen and (max-width: 768px){
+    .product-similar{
+        margin: 4rem 0;
+    }  
+}
 
 .nav-tabs{
     border: 0;
@@ -517,6 +570,15 @@
                 }
             }
         }
+    }
+}
+@media screen and (max-width: 991px){
+    .swiper-responsive-thumbs{
+        display: block;
+        margin-bottom: 3rem;
+    }  
+    .container-product-thumbs{
+        display: none;
     }
 }
 @media screen and (max-width: 768px){

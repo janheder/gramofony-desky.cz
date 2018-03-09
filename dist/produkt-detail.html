@@ -79,13 +79,13 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-top">
+      <nav class="navbar navbar--top">
         <div class="container">
-          <div class="navbar-top-left">
-            <p><span><span class="fas fa-phone"></span></span> +420 777 888 042</p>
-            <p><span><span class="far fa-clock"></span></span> Po-Pá: 8:00 - 16:00</p>
+          <div class="navbar--top__left">
+            <p class="navbar--top__text"><span class="navbar--top__icon"><span class="fas fa-phone"></span></span> +420 777 888 042</p>
+            <p class="navbar--top__text"><span class="navbar--top__icon"><span class="far fa-clock"></span></span> Po-Pá: 8:00 - 16:00</p>
           </div>
-          <div class="navbar-top-right"><a href="#">O nás</a><a href="#">Poslechová místnost</a><a href="#">Kamenná prodejna</a><a href="#">Obchodní podmínky</a><a href="#">Kontakty</a></div>
+          <div class="navbar--top__right"><a class="navbar--top__link" href="#">O nás</a><a class="navbar--top__link" href="#">Poslechová místnost</a><a class="navbar--top__link" href="#">Kamenná prodejna</a><a class="navbar--top__link" href="#">Obchodní podmínky</a><a class="navbar--top__link" href="#">Kontakty</a></div>
         </div>
       </nav>
       <nav class="navbar navbar-expand-lg navbar-main">
@@ -120,19 +120,16 @@
               </div>
             </div>
           </div>
-          <!-- Přihlášení uživatel
+          <!-- Přihlášený uživatel
           .user-wrap
           	.dropdown
           		.dropdown-toggle(id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
           			span.user-icon.white
           			.user-text
-          				// p Přihlášen jako
           				p Petroslav Novakovič
           			span.caret-icon.white
-          		.dropdown-menu.dropdown-menu-right(aria-labelledby="userDropdown")
+          		.dropdown-menu.dropdown-menu-left(aria-labelledby="userDropdown")
           			a.dropdown-item(href="#") Detail účtu
-          			a.dropdown-item(href="#") Oblíbené
-          			a.dropdown-item(href="#") Porovnání zboží
           			a.dropdown-item(href="#") Historie objednávek
           			a.dropdown-item(href="#") Odhlásit
           -->
@@ -142,12 +139,11 @@
               </div></a></div>
           <div class="cart-wrap"><a href="#"><span class="cart-icon"><span class="cart-number">3</span></span>
               <div class="cart-text">
-                <!-- p Nákupní košík-->
                 <p>5 899Kč</p>
               </div><span class="caret-icon white"></span></a>
             <div class="cart-dropdown">
               <div class="cart-dropdown-inner"><a class="cart-dropdown-item" href="#">
-                  <div class="cart-dropdown-item-img"><img src="http://via.placeholder.com/60x60" data-src="http://via.placeholder.com/60x60" alt="#" title="#"></div>
+                  <div class="cart-dropdown-item-img"><img class="lazy" src="http://via.placeholder.com/60x60" data-src="http://via.placeholder.com/60x60" alt="#" title="#"></div>
                   <div class="cart-dropdown-item-text">
                     <h5>Sennheiser IE 60 lorem ipsum dolor sit amets</h5>
                     <p>3 kusy</p>
@@ -156,7 +152,7 @@
                       <div class="cart-dropdown-item-price-main">899 Kč</div>
                     </div>
                   </div></a><a class="cart-dropdown-item" href="#">
-                  <div class="cart-dropdown-item-img"><img src="http://via.placeholder.com/60x60" data-src="http://via.placeholder.com/60x60" alt="#" title="#"></div>
+                  <div class="cart-dropdown-item-img"><img class="lazy" src="http://via.placeholder.com/60x60" data-src="http://via.placeholder.com/60x60" alt="#" title="#"></div>
                   <div class="cart-dropdown-item-text">
                     <h5>Sennheiser IE 60 lorem ipsum dolor sit amet</h5>
                     <p>3 kusy</p>
@@ -165,7 +161,7 @@
                       <div class="cart-dropdown-item-price-main">899 Kč</div>
                     </div>
                   </div></a><a class="cart-dropdown-item" href="#">
-                  <div class="cart-dropdown-item-img"><img src="http://via.placeholder.com/60x60" data-src="http://via.placeholder.com/60x60" alt="#" title="#"></div>
+                  <div class="cart-dropdown-item-img"><img class="lazy" src="http://via.placeholder.com/60x60" data-src="http://via.placeholder.com/60x60" alt="#" title="#"></div>
                   <div class="cart-dropdown-item-text">
                     <h5>Sennheiser IE 60 lorem ipsum dolor sit amet</h5>
                     <p>3 kusy</p>
@@ -193,7 +189,7 @@
             			h3 Váš košík je prázdný
             			p Před nákupem prosím do svého košíku vložte produkt
             		.cart-dropdown-checkout-btn
-            			a.btn.btn-grey.btn-ghost-grey(href="#") <span class="fa fa-heart-o"></span> Oblíbené
+            			a.btn.btn-grey.btn-ghost-grey(href="#") Kontakty
             			a.btn(href="#") Akční nabídka <span class="arrow-icon white"></span>											
             
             -->
@@ -461,8 +457,8 @@
           <div class="modal-body">
             <div class="row cart-item-single">
               <div class="cart-item-single__col-1"> 
-                <div class="cart-item-single__thumb">
-                  <div class="cart-item-single__thumb-wrap"><img class="cart-item-single__img lazy" src="http://via.placeholder.com/200x200" data-src="img/product-thumb-small.jpg"></div>
+                <div class="cart-item-single__thumb-wrap">
+                  <div class="cart-item-single__thumb"><img class="cart-item-single__img lazy" src="http://via.placeholder.com/200x200" data-src="img/product-thumb-small.jpg"></div>
                 </div>
               </div>
               <div class="cart-item-single__col-2">  
@@ -564,9 +560,59 @@
                           <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </div>
                       </div>
+                      <div class="swiper-slide">
+                        <div class="swiper-zoom-container">
+                          <figure class="find-them-all" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"><a href="img/product-thumb-large.jpg" itemprop="contentUrl" data-size="1920x1920"><img class="swiper-lazy" data-src="img/product-thumb-medium.jpg" itemprop="thumbnail" alt="Image description" data-index="4"></a>
+                            <figcaption itemprop="caption description">Popis obrázku 1</figcaption>
+                          </figure>
+                          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="swiper-zoom-container">
+                          <figure class="find-them-all" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"><a href="http://via.placeholder.com/1920x1920" itemprop="contentUrl" data-size="1920x1920"><img class="swiper-lazy" data-src="http://via.placeholder.com/800x800" itemprop="thumbnail" alt="Image description" data-index="5"></a>
+                            <figcaption itemprop="caption description">Popis obrázku 2</figcaption>
+                          </figure>
+                          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="swiper-zoom-container">
+                          <figure class="find-them-all" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"><a href="http://via.placeholder.com/1920x1920" itemprop="contentUrl" data-size="1920x1920"><img class="swiper-lazy" data-src="http://via.placeholder.com/800x800" itemprop="thumbnail" alt="Image description" data-index="6"></a>
+                            <figcaption itemprop="caption description">Popis obrázku 3</figcaption>
+                          </figure>
+                          <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                        </div>
+                      </div>
                     </div>
                     <div class="swiper-pagination swiper-pagination-white swiper-pagination--product"></div>
                   </div>
+                  <div class="swiper-responsive-thumbs">
+                    <div class="swiper-container-product-thumbs">                                       
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="swiper-slide__single"><img class="lazy" src="http://via.placeholder.com/200x200" data-src="img/product-thumb-small.jpg"></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-slide__single"><img class="lazy" src="http://via.placeholder.com/200x200" data-src="img/product-thumb-small.jpg"></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-slide__single"><img class="lazy" src="http://via.placeholder.com/200x200" data-src="img/product-thumb-small.jpg"></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-slide__single"><img class="lazy" src="http://via.placeholder.com/200x200" data-src="img/product-thumb-small.jpg"></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-slide__single"><img class="lazy" src="http://via.placeholder.com/200x200" data-src="img/product-thumb-small.jpg"></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper-slide__single"><img class="lazy" src="http://via.placeholder.com/200x200" data-src="img/product-thumb-small.jpg"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-detail-gallery2" itemscope itemtype="http://schema.org/ImageGallery">
                   <div class="container-product-thumbs">
                     <div class="container-product-thumbs-single">
                       <figure class="find-them-all" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"><a href="img/product-thumb-large.jpg" itemprop="contentUrl" data-size="1920x1920"><img src="img/product-thumb-small.jpg" itemprop="thumbnail" alt="Image description" data-index="1"></a>
@@ -603,19 +649,6 @@
                             <figcaption itemprop="caption description">Popis obrázku 1</figcaption>
                           </figure>
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-responsive-thumbs">
-                    <div class="swiper-container-product-thumbs">                                       
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img class="lazy" src="http://via.placeholder.com/200x200" data-src="img/product-thumb-small.jpg"></div>
-                        <div class="swiper-slide"><img class="lazy" src="http://via.placeholder.com/200x200" data-src="http://via.placeholder.com/800x800"></div>
-                        <div class="swiper-slide"><img class="lazy" src="http://via.placeholder.com/200x200" data-src="http://via.placeholder.com/800x800"></div>
-                        <div class="swiper-slide"><img class="lazy" src="http://via.placeholder.com/200x200" data-src="http://via.placeholder.com/800x800"></div>
-                        <div class="swiper-slide"><img class="lazy" src="http://via.placeholder.com/200x200" data-src="http://via.placeholder.com/800x800"></div>
-                        <div class="swiper-slide"><img class="lazy" src="http://via.placeholder.com/200x200" data-src="http://via.placeholder.com/800x800"></div>
-                        <div class="swiper-slide"><img class="lazy" src="http://via.placeholder.com/200x200" data-src="http://via.placeholder.com/800x800"></div>
                       </div>
                     </div>
                   </div>
@@ -1505,10 +1538,10 @@
         </div>
         <div class="product-detail-responsive">
           <div class="product-detail-responsive-name">
-            <p>Sennheiser IE 60 lorem ipsum dolor sit amet</p>
+            <p>Onkyo TX-8270 + Focal Chorus 706</p>
             <h3><span>16 989</span> Kč</h3>
           </div>
-          <div class="product-detail-responsive-btn"><a class="btn" href="#"><span class="cart-icon"></span> Do košíku</a></div>
+          <div class="product-detail-responsive-btn"><a class="btn" href="#">Do košíku</a></div>
         </div>
       </div>
     </main>
@@ -1655,7 +1688,7 @@
         lazy: true,
         spaceBetween: 0,
         grabCursor: true,
-        zoom: true,
+        zoom: false,
         loop: false,
         pagination: {
           el: '.swiper-pagination--product',
@@ -1669,7 +1702,7 @@
       var galleryThumbs = new Swiper('.swiper-container-product-thumbs', {
         spaceBetween: 10,
         centeredSlides: true,
-        slidesPerView: 'auto',
+        slidesPerView: '4',
         touchRatio: 0.2,
         slideToClickedSlide: true,
       });
@@ -1679,7 +1712,9 @@
           
     </script>
     <script>
-      initPhotoSwipeFromDOM('.product-detail-gallery figure');
+      initPhotoSwipeFromDOM('.product-detail-gallery');
+      initPhotoSwipeFromDOM2('.product-detail-gallery2');
+      
        
       $( ".pswp__button--arrow--left" ).click(function() {
           $( ".product-detail-images .swiper-button-prev" ).click();
