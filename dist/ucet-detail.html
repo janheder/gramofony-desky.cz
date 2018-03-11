@@ -72,13 +72,13 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar--top">
+      <nav class="navbar navbar-top" id="anchor-navbar-top">
         <div class="container">
-          <div class="navbar--top__left">
-            <p class="navbar--top__text"><span class="navbar--top__icon"><span class="fas fa-phone"></span></span> +420 777 888 042</p>
-            <p class="navbar--top__text"><span class="navbar--top__icon"><span class="far fa-clock"></span></span> Po-Pá: 8:00 - 16:00</p>
+          <div class="navbar-top__left">
+            <p class="navbar-top__text"><span class="navbar-top__icon"><span class="fas fa-phone"></span></span> +420 777 888 042</p>
+            <p class="navbar-top__text"><span class="navbar-top__icon"><span class="far fa-clock"></span></span> Po-Pá: 8:00 - 16:00</p>
           </div>
-          <div class="navbar--top__right"><a class="navbar--top__link" href="#">O nás</a><a class="navbar--top__link" href="#">Poslechová místnost</a><a class="navbar--top__link" href="#">Kamenná prodejna</a><a class="navbar--top__link" href="#">Obchodní podmínky</a><a class="navbar--top__link" href="#">Kontakty</a></div>
+          <div class="navbar-top__right"><a class="navbar-top__link" href="#">O nás</a><a class="navbar-top__link" href="#">Poslechová místnost</a><a class="navbar-top__link" href="#">Kamenná prodejna</a><a class="navbar-top__link" href="#">Obchodní podmínky</a><a class="navbar-top__link" href="#">Kontakty</a></div>
         </div>
       </nav>
       <nav class="navbar navbar-expand-lg navbar-main">
@@ -138,7 +138,7 @@
               <div class="cart-dropdown-inner"><a class="cart-dropdown-item" href="#">
                   <div class="cart-dropdown-item-img"><img class="lazy" src="http://via.placeholder.com/60x60" data-src="http://via.placeholder.com/60x60" alt="#" title="#"></div>
                   <div class="cart-dropdown-item-text">
-                    <h5>Sennheiser IE 60 lorem ipsum dolor sit amets</h5>
+                    <h5>Onkyo TX-8270 + Focal Chorus 706</h5>
                     <p>3 kusy</p>
                     <div class="cart-dropdown-item-price">
                       <div class="cart-dropdown-item-price-old">1099 Kč</div>
@@ -147,7 +147,7 @@
                   </div></a><a class="cart-dropdown-item" href="#">
                   <div class="cart-dropdown-item-img"><img class="lazy" src="http://via.placeholder.com/60x60" data-src="http://via.placeholder.com/60x60" alt="#" title="#"></div>
                   <div class="cart-dropdown-item-text">
-                    <h5>Sennheiser IE 60 lorem ipsum dolor sit amet</h5>
+                    <h5>Onkyo TX-8270 + Focal Chorus 706</h5>
                     <p>3 kusy</p>
                     <div class="cart-dropdown-item-price">
                       <div class="cart-dropdown-item-price-old">1099 Kč</div>
@@ -156,7 +156,7 @@
                   </div></a><a class="cart-dropdown-item" href="#">
                   <div class="cart-dropdown-item-img"><img class="lazy" src="http://via.placeholder.com/60x60" data-src="http://via.placeholder.com/60x60" alt="#" title="#"></div>
                   <div class="cart-dropdown-item-text">
-                    <h5>Sennheiser IE 60 lorem ipsum dolor sit amet</h5>
+                    <h5>Onkyo TX-8270 + Focal Chorus 706</h5>
                     <p>3 kusy</p>
                     <div class="cart-dropdown-item-price">
                       <div class="cart-dropdown-item-price-old">1099 Kč</div>
@@ -190,236 +190,290 @@
         </div>
       </nav>
       <nav class="navbar navbar-expand-lg navbar-menu">
-        <div class="container">
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <div class="dropdown"><a class="dropdown-toggle nav-link" id="navDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Akční sety</a>
-                  <div class="dropdown-menu" aria-labelledby="navDropdown1">
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Vítr ve studiu</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Gramofony</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Receiver + CD</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Zesilovač + Repro</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Receiver + Repro</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Předzesilovač + Koncový</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Kino</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Rozbaleno</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Repro + stojany</h5></a></div>
+        <div class="container navbar-menu__container">
+          <div class="collapse navbar-collapse navbar-menu__collapse" id="navbarNav">
+            <ul class="navbar-nav navbar-menu__navbar">
+              <li class="nav-item navbar-menu__nav-item">
+                <div class="dropdown nav-item__dropdown"><a class="dropdown-toggle nav-link nav-item__link" id="navDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Akční sety</a>
+                  <div class="dropdown-menu nav-item__dropdown-menu" aria-labelledby="navDropdown1">
+                    <div class="container nav-item__container">
+                      <div class="row nav-item__row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 nav-item__column dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
                       </div>
                     </div>
                   </div>
                 </div>
               </li>
-              <li class="nav-item">
-                <div class="dropdown"><a class="dropdown-toggle nav-link" id="navDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hudební nosiče</a>
-                  <div class="dropdown-menu" aria-labelledby="navDropdown1">
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
+              <li class="nav-item navbar-menu__nav-item">
+                <div class="dropdown nav-item__dropdown"><a class="dropdown-toggle nav-link nav-item__link" id="navDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Akční sety</a>
+                  <div class="dropdown-menu nav-item__dropdown-menu" aria-labelledby="navDropdown1">
+                    <div class="container nav-item__container">
+                      <div class="row nav-item__row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 nav-item__column dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
                       </div>
                     </div>
                   </div>
                 </div>
               </li>
-              <li class="nav-item">
-                <div class="dropdown"><a class="dropdown-toggle nav-link" id="navDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Audiophile </a>
-                  <div class="dropdown-menu" aria-labelledby="navDropdown1">
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Audiophile 	</h5></a></div>
+              <li class="nav-item navbar-menu__nav-item">
+                <div class="dropdown nav-item__dropdown"><a class="dropdown-toggle nav-link nav-item__link" id="navDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Akční sety</a>
+                  <div class="dropdown-menu nav-item__dropdown-menu" aria-labelledby="navDropdown1">
+                    <div class="container nav-item__container">
+                      <div class="row nav-item__row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 nav-item__column dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
                       </div>
                     </div>
                   </div>
                 </div>
               </li>
-              <li class="nav-item">
-                <div class="dropdown"><a class="dropdown-toggle nav-link" id="navDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gramofony</a>
-                  <div class="dropdown-menu" aria-labelledby="navDropdown1">
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
+              <li class="nav-item navbar-menu__nav-item">
+                <div class="dropdown nav-item__dropdown"><a class="dropdown-toggle nav-link nav-item__link" id="navDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Akční sety</a>
+                  <div class="dropdown-menu nav-item__dropdown-menu" aria-labelledby="navDropdown1">
+                    <div class="container nav-item__container">
+                      <div class="row nav-item__row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 nav-item__column dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
                       </div>
                     </div>
                   </div>
                 </div>
               </li>
-              <li class="nav-item">
-                <div class="dropdown"><a class="dropdown-toggle nav-link" id="navDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Zesilovače</a>
-                  <div class="dropdown-menu" aria-labelledby="navDropdown1">
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
+              <li class="nav-item navbar-menu__nav-item">
+                <div class="dropdown nav-item__dropdown"><a class="dropdown-toggle nav-link nav-item__link" id="navDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Akční sety</a>
+                  <div class="dropdown-menu nav-item__dropdown-menu" aria-labelledby="navDropdown1">
+                    <div class="container nav-item__container">
+                      <div class="row nav-item__row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 nav-item__column dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
                       </div>
                     </div>
                   </div>
                 </div>
               </li>
-              <li class="nav-item">
-                <div class="dropdown"><a class="dropdown-toggle nav-link" id="navDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Repro</a>
-                  <div class="dropdown-menu" aria-labelledby="navDropdown1">
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
+              <li class="nav-item navbar-menu__nav-item">
+                <div class="dropdown nav-item__dropdown"><a class="dropdown-toggle nav-link nav-item__link" id="navDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Akční sety</a>
+                  <div class="dropdown-menu nav-item__dropdown-menu" aria-labelledby="navDropdown1">
+                    <div class="container nav-item__container">
+                      <div class="row nav-item__row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 nav-item__column dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
                       </div>
                     </div>
                   </div>
                 </div>
               </li>
-              <li class="nav-item">
-                <div class="dropdown"><a class="dropdown-toggle nav-link" id="navDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hi-Fi</a>
-                  <div class="dropdown-menu" aria-labelledby="navDropdown1">
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
+              <li class="nav-item navbar-menu__nav-item">
+                <div class="dropdown nav-item__dropdown"><a class="dropdown-toggle nav-link nav-item__link" id="navDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Akční sety</a>
+                  <div class="dropdown-menu nav-item__dropdown-menu" aria-labelledby="navDropdown1">
+                    <div class="container nav-item__container">
+                      <div class="row nav-item__row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 nav-item__column dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
                       </div>
                     </div>
                   </div>
                 </div>
               </li>
-              <li class="nav-item">
-                <div class="dropdown"><a class="dropdown-toggle nav-link" id="navDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rádia</a>
-                  <div class="dropdown-menu" aria-labelledby="navDropdown1">
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
+              <li class="nav-item navbar-menu__nav-item">
+                <div class="dropdown nav-item__dropdown"><a class="dropdown-toggle nav-link nav-item__link" id="navDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Akční sety</a>
+                  <div class="dropdown-menu nav-item__dropdown-menu" aria-labelledby="navDropdown1">
+                    <div class="container nav-item__container">
+                      <div class="row nav-item__row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 nav-item__column dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
                       </div>
                     </div>
                   </div>
                 </div>
               </li>
-              <li class="nav-item">
-                <div class="dropdown"><a class="dropdown-toggle nav-link" id="navDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kabely</a>
-                  <div class="dropdown-menu" aria-labelledby="navDropdown1">
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
+              <li class="nav-item navbar-menu__nav-item">
+                <div class="dropdown nav-item__dropdown"><a class="dropdown-toggle nav-link nav-item__link" id="navDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Akční sety</a>
+                  <div class="dropdown-menu nav-item__dropdown-menu" aria-labelledby="navDropdown1">
+                    <div class="container nav-item__container">
+                      <div class="row nav-item__row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 nav-item__column dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
                       </div>
                     </div>
                   </div>
                 </div>
               </li>
-              <li class="nav-item">
-                <div class="dropdown"><a class="dropdown-toggle nav-link" id="navDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sluchátka</a>
-                  <div class="dropdown-menu" aria-labelledby="navDropdown1">
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item" href="#">
-                            <h5>Úvodem</h5></a></div>
+              <li class="nav-item navbar-menu__nav-item">
+                <div class="dropdown nav-item__dropdown"><a class="dropdown-toggle nav-link nav-item__link" id="navDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Akční sety</a>
+                  <div class="dropdown-menu nav-item__dropdown-menu" aria-labelledby="navDropdown1">
+                    <div class="container nav-item__container">
+                      <div class="row nav-item__row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 nav-item__column dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
+                            <h5 class="dropdown-column__title"><span class="arrow-icon white dropdown-column__icon"></span> Vítr ve studiu</h5></a></div>
                       </div>
                     </div>
                   </div>
                 </div>
               </li>
-              <li class="nav-item"><a class="nav-link" href="#">Půjčovna</a></li>
+              <li class="nav-item navbar-menu__nav-item"><a class="nav-link nav-item__link" href="#">Půjčovna</a></li>
             </ul>
           </div>
         </div>
@@ -469,7 +523,7 @@
                   <input class="form-control" type="password" name="register_form_password" id="register_form_password" autocomplete="off" required value="Lorem ipsum dolor">
                 </div>
                 <div class="form-group">
-                  <label for="register_form_tel">Telefonní číslo <span>(nepovinné)</span></label>
+                  <label for="register_form_tel">Telefonní číslo <span class="label__muted">(nepovinné)</span></label>
                   <input class="form-control" type="tel" name="register_form_tel" id="register_form_tel" autocomplete="tel" value="Lorem ipsum dolor">
                 </div>
                 <div class="form-group">
@@ -486,21 +540,26 @@
                 </div>
                 <div class="form-group">
                   <label for="country">Stát</label>
-                  <input class="form-control" type="text" name="register-form-country" id="country" autocomplete="country-name" required value="Lorem ipsum dolor">
+                  <select class="form-control" type="text" name="register-form-country" id="country" required>
+                    <option value="cz">Česká republika</option>
+                    <option value="sk">Slovensko</option>
+                  </select>
                 </div>
                 <div class="register-form-info-collapse-wrap">  
                   <div class="form-group">
-                    <label class="form-check-label billing-address-toggler">
-                      <input class="form-check-input" type="checkbox" name="register-form-billing-address">Vyplnit fakturační adresu<span class="input-element checkbox"></span>
-                    </label>
+                    <div class="form-check">
+                      <label class="form-check__label billing-address-toggler">
+                        <input class="form-check__input" type="checkbox" name="register-form-billing-address">Vyplnit fakturační adresu<span class="form-check__box checkbox"></span>
+                      </label>
+                    </div>
                   </div>
                   <div class="billing-address-wrap"> 
                     <div class="form-group">
-                      <label for="register-form-billing-address-name">Jméno a příjmení <span>(nepovinné)</span></label>
+                      <label for="register-form-billing-address-name">Jméno a příjmení <span class="label__muted">(nepovinné)</span></label>
                       <input class="form-control" type="text" name="register-form-billing-address-name" id="register-form-billing-address-name" autocomplete="name">
                     </div>
                     <div class="form-group">
-                      <label for="register-form-billing-address-company">Název firmy <span>(nepovinné)</span></label>
+                      <label for="register-form-billing-address-company">Název firmy <span class="label__muted">(nepovinné)</span></label>
                       <input class="form-control" type="text" name="register-form-billing-address-company" id="register-form-billing-address-company" autocomplete="org">
                     </div>
                     <div class="form-group">
@@ -508,7 +567,7 @@
                       <input class="form-control" type="text" name="register-form-billing-address-ico" id="register-form-billing-address-ico" autocomplete="ico">
                     </div>
                     <div class="form-group">
-                      <label for="register-form-billing-address-dic">DIČ <span>(nepovinné)</span></label>
+                      <label for="register-form-billing-address-dic">DIČ <span class="label__muted">(nepovinné)</span></label>
                       <input class="form-control" type="text" name="register-form-billing-address-dic" id="register-form-billing-address-dic" autocomplete="dic">
                     </div>
                     <div class="form-group">
@@ -525,21 +584,26 @@
                     </div>
                     <div class="form-group">
                       <label for="register-form-billing-address-country">Stát</label>
-                      <input class="form-control" type="text" name="register-form-billing-address-country" id="register-form-billing-address-country" autocomplete="country-name">
+                      <select class="form-control" type="text" name="register-form-billing-address-country" id="register-form-billing-address-country">
+                        <option value="cz">Česká republika</option>
+                        <option value="sk">Slovensko</option>
+                      </select>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="form-check-label shipping-address-toggler">
-                      <input class="form-check-input" type="checkbox" name="register-form-shipping-address">Mám jinou dodací adresu<span class="input-element checkbox"></span>
-                    </label>
+                    <div class="form-check">
+                      <label class="form-check__label shipping-address-toggler">
+                        <input class="form-check__input" type="checkbox" name="register-form-shipping-address">Mám jinou dodací adresu<span class="form-check__box checkbox"></span>
+                      </label>
+                    </div>
                   </div>
                   <div class="shipping-address-wrap"> 
                     <div class="form-group">
-                      <label for="register-form-shipping-address-name">Jméno a příjmení <span>(nepovinné)</span></label>
+                      <label for="register-form-shipping-address-name">Jméno a příjmení <span class="label__muted">(nepovinné)</span></label>
                       <input class="form-control" type="text" name="register-form-shipping-address-name" id="register-form-shipping-address-name" autocomplete="name">
                     </div>
                     <div class="form-group">
-                      <label for="register-form-shipping-address-company">Název firmy <span>(nepovinné)</span></label>
+                      <label for="register-form-shipping-address-company">Název firmy <span class="label__muted">(nepovinné)</span></label>
                       <input class="form-control" type="text" name="register-form-shipping-address-company" id="register-form-shipping-address-company" autocomplete="org">
                     </div>
                     <div class="form-group">
@@ -556,14 +620,12 @@
                     </div>
                     <div class="form-group">
                       <label for="register-form-shipping-address-country">Stát</label>
-                      <input class="form-control" type="text" name="register-form-shipping-address-country" id="register-form-shipping-address-country" autocomplete="country-name">
+                      <select class="form-control" type="text" name="register-form-shipping-address-country" id="register-form-shipping-address-country">
+                        <option value="cz">Česká republika</option>
+                        <option value="sk">Slovensko</option>
+                      </select>
                     </div>
                   </div>
-                </div>
-                <div class="form-group">
-                  <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" name="register-form-email-marketing" checked>Zasílat novinky a propagační materiály na email<span class="input-element checkbox"></span>
-                  </label>
                 </div>
                 <div class="form-group">
                   <button class="btn form-control" type="submit" name="register_form_submit" id="register_form_submit">Potvrdit úpravy</button>
@@ -698,7 +760,7 @@
       });
       
       
-    </script><a class="scroll-to-top" href="#dark-overlay"><span class="caret-icon top"></span></a>
+    </script><a class="scroll-to-top" href="#anchor-navbar-top"><span class="caret-icon top"></span></a>
     <footer>
       <section class="footer-bar">
         <div class="footer-bar__img1 post__image-container"><img class="post__featured-image" src="img/footer-bar-poslechova.jpg" alt="#" title="#"></div>

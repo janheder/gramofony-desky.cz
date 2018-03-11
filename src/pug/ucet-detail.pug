@@ -55,7 +55,7 @@ html(lang="en")
                                     input.form-control(type="password" name="register_form_password" id="register_form_password" autocomplete="off" required value="Lorem ipsum dolor")
 
                                 .form-group
-                                    label(for="register_form_tel") Telefonní číslo #[span (nepovinné)]
+                                    label(for="register_form_tel") Telefonní číslo #[span.label__muted (nepovinné)]
                                     input.form-control(type="tel" name="register_form_tel" id="register_form_tel" autocomplete="tel" value="Lorem ipsum dolor")
                           
                                 .form-group
@@ -72,23 +72,26 @@ html(lang="en")
 
                                 .form-group
                                     label(for="country") Stát
-                                    input.form-control(type="text" name="register-form-country" id="country" autocomplete="country-name" required value="Lorem ipsum dolor")
+                                    select.form-control(type="text" name="register-form-country" id="country" required)
+                                        option(value="cz") Česká republika
+                                        option(value="sk") Slovensko
 
 
                                 .register-form-info-collapse-wrap   
                                     .form-group
-                                        label.form-check-label.billing-address-toggler
-                                            input.form-check-input(type="checkbox" name="register-form-billing-address") 
-                                            | Vyplnit fakturační adresu
-                                            span.input-element.checkbox
+                                        .form-check
+                                            label.form-check__label.billing-address-toggler
+                                                input.form-check__input(type="checkbox" name="register-form-billing-address") 
+                                                | Vyplnit fakturační adresu
+                                                span.form-check__box.checkbox
 
                                     .billing-address-wrap 
                                         .form-group
-                                            label(for="register-form-billing-address-name") Jméno a příjmení #[span (nepovinné)]
+                                            label(for="register-form-billing-address-name") Jméno a příjmení #[span.label__muted (nepovinné)]
                                             input.form-control(type="text" name="register-form-billing-address-name" id="register-form-billing-address-name" autocomplete="name")
 
                                         .form-group
-                                            label(for="register-form-billing-address-company") Název firmy #[span (nepovinné)]
+                                            label(for="register-form-billing-address-company") Název firmy #[span.label__muted (nepovinné)]
                                             input.form-control(type="text" name="register-form-billing-address-company" id="register-form-billing-address-company" autocomplete="org")
 
                                         .form-group
@@ -96,7 +99,7 @@ html(lang="en")
                                             input.form-control(type="text" name="register-form-billing-address-ico" id="register-form-billing-address-ico" autocomplete="ico")
 
                                         .form-group
-                                            label(for="register-form-billing-address-dic") DIČ #[span (nepovinné)]
+                                            label(for="register-form-billing-address-dic") DIČ #[span.label__muted (nepovinné)]
                                             input.form-control(type="text" name="register-form-billing-address-dic" id="register-form-billing-address-dic" autocomplete="dic")
 
                                         .form-group
@@ -113,22 +116,24 @@ html(lang="en")
 
                                         .form-group
                                             label(for="register-form-billing-address-country") Stát
-                                            input.form-control(type="text" name="register-form-billing-address-country" id="register-form-billing-address-country" autocomplete="country-name")
-
+                                            select.form-control(type="text" name="register-form-billing-address-country" id="register-form-billing-address-country")
+                                                option(value="cz") Česká republika
+                                                option(value="sk") Slovensko
 
                                     .form-group
-                                        label.form-check-label.shipping-address-toggler
-                                            input.form-check-input(type="checkbox" name="register-form-shipping-address")
-                                            | Mám jinou dodací adresu
-                                            span.input-element.checkbox
+                                        .form-check
+                                            label.form-check__label.shipping-address-toggler
+                                                input.form-check__input(type="checkbox" name="register-form-shipping-address")
+                                                | Mám jinou dodací adresu
+                                                span.form-check__box.checkbox
 
                                     .shipping-address-wrap 
                                         .form-group
-                                            label(for="register-form-shipping-address-name") Jméno a příjmení #[span (nepovinné)]
+                                            label(for="register-form-shipping-address-name") Jméno a příjmení #[span.label__muted (nepovinné)]
                                             input.form-control(type="text" name="register-form-shipping-address-name" id="register-form-shipping-address-name" autocomplete="name")
 
                                         .form-group
-                                            label(for="register-form-shipping-address-company") Název firmy #[span (nepovinné)]
+                                            label(for="register-form-shipping-address-company") Název firmy #[span.label__muted (nepovinné)]
                                             input.form-control(type="text" name="register-form-shipping-address-company" id="register-form-shipping-address-company"  autocomplete="org")
 
                                         .form-group
@@ -145,13 +150,9 @@ html(lang="en")
 
                                         .form-group
                                             label(for="register-form-shipping-address-country") Stát
-                                            input.form-control(type="text" name="register-form-shipping-address-country" id="register-form-shipping-address-country" autocomplete="country-name")
-
-                                .form-group
-                                    label.form-check-label
-                                        input.form-check-input(type="checkbox" name="register-form-email-marketing" checked)
-                                        | Zasílat novinky a propagační materiály na email
-                                        span.input-element.checkbox
+                                            select.form-control(type="text" name="register-form-shipping-address-country" id="register-form-shipping-address-country")
+                                                option(value="cz") Česká republika
+                                                option(value="sk") Slovensko
                                             
                                 .form-group
                                     button.btn(class="form-control" type="submit" name="register_form_submit" id="register_form_submit") Potvrdit úpravy

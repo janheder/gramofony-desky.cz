@@ -47,9 +47,6 @@ select.form-control:not([size]):not([multiple]) {
     }
     & label{
         width: 100%;
-        & span{
-            opacity: 0.7;
-        } 
     }
     & h3{
         margin: 2rem 0;
@@ -66,6 +63,9 @@ select.form-control:not([size]):not([multiple]) {
             opacity: 1;
         }
     }
+}
+.label__muted{
+    opacity: 0.7;
 }
 .form-check{
     margin: 10px 0;
@@ -97,6 +97,13 @@ select.form-control:not([size]):not([multiple]) {
     bottom: 1.5rem;
     left: 1.5rem;
     opacity: 0.5;
+}
+.form-check__inline{
+    @include flexbox();
+    @include flex-direction(row);  
+}
+.form-check__link{
+    margin: 0 5px;
 }
 .form-check__input:checked ~ .form-check__box{
     opacity: 1;

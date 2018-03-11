@@ -1,5 +1,11 @@
 .modal-dialog {
-	background: $white;
+    background: transparent;
+    height: 100%;
+    @include flexbox();
+    @include flex-direction(row);
+    @include align-items(center);
+    margin: 0 auto;
+    padding: 10px;
 }
 .modal-content{
     border-radius: $border-radius-primary;
@@ -43,5 +49,10 @@
 @media (min-width: 576px){
     .modal-dialog {
         max-width: 800px;
+    }
+}
+@media (max-width: 575px){
+    .modal-header, .modal-body, .modal-footer{
+        padding:  10px;
     }
 }

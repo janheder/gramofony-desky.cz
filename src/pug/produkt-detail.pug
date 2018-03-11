@@ -33,8 +33,8 @@ html(lang="en")
         main
             .product-detail
                 .container
-                    .row.product-detail-row
-                        .col-12.col-sm-12.col-md-12.col-lg-12.col-xl-12
+                    .row.product-detail__row
+                        .col-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.product-detail__column
                             .product-detail-side-info-name
                                 h1 #{ProductName}
                                 .product-detail-side-info-undername
@@ -216,7 +216,7 @@ html(lang="en")
                                     p.essox-bar__text Nákup na splátky s Essoxem
 
                                 .product-detail-side-info-description
-                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. #[a(href="#product-detail-description") Celý popis produktu #[span.fa.fa-angle-down]]
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. #[a(href="#anchor-product-detail-description") Celý popis produktu #[span.fa.fa-angle-down]]
 
                                 
                                 .product-detail-side-info-free-delivery
@@ -252,57 +252,73 @@ html(lang="en")
                             .swiper-button-prev.swiper-button-prev--5
                             .swiper-button-next.swiper-button-next--5
 
-                    .product-description(id="product-detail-description")
-                        ul.nav.nav-tabs(role="tablist")
-                            li.nav-item
-                                a.nav-link.active(data-toggle="tab" href="#product-description-1" role="tab") Popis produktu
-                            li.nav-item
-                                a.nav-link(data-toggle="tab" href="#product-description-2" role="tab") Technické parametry
-                            li.nav-item
-                                a.nav-link(data-toggle="tab" href="#product-description-3" role="tab") Přílohy produktu
-                        .tab-content
-                            .tab-pane.active(id="product-description-1" role="tabpanel")
-                                .product-description__text
-                                    p Špičkový japonský výrobce elektroniky Onkyo, se více než půl století zabývá produkcí precizních audio komponentů. Během posledního desetiletí si Onkyo získalo zvučné jméno také mezi výrobci systémů domácího kina. Jak naznačují dvě japonská slova (ON - zvuk a KYO - harmonie), ze kterých je název společnosti složen, je to hlavně prvotřídní zvuk, který všechny produkty Onkyo charakterizuje. Šíře sortimentu a design produktů osloví téměř každého. Nabídka obsahuje kromě tradičně velmi úspěšných AV receiverů také mikrosystémy, Blu-Ray přehrávače, sluchátka, systémy pro ozvučení TV a v neposlední řadě vysoce kvalitní Hi-Fi komponenty.
+                    .product-description(id="anchor-product-detail-description")
+                        ul.nav.nav-tabs.product-description__nav(role="tablist")
+                            li.nav-item.product-description__tab
+                                a.nav-link.product-description__tab-link.active(data-toggle="tab" href="#product-description-1" role="tab") Popis produktu
+                            li.nav-item.product-description__tab
+                                a.nav-link.product-description__tab-link(data-toggle="tab" href="#product-description-2" role="tab") Technické parametry
+                            li.nav-item.product-description__tab
+                                a.nav-link.product-description__tab-link(data-toggle="tab" href="#product-description-3" role="tab") Přílohy produktu
 
-                                    p Zaměřte se na muzikálnost s Onkyo TX-8270, krásným síťovým stereo receiverem, který je připraven přehrát všechno, co na něj hodíte. Společně s linkovými a phono vstupy, je zde k dispozici koaxiální a optický digitální, čtyři vstupy HDMI, USB a dual-band Wi-Fi, pro podporu bezdrátových audio technologií. Mezi ně patří DTS Play-Fi, vestavěný Chromecast, AirPlay, Spotify, audio připojené k síti a streamovací služby. Vychutnejte si všestrannost se snadným vylepšením každodenní televizní zábavy, rádiem DAB+ a FM/RDS a dalšími.
 
-                                    strong Řízení velkých reproduktorů s vitalitou a dynamikou. 
-                                    p Tento zesilovač generuje vysoký proud s masivním transformátorem a zvukovými kondenzátory. Obvod je vybaven diskrétními výstupními tranzistory pro nízké zkreslení a snadnou hnací sílu. Vysoký proud zajišťuje přesné ovládání, obnovuje energii a vitalitu vaší hudby.
+                        .tab-content.product-description__wrap
 
-                                    strong Stereo receiver, který připojí vše.
-                                    p Krásný stereofonní receiver vytvořený pro milovníky hi-fi, TX-8270 je také exkluzivně vybaven připojením, které mu umožní sloužit jako moderní zesilovač pro televizní zábavu. Spojením analogových, digitálních, phono a USB vstupů jsou HDMI terminály (připojte Apple TV nebo podobně) společně s platformou Next Generation Network Audio.
+                            .tab-pane.product-description__tab-content.active(id="product-description-1" role="tabpanel" aria-expanded="true")
+                                a.product-description__collapse(data-toggle="collapse" href="#product-description-c-1") Popis produktu
+                                .panel-collapse.collapse.show.product-description__collapse-wrap(id="product-description-c-1")
+                                    .product-description__content
+                                        .product-description__text
+                                            p Špičkový japonský výrobce elektroniky Onkyo, se více než půl století zabývá produkcí precizních audio komponentů. Během posledního desetiletí si Onkyo získalo zvučné jméno také mezi výrobci systémů domácího kina. Jak naznačují dvě japonská slova (ON - zvuk a KYO - harmonie), ze kterých je název společnosti složen, je to hlavně prvotřídní zvuk, který všechny produkty Onkyo charakterizuje. Šíře sortimentu a design produktů osloví téměř každého. Nabídka obsahuje kromě tradičně velmi úspěšných AV receiverů také mikrosystémy, Blu-Ray přehrávače, sluchátka, systémy pro ozvučení TV a v neposlední řadě vysoce kvalitní Hi-Fi komponenty.
 
-                                    strong Prémiové digitál/analog zpracování.
-                                    p Digitální/analogový převodník AK4438 384 kHz/32 bit z AKM nabízí unikátní technologie s nízkým zkreslením, ideální pro DSD 5,6 MHz a PCM signály až do 192 kHz/24 bitů. Společně s jedinečným VLSC obvodem, který eliminuje vysokofrekvenční pulsní šum, je přehrávání křišťálově čisté.
+                                            p Zaměřte se na muzikálnost s Onkyo TX-8270, krásným síťovým stereo receiverem, který je připraven přehrát všechno, co na něj hodíte. Společně s linkovými a phono vstupy, je zde k dispozici koaxiální a optický digitální, čtyři vstupy HDMI, USB a dual-band Wi-Fi, pro podporu bezdrátových audio technologií. Mezi ně patří DTS Play-Fi, vestavěný Chromecast, AirPlay, Spotify, audio připojené k síti a streamovací služby. Vychutnejte si všestrannost se snadným vylepšením každodenní televizní zábavy, rádiem DAB+ a FM/RDS a dalšími.
 
-                                    strong Snadná hudba s vestavěným Chromecast.
-                                    p Streamujte hudbu jednoduše z vašeho smartphonu, notebooku nebo počítače do vašich reproduktorů. Ovládejte přehrávání pomocí Chromecast podporujících aplikací, které znáte a milujete z vašeho iPhonu, iPadu, Android telefonu nebo tabletu, Mac nebo Windows laptopu nebo Chromebooku.
+                                            strong Řízení velkých reproduktorů s vitalitou a dynamikou. 
+                                            p Tento zesilovač generuje vysoký proud s masivním transformátorem a zvukovými kondenzátory. Obvod je vybaven diskrétními výstupními tranzistory pro nízké zkreslení a snadnou hnací sílu. Vysoký proud zajišťuje přesné ovládání, obnovuje energii a vitalitu vaší hudby.
 
-                                    strong Streamujte vše s DTS Play-Fi.
-                                    p DTS Play-Fi je bezdrátový protokol, který pracuje s jakoukoli aplikací a inteligentním zařízením. Přesuňte vše, co přehráváte, do receiveru, dokonce různé zdroje do různých komponentů najednou.
+                                            strong Stereo receiver, který připojí vše.
+                                            p Krásný stereofonní receiver vytvořený pro milovníky hi-fi, TX-8270 je také exkluzivně vybaven připojením, které mu umožní sloužit jako moderní zesilovač pro televizní zábavu. Spojením analogových, digitálních, phono a USB vstupů jsou HDMI terminály (připojte Apple TV nebo podobně) společně s platformou Next Generation Network Audio.
 
-                                    strong Dual-band Wi-Fi, AirPlay, Spotify.
-                                    p Volitelný kanál Wi-Fi o frekvenci 5 GHz zajišťuje stabilní konektivitu v oblastech s provozním přetížením v pásmu 2,4 GHz. Vychutnejte si plynulé přehrávání přes AirPlay, aplikaci Spotify Connect a další síťové audio služby.
+                                            strong Prémiové digitál/analog zpracování.
+                                            p Digitální/analogový převodník AK4438 384 kHz/32 bit z AKM nabízí unikátní technologie s nízkým zkreslením, ideální pro DSD 5,6 MHz a PCM signály až do 192 kHz/24 bitů. Společně s jedinečným VLSC obvodem, který eliminuje vysokofrekvenční pulsní šum, je přehrávání křišťálově čisté.
 
-                                    strong Internetové rádio, streaming služby, FM/RDS a DAB/DAB+.
-                                    p TIDAL, Deezer a TuneIn jsou vypáleny do grafického uživatelského rozhraní, což usnadňuje výběr z masivního spektra hudebních a rozhlasových programů. Rádiové tunery jsou také součástí se 40 předvolenými stanicemi. Získejte okamžitý přístup ke čtyřem vašim oblíbeným stanicím pomocí přednastavených tlačítek na předním panelu.
+                                            strong Snadná hudba s vestavěným Chromecast. 
+                                            p Streamujte hudbu jednoduše z vašeho smartphonu, notebooku nebo počítače do vašich reproduktorů. Ovládejte přehrávání pomocí Chromecast podporujících aplikací, které znáte a milujete z vašeho iPhonu, iPadu, Android telefonu nebo tabletu, Mac nebo Windows laptopu nebo Chromebooku.
 
-                                    strong Onkyo Controller podporuje síťové audio příští generace.
-                                    p Aplikace Onkyo Controller shromažďuje streaming služby a audio připojené k síti do intuitivního rozhraní. Ovládejte hudbu a distribujte ji po celém domě z jedné snadno použitelné aplikace.
+                                            strong Streamujte vše s DTS Play-Fi.
+                                            p DTS Play-Fi je bezdrátový protokol, který pracuje s jakoukoli aplikací a inteligentním zařízením. Přesuňte vše, co přehráváte, do receiveru, dokonce různé zdroje do různých komponentů najednou.
 
-                                    strong Bezdrátové multi-pokojové audio FireConnect.
-                                    p FireConnect zrcadlí síťový zvuk a externí analogové zdroje připojené k hlavnímu komponentu - od streamingových služeb až po vinylové záznamy - na FireConnect kompatibilní reproduktory v jiných místnostech. Výběr hudby, seskupování reproduktorů a správa přehrávání v domácím prostředí jsou zabudovány do aplikace Onkyo Controller pro iOS a Android.
-                            .tab-pane(id="product-description-2" role="tabpanel")
-                                .product-description__parameters
-                                    table.table
-                                        thead
-                                            th Parametr
-                                            th Hodnota
-                                        tbody
-                                            tr
-                                                td Výstupní výkon
-                                                td 160 W/k (6 Ω, 1 kHz, 1%, 1 kanál řízený, IEC); 170 W/k (6 Ω, 1 kHz, 10%, 1 kanál řízený, JEITA)
+                                            strong Dual-band Wi-Fi, AirPlay, Spotify.
+                                            p Volitelný kanál Wi-Fi o frekvenci 5 GHz zajišťuje stabilní konektivitu v oblastech s provozním přetížením v pásmu 2,4 GHz. Vychutnejte si plynulé přehrávání přes AirPlay, aplikaci Spotify Connect a další síťové audio služby.
+
+                                            strong Internetové rádio, streaming služby, FM/RDS a DAB/DAB+.
+                                            p TIDAL, Deezer a TuneIn jsou vypáleny do grafického uživatelského rozhraní, což usnadňuje výběr z masivního spektra hudebních a rozhlasových programů. Rádiové tunery jsou také součástí se 40 předvolenými stanicemi. Získejte okamžitý přístup ke čtyřem vašim oblíbeným stanicím pomocí přednastavených tlačítek na předním panelu.
+
+                                            strong Onkyo Controller podporuje síťové audio příští generace.
+                                            p Aplikace Onkyo Controller shromažďuje streaming služby a audio připojené k síti do intuitivního rozhraní. Ovládejte hudbu a distribujte ji po celém domě z jedné snadno použitelné aplikace.
+
+                                            strong Bezdrátové multi-pokojové audio FireConnect.
+                                            p FireConnect zrcadlí síťový zvuk a externí analogové zdroje připojené k hlavnímu komponentu - od streamingových služeb až po vinylové záznamy - na FireConnect kompatibilní reproduktory v jiných místnostech. Výběr hudby, seskupování reproduktorů a správa přehrávání v domácím prostředí jsou zabudovány do aplikace Onkyo Controller pro iOS a Android.
+                            
+                            .tab-pane.product-description__tab-content(id="product-description-2" role="tabpanel" aria-expanded="false")
+                                a.product-description__collapse.collapsed(data-toggle="collapse" href="#product-description-c-2") Technické parametry
+                                .panel-collapse.collapse.product-description__collapse-wrap(id="product-description-c-2")
+                                    .product-description__content
+                                        .product-description__parameters
+                                            table.table
+                                                thead
+                                                    th Parametr
+                                                    th Hodnota
+                                                tbody
+                                                    tr
+                                                        td Výstupní výkon
+                                                        td 160 W/k (6 Ω, 1 kHz, 1%, 1 kanál řízený, IEC); 170 W/k (6 Ω, 1 kHz, 10%, 1 kanál řízený, JEITA)
+
+                            .tab-pane.product-description__tab-content(id="product-description-3" role="tabpanel" aria-expanded="false")
+                                a.product-description__collapse.collapsed(data-toggle="collapse" href="#product-description-c-3") Přílohy produktu
+                                .panel-collapse.collapse.product-description__collapse-wrap(id="product-description-c-3")
+                                    .product-description__content
+                                        p FireConnect zrcadlí síťový zvuk
 
                     .product-similar
                         h2.product-accessories__heading Obdobné produkty

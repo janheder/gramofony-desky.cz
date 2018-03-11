@@ -77,76 +77,78 @@ html(lang="en")
                         .swiper-button-next.swiper-button-next--5
 
                 .filter-main
-                    form(method="post" action="")
-                        .filter-main__tag
-                            h2.filter-main__heading.filter-main__heading--tag Filtrovat podle štítku
-                            .form-group.filter-main__single
-                                label.form-check__label.filter-main__label
-                                    input.form-check__input(type="checkbox" name="filter-novinka") 
-                                    | Novinka
-                                    span.form-check__box.checkbox
-                            .form-group.filter-main__single
-                                label.form-check__label.filter-main__label
-                                    input.form-check__input(type="checkbox" name="filter-akce") 
-                                    | Akční zboží
-                                    span.form-check__box.checkbox
-                            .form-group.filter-main__single
-                                label.form-check__label.filter-main__label
-                                    input.form-check__input(type="checkbox" name="filter-doporucene") 
-                                    | Doporučujeme
-                                    span.form-check__box.checkbox
+                    a.filter-main__collapse(data-toggle="collapse" href="#product-filter" aria-expanded="false" aria-controls="product-filter") Filtr produktů
+                    .panel-collapse.collapse.filter-main__collapse-wrap(id="product-filter")   
+                        form.filter-main__form(method="post" action="")
+                            .filter-main__tag
+                                h2.filter-main__heading.filter-main__heading--tag Filtrovat podle štítku
+                                .form-group.filter-main__single
+                                    label.form-check__label.filter-main__label
+                                        input.form-check__input(type="checkbox" name="filter-novinka") 
+                                        | Novinka
+                                        span.form-check__box.checkbox
+                                .form-group.filter-main__single
+                                    label.form-check__label.filter-main__label
+                                        input.form-check__input(type="checkbox" name="filter-akce") 
+                                        | Akční zboží
+                                        span.form-check__box.checkbox
+                                .form-group.filter-main__single
+                                    label.form-check__label.filter-main__label
+                                        input.form-check__input(type="checkbox" name="filter-doporucene") 
+                                        | Doporučujeme
+                                        span.form-check__box.checkbox
 
-                            h2.form-group.filter-main__single.filter-main__collapse-toggle(data-toggle="collapse" href="#filter-main-brand" aria-expanded="false" aria-controls="filter-main-brand") Filtrovat podle výrobce
-                                span.plus-icon.filter-main__icon 
-
-
-                        .filter-main__brand
-                            .collapse.filter-main__collapse(id="filter-main-brand")
-                                .filter-main__collapse-wrap
-                                    .form-group.filter-main__single
-                                        label.form-check__label.filter-main__label
-                                            input.form-check__input(type="checkbox" name="#") 
-                                            | Advance Acoustic
-                                            span.form-check__box.checkbox                         
-                                    .form-group.filter-main__single
-                                        label.form-check__label.filter-main__label
-                                            input.form-check__input(type="checkbox" name="#") 
-                                            | Advance Acoustic
-                                            span.form-check__box.checkbox 
-                                    .form-group.filter-main__single
-                                        label.form-check__label.filter-main__label
-                                            input.form-check__input(type="checkbox" name="#") 
-                                            | Advance Acoustic
-                                            span.form-check__box.checkbox                         
-                                    .form-group.filter-main__single
-                                        label.form-check__label.filter-main__label
-                                            input.form-check__input(type="checkbox" name="#") 
-                                            | Advance Acoustic
-                                            span.form-check__box.checkbox 
-                                    .form-group.filter-main__single
-                                        label.form-check__label.filter-main__label
-                                            input.form-check__input(type="checkbox" name="#") 
-                                            | Advance Acoustic
-                                            span.form-check__box.checkbox 
-                                    .form-group.filter-main__single
-                                        label.form-check__label.filter-main__label
-                                            input.form-check__input(type="checkbox" name="#") 
-                                            | Advance Acoustic
-                                            span.form-check__box.checkbox                         
-                                    .form-group.filter-main__single
-                                        label.form-check__label.filter-main__label
-                                            input.form-check__input(type="checkbox" name="#") 
-                                            | Advance Acoustic
-                                            span.form-check__box.checkbox 
-
-                        .filter-main__author
-                            h2.filter-main__heading Vyhledávat podle autora
-
-                            .form-group.filter-main__searchbox
-                                input.form-control(type="text" name="search" id="search" placeholder="Zadejte jméno autora")
+                                h2.form-group.filter-main__single.filter-main__collapse-toggle(data-toggle="collapse" href="#filter-main-brand" aria-expanded="false" aria-controls="filter-main-brand") Filtrovat podle výrobce
+                                    span.plus-icon.filter-main__icon 
 
 
-                        button.btn.filter-main__button(type="submit") Filtrovat produkty
+                            .filter-main__brand
+                                .collapse.filter-main__brand-collapse(id="filter-main-brand")
+                                    .filter-main__brand-collapse-wrap
+                                        .form-group.filter-main__single
+                                            label.form-check__label.filter-main__label
+                                                input.form-check__input(type="checkbox" name="#") 
+                                                | Advance Acoustic
+                                                span.form-check__box.checkbox                         
+                                        .form-group.filter-main__single
+                                            label.form-check__label.filter-main__label
+                                                input.form-check__input(type="checkbox" name="#") 
+                                                | Advance Acoustic
+                                                span.form-check__box.checkbox 
+                                        .form-group.filter-main__single
+                                            label.form-check__label.filter-main__label
+                                                input.form-check__input(type="checkbox" name="#") 
+                                                | Advance Acoustic
+                                                span.form-check__box.checkbox                         
+                                        .form-group.filter-main__single
+                                            label.form-check__label.filter-main__label
+                                                input.form-check__input(type="checkbox" name="#") 
+                                                | Advance Acoustic
+                                                span.form-check__box.checkbox 
+                                        .form-group.filter-main__single
+                                            label.form-check__label.filter-main__label
+                                                input.form-check__input(type="checkbox" name="#") 
+                                                | Advance Acoustic
+                                                span.form-check__box.checkbox 
+                                        .form-group.filter-main__single
+                                            label.form-check__label.filter-main__label
+                                                input.form-check__input(type="checkbox" name="#") 
+                                                | Advance Acoustic
+                                                span.form-check__box.checkbox                         
+                                        .form-group.filter-main__single
+                                            label.form-check__label.filter-main__label
+                                                input.form-check__input(type="checkbox" name="#") 
+                                                | Advance Acoustic
+                                                span.form-check__box.checkbox 
+
+                            .filter-main__author
+                                h2.filter-main__heading Vyhledávat podle autora
+
+                                .form-group.filter-main__searchbox
+                                    input.form-control(type="text" name="search" id="search" placeholder="Zadejte jméno autora")
+
+
+                            button.btn.filter-main__button(type="submit") Filtrovat produkty
 
                 .filter-sort
                     ul.nav.nav-tabs

@@ -2,22 +2,22 @@
     TOP NAVIGATION BAR
 \*------------------------------------*/
 
-.navbar--top{
+.navbar-top{
     background: $bg-darker;
     color: $text-white;
     height: 34px;
     @include flexbox();
     @include flex-direction(row);
 }
-.navbar--top__left, .navbar--top__right{
+.navbar-top__left, .navbar-top__right{
     @include flexbox();
     @include flex-direction(row);
     @include flex-grow(1); 
 }
-.navbar--top__right{
+.navbar-top__right{
     @include justify-content(flex-end);
 }
-.navbar--top__text{
+.navbar-top__text{
     margin: 0;
     font-size: 1.4rem;
     padding: 0 1rem;
@@ -26,10 +26,10 @@
         padding-left: 0;
     }
 }
-.navbar--top__icon{
+.navbar-top__icon{
     color: $brand-primary;
 }
-.navbar--top__link{
+.navbar-top__link{
     color: $text-grey;
     font-size: 1.3rem;
     font-weight: 400;
@@ -37,7 +37,7 @@
 }
 
 @media screen and (max-width: 991px){
-    nav.navbar--top{
+    nav.navbar-top{
         display: none;
     }
 }
@@ -46,7 +46,7 @@
     NAVIGATION MAIN
 \*------------------------------------*/
 
-nav.navbar-main{
+.navbar-main{
     position: relative;
     z-index: 9;
     width: 100%;
@@ -546,6 +546,7 @@ nav.navbar-main{
         width: 100%;
         padding: 0rem;
         height: 56px;
+        @include box-shadow(0px,0,10px,$black-transparent-25);
 
         & .navbar-toggler{
             order: 1;
@@ -580,7 +581,7 @@ nav.navbar-main{
             @include flex-grow(1);
             @include justify-content(center);
             margin: 0;
-            padding: 5px 0;
+            padding: 8px 0;
             order: 3;
         }
         & .user-wrap{
@@ -823,73 +824,67 @@ nav.navbar-main{
     NAVIGATION MENU
 \*------------------------------------*/
 
-nav.navbar-menu{
+.navbar-menu{
     height: 56px;
     padding: 0;
     background: $dark-grey;
     border-top: 1px solid $white-transparent;
     @include box-shadow(0px,0,20px,$black-transparent-50);
+}
+.navbar-menu__nav-item, .nav-item__link, .nav-item__dropdown{
+    height: 100%;
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(center);
+}
+.nav-item__dropdown{
+    position: static;
+    width: 100%;
+    color: $text-grey;
 
-    & .navbar-collapse, & .navbar-nav{
-        height: 100%;
-        @include align-items(center);
+    &.show{
+        background: $white;
     }
-    & .container{
-        height: 100%;
+}
+.nav-item__dropdown.show .nav-item__link{
+    color: $text-white;
+}
+.nav-item__link{
+    position: relative;
+    padding: 0;
+    font-weight: 500;
+    font-size: 1.4rem;
+    height: 100%;
+    width: 100%;
+    padding-right: 0.75rem !important;
+    padding-left: 0.75rem !important;
+    color: $text-grey;
+    height: 100%;
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(center);
+    cursor: pointer;
+
+    &::after{
+        content: none;
     }
-    & .nav-item, & .nav-link, & .nav-item .dropdown{
-        height: 100%;
-        @include flexbox();
-        @include flex-direction(column);
-        @include align-items(center);
-        @include justify-content(center);
+    &:hover, &:active, &:focus{
+        background: $brand-primary;
+        color: $text-white;
     }
-    & .dropdown{
-        position: static;
-        width: 100%;
-
-        &.show{
-            background: $white;
-            & .dropdown-toggle{
-                color: $dark-grey;
-            }
-        }
-        & .dropdown-toggle{
-            color: $text-grey;
-            height: 100%;
-            @include flexbox();
-            @include flex-direction(column);
-            @include align-items(center);
-            @include justify-content(center);
-            cursor: pointer;
-
-            &::after{
-                content: none;
-            }
-        }
-
-        & .dropdown-menu{
-            width: 100%;
-            padding: 0;
-        }
-    }
-
-    & .nav-link{
-        position: relative;
-        padding: 0;
-        color: $text-grey;
-        font-weight: 500;
-        font-size: 1.4rem;
-        height: 100%;
-        width: 100%;
-        padding-right: 0.75rem !important;
-        padding-left: 0.75rem !important;
-
-        &:hover, &:active, &:focus{
-            background: $white;
-            color: $dark-grey;
-        }
-    }
+}
+.nav-item__dropdown-menu{
+    width: 100%;
+    padding: 0;  
+}
+.navbar-menu__collapse, .navbar-menu__navbar{
+    height: 100%;
+    @include align-items(center);
+}
+.navbar-menu__container{
+    height: 100%;
 }
 
 
@@ -898,160 +893,210 @@ nav.navbar-menu{
 \*------------------------------------*/
 
 @media screen and (min-width:992px){
-    nav.navbar-menu{
-        & .navbar-collapse, & .navbar-nav{
+    .navbar-menu__collapse, .navbar-menu__navbar{
+        width: 100%;
+    } 
+    .navbar-menu__nav-item{
+        @include flex-grow(1);
+    }
+    .nav-item__dropdown{
+        z-index: 8;
+
+        &:hover .dropdown-menu{
+            display: block;  
+        }
+        &:hover .dropdown-toggle, &.show .dropdown-toggle{
+            background: $brand-primary;
+            color: $text-white;
+            z-index: 3;
+        }
+        & a:not([href]):not([tabindex]):focus, & a:not([href]):not([tabindex]):hover {
+            color: white;
+            text-decoration: none;
+        } 
+    } 
+    .nav-item__link{
+        &:hover, &:active, &:focus{
+            background: $brand-primary;
+            color: $text-white;
+        }
+    }
+    .nav-item__dropdown-menu{
+        @include box-shadow(0px,0,10px,$black-transparent-25);
+        z-index: 2;
+        background: $brand-primary;
+    }
+    .nav-item__container{
+        @include flexbox();
+        @include flex-direction(row);
+        position: relative;
+
+        &::after{
+            content:"";
+            background: $brand-primary;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            position: absolute;
             width: 100%;
+        }
+    }
+    .nav-item__row{
+        width: 100%;
+    }
+    .dropdown-column{
+        @include flexbox();
+        @include flex-direction(column);      
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+    }
+    .dropdown-column__link{
+        font-size: 1.4rem;
+        min-height: 3.6rem;
+        line-height: 1.5;
+        padding: 2rem 3rem;
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content(center);
+        font-weight: 400;
+        border-bottom: 1px solid $white-transparent;
 
-            & .nav-item{
-                @include flex-grow(1);
-            }
-        }  
-         & .dropdown{
-            z-index: 8;
+        &:hover, &:active, &:focus{
+            background: $brand-primary;
+            color: $text-white;
 
-            & .dropdown-menu{
-                @include box-shadow(0px,0,10px,$black-transparent-25);
-                z-index: 2;
+            & .dropdown-column__title{
+                padding-left: 5px;
+                @include transition(0.3s ease all);
             }
-            &:hover .dropdown-menu{
-                display: block;
-                padding: 10px 0;
-            }
-            &:hover .dropdown-toggle, &.show .dropdown-toggle{
-                background: $white;
-                color: $dark-grey;
-                z-index: 3;
-            }
-            & .container{
-                @include flexbox();
-                @include flex-direction(row);
-                & .row{
-                    width: 100%;
-                }
+        }
+    }   
+    .dropdown-column__title{
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin: 0;
+        line-height: 1.5;
+        color: $text-white;
+    }
+    .dropdown-column__icon{
+        display: inline-block;
+        height: 12px;
+        width: 12px;
+        margin: 0 5px;
+    }
 
-                & .dropdown-column{
-                    @include flexbox();
-                    @include flex-direction(column);      
-                    padding-top: 1rem;
-                    padding-bottom: 1rem;
-
-                    & .dropdown-item{
-                        font-size: 1.4rem;
-                        min-height: 3.6rem;
-                        line-height: 1.5;
-                        padding: 1rem 3rem;
-                        @include flexbox();
-                        @include flex-direction(column);
-                        @include justify-content(center);
-                        font-weight: 400;
-
-                        &:hover, &:active, &:focus{
-                            background: $light-grey;
-                            color: $dark-grey;
-                        }
-                    }
-                    & h5{
-                        font-size: 1.6rem;
-                        font-weight: 500;
-                        margin: 0;
-                        line-height: 1.5;
-                    }              
-                }
-            }
-        }     
-    }  
 }
 
 @media screen and (max-width:991px){
-    nav.navbar-menu{
+    .navbar-menu{
         height: 0;
         border: 0;
 
-        & .navbar-collapse{
-            background: $white;
+        & .nav-item__dropdown.show .nav-item__link::before{
+            display: none;
         }
-        & .nav-item, & .nav-link, & .nav-item .dropdown{
-            height: auto;
-            @include flexbox();
-            @include flex-direction(column);
-            @include align-items(center);
-            @include justify-content(center);
+    }
+    .navbar-menu__collapse{
+        background: $white;
+    }
+    .navbar-menu__nav-item, .nav-item__link, .nav-item__dropdown{
+        height: auto;
+        @include flexbox();
+        @include flex-direction(column);
+        @include align-items(center);
+        @include justify-content(center);
+    }
+    .navbar-menu__nav-item{
+        width:100%;
+        display: block;
+        border-bottom: 1px solid $black-transparent;
+    }
+    .nav-item__link{
+        padding-right: 2rem !important;
+        padding-left: 2rem !important;
+        font-size: 1.5rem;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        &:hover, &:active, &:focus{
+            background: $bg-white;
+            color: $text-primary;
         }
-        & .nav-item{
-            width:100%;
-            display: block;
-            border-bottom: 1px solid $black-transparent;
+    }
+    & .nav-item__link, & .nav-item__dropdown{
+        width:100%;
+        min-height: 46px;
+        color: $dark-grey;
+        white-space: normal;
+        @include align-items(flex-start);
+    }
+    .nav-item__dropdown-menu{
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    .nav-item__container{
+        padding: 0;
+    }
+    .nav-item__row{
+            margin-right: 0px;
+            margin-left: 0px;
+    }
+    .dropdown-column{
+            padding: 0;
+            padding: 5px 0;
+    }
+    .dropdown-column__link{
+        padding: 0 2rem 0 3rem;
+        min-height: 42px;
+        white-space: normal;
+        line-height: 1.2;
+        @include flexbox();
+        @include flex-direction(row);
+        @include align-items(center);
 
-            & .nav-link{
-                padding-right: 2rem !important;
-                padding-left: 2rem !important;
-                font-size: 1.5rem;
-                padding-top: 10px;
-                padding-bottom: 10px;
-            }
-            & .nav-link, & .dropdown{
-                width:100%;
-                min-height: 40px;
-                color: $dark-grey;
-                white-space: normal;
-                @include align-items(flex-start);
-            }
-            & .dropdown-menu .container{
-                padding: 0;
 
-                & .row{
-                    margin-right: 0px;
-                    margin-left: 0px;
-                }
-                & .dropdown-column{
-                    padding: 0;
-                    padding: 5px 0;
-
-                    & .dropdown-item{
-                        padding: 0 2rem 0 4rem;
-                        min-height: 36px;
-                        white-space: normal;
-                        line-height: 1.2;
-                        @include flexbox();
-                        @include flex-direction(row);
-                        @include align-items(center);
-
-                        & h5{
-                            font-size: 1.5rem;
-                            font-weight: 500;
-                            margin: 0;
-                        }
-                    }
-                }
-            }
-            & .dropdown.show, & .dropdown.show .dropdown-menu{
-                background: $light-grey;
-                padding: 0;
-                box-shadow: none;
-                border-radius: 0;
-            }
-            & .dropdown .dropdown-toggle::before{
-                content: "";
-                width:2px;
-                height: 10px;
-                background: $medium-grey;
-                right: 19px;
-                @include center('vertical');
-                border:0;
-            }
-            & .dropdown .dropdown-toggle::after{
-                content: "";
-                width:10px;
-                height: 2px;
-                background: $medium-grey;
-                right: 15px;
-                @include center('vertical');
-                border:0;
-            }
-            & .dropdown.show .dropdown-toggle::before{
-                display: none;
-            }
+        &:hover, &:active, &:focus{
+            background: $bg-white;
+            color: $text-primary;
         }
+    }
+    .dropdown-column__title{
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin: 0;
+    }
+    .dropdown-column__icon{
+        display: none;
+    }
+    .nav-item__dropdown.show .nav-item__link {
+        color: $text-primary;
+        background: $bg-light;
+    }
+    & .nav-item__dropdown.show, & .nav-item__dropdown.show .nav-item__dropdown-menu{
+        background: $light-grey;
+        padding: 0;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .dropdown .dropdown-toggle::before{
+        content: "";
+        width:2px;
+        height: 10px;
+        background: $medium-grey;
+        right: 19px;
+        @include center('vertical');
+        border:0;
+    }
+    .dropdown .dropdown-toggle::after{
+        content: "";
+        width:10px;
+        height: 2px;
+        background: $medium-grey;
+        right: 15px;
+        @include center('vertical');
+        border:0;
     }
 }
 
@@ -1084,7 +1129,7 @@ nav.navbar-menu{
     body.stop-scroll{
         overflow: hidden;
     }
-    header .navbar-collapse{
+    header .navbar-menu__collapse{
         position: fixed;
         left: 0px;
         top: 0px;
@@ -1095,34 +1140,6 @@ nav.navbar-menu{
         @include transition(0.3s transform ease);
         overflow-y: auto;
         overflow-x: hidden;
-        background: $dark-grey;
-
-        & .dropdown-menu{
-            position: relative;
-            top: 0;
-            left: 0;
-        }
-        & .navbar-toggler{
-            z-index: 2;
-            height: 100%;
-            width: 50px;
-            position: relative;
-            cursor: pointer;
-            padding: 0;
-            border:0;
-
-            &::after{
-                content: "";
-                position: absolute;
-                top: 0px;
-                right: 0px;
-                bottom: 0px;
-                left: 0px;
-                border: 2px solid $white;
-                border-radius: 3px;
-                margin: 0;
-            }
-        }
     }
     .collapsing, body.active .collapse, body.active .collapsing {
         @include translate(0%,0%);
@@ -1168,10 +1185,10 @@ nav.navbar.scroll{
 \*------------------------------------*/
 
 @media screen and (max-width:500px){
-    nav.navbar{
+    .navbar{
         padding:0;
     
-        & .navbar-brand img{
+        .navbar-brand img{
             height: 100%;
         }
     }
@@ -1243,9 +1260,9 @@ nav.navbar-responsive-bottom{
     NAVIGATION BUTTONS
 \*------------------------------------*/
 
-nav.navbar-main{
-    & .search-wrap-responsive.open, & .search-wrap-responsive-close.open{
-        & .search-icon::before{
+.navbar-main{
+    .search-wrap-responsive-close.open{
+        .search-icon::before{
             background: $white;
             width:100%;
             height: 2px;
@@ -1253,7 +1270,7 @@ nav.navbar-main{
             @include transform-origin(center);
             top: 50%;
         }
-        & .search-icon::after{
+        .search-icon::after{
             background: $white;
             width:100%;
             height: 2px;
@@ -1263,11 +1280,11 @@ nav.navbar-main{
             top: 50%;
         }
     }
-    & .search-wrap-responsive-close.open{
-        & .search-icon::before{
+    .search-wrap-responsive-close.open{
+        .search-icon::before{
             background: $dark-grey;
         }
-        & .search-icon::after{
+        .search-icon::after{
             background: $dark-grey;
         }
     }
@@ -1280,13 +1297,6 @@ nav.navbar-main{
 nav{
     & .dropdown button{
         cursor: pointer;
-    }
-    & .dropdown .dropdown-item{
-        font-size: 1.5rem;
-        min-height: 5rem;
-        line-height: 2.4rem;
-        padding:1.3rem 3rem;
-        font-weight: 400;
     }
     .dropdown-menu-right{
         right: 0;

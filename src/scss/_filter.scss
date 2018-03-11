@@ -44,9 +44,11 @@
 .filter-main{
 	background: $light-grey;
     border: 1px solid $border-grey;
-	padding: 20px;
     margin-bottom: 4rem;
     border-radius: $border-radius-primary;
+}
+.filter-main__collapse{
+    display: none;
 }
 .filter-main__heading{
     display: block;
@@ -90,11 +92,13 @@
     min-height: 4.6rem;
     margin: 0;
     color: $orange-main;
-
 }
 .filter-main__button{
     width: 100%;
     margin-top: 0px;
+}
+.filter-main__form{
+    padding: 2rem;
 }
 .filter-main__collapse-toggle{
     background: $white;
@@ -112,11 +116,11 @@
 .filter-main__collapse-toggle[aria-expanded="true"] .filter-main__icon::before{
     display: none;
 }
-.filter-main__collapse{
+.filter-main__brand-collapse{
     width: 100%;
     margin: 0 5px;
 }
-.filter-main__collapse-wrap{
+.filter-main__brand-collapse-wrap{
     width: 100%;
     @include flexbox();
     @include flex-direction(row);
@@ -138,3 +142,25 @@
     margin-top: 10px;
 }
 
+@media screen and (max-width:991px){
+    .filter-main__collapse{
+        display: block;
+        background: $brand-primary;
+        padding: 2rem;
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: $text-white;
+        border-top-left-radius: $border-radius-primary;
+        border-top-right-radius: $border-radius-primary;
+
+        &:hover, &:active, &:focus{
+            color: $text-white;
+            text-decoration: none;
+        }
+    }
+}
+@media screen and (min-width:992px){
+    .filter-main__collapse-wrap{
+        display: block;
+    }
+}

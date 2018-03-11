@@ -178,11 +178,10 @@ $( "#eac-container-searchbox" ).click(function() {
 
 
 // Select all links with hashes
-$('a[href*="#"]')
+$('a[href*="#anchor"]')
   // Remove links that don't actually link to anything
   .not('[href="#"]')
   .not('[href="#0"]')
-  .not('[href="#tab-delivery-price-1"], [href="#tab-delivery-price-2"], [href="#product-description-1"], [href="#product-description-2"], [href="#product-description-3"]')
   .click(function(event) {
     // On-page links
     if (
