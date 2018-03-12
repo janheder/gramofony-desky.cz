@@ -19,6 +19,9 @@
     position:relative;
     overflow: hidden;
 }
+.hero__swiper-wrapper{
+    padding: 0;
+}
 .hero__swiper-slide{
     height: auto;
     @include flexbox();
@@ -381,15 +384,31 @@
     position: relative;
     overflow: hidden;
 }
-.logos__swiper-wrap .swiper-slide{
+.logos__swiper-slide{
     height: auto;
+    position: relative;
     text-align: center;
     padding: 15px;
-    /*
-    &:hover, &:active, &:focus{
-        @include box-shadow(0px,0,10px,$black-transparent-25);
+    @include flexbox();
+    @include flex-direction(row);
+    @include align-items(center);
+    @include justify-content(center);
+
+    .swiper-lazy-loaded{
+        max-height: 80px; 
     }
-    */
+    
+    &:hover, &:active, &:focus{
+        &::after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            top: 5px;
+            bottom: 5px;
+            @include box-shadow(0px,0,10px,$black-transparent-25);
+        }
+    }
+    
 }
 
 /* ========================================================================== */

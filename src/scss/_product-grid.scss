@@ -121,6 +121,8 @@
     PRODUCT SWIPER
 \*------------------------------------*/
 .swiper-wrapper{
+    padding: 20px 0px;
+
     & figcaption{
         display: none;
     }
@@ -174,6 +176,7 @@
 }
 .swiper-container-5-products-wrap{
     position: relative;
+
 }
 @media screen and (max-width:991px){
     .swiper-container-5-products{

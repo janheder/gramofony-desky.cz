@@ -53,9 +53,10 @@ html(lang="en")
                             a.subcategories-grid__single(href="#") #[span.arrow-icon.subcategories-grid__icon] Profesional
 
                 .top-products
-                    h2.top-products__heading Nejprodávanější produkty
+                    .top-products__title-wrap
+                        h2.top-products__title Nejprodávanější produkty
                     .swiper-container-5-products-wrap
-                        .swiper-container-5-products
+                        .swiper-container-5-products 
                             .swiper-wrapper
                                 .swiper-slide
                                     include _single-product-cell-top.pug
