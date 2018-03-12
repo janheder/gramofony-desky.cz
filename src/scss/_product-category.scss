@@ -29,9 +29,9 @@ margin-bottom: 4rem;
 }
 
 .top-products {
-    margin-bottom: 4rem;
+    margin-bottom: 0rem;
     position: relative;
-    padding: 3rem 0;
+    padding: 0;
 }
 .top-products__title-wrap{
     position: relative;
@@ -58,4 +58,10 @@ margin-bottom: 4rem;
     z-index: 2;
     display: inline-block;
     padding: 0 2rem;
+}
+@media screen and (min-width:992px){
+    .top-products {
+        margin-bottom: 4rem;
+        padding: 3rem 0;
+    }
 }

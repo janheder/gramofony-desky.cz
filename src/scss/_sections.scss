@@ -75,8 +75,9 @@
     position: relative;
 }
 .hero__img{
-    max-width: 360px;
+    width: 360px;
     max-height: 360px;
+    max-width: 100%;
 }
 .hero__sale-tag{
     color: $text-white;
@@ -176,9 +177,15 @@
     }
 }
 @media screen and (max-width:420px){
+    .hero__swiper-slide{
+        @include flexbox();
+        @include flex-direction(column);
+    }
     .hero__content, .hero__image{
         padding: 20px;
-        padding-bottom: 40px;
+        @include flex-basis(100%);
+        display: block;
+        height: auto;
     }
     .hero__contant{
         padding-right: 0px;   

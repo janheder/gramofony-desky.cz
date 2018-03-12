@@ -7,3 +7,25 @@
 #cookie-bar .cb-policy {
     background: $medium-grey;
 }
+
+@media screen and (max-width: 768px){
+    #cookie-bar.fixed.bottom {
+        bottom: 60px;
+        width: 320px;
+        max-width: 90%;
+        left: auto;
+        right: 0px; 
+        top: auto;
+        border-radius: $border-radius-primary;
+    }
+    #cookie-bar .cb-enable {
+        background: $orange-main;
+        display: inline-block;
+        width: 45%;
+    }
+    #cookie-bar .cb-policy {
+        background: $medium-grey;
+        display: inline-block;
+        width: 40%;
+    }
+}

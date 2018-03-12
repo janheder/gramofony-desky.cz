@@ -405,5 +405,17 @@
     background: $border-grey;
     color: $dark-grey;
 }
-                
+
+.product-tags--detail{
+    position: absolute;
+    top: 10px;
+    z-index: 5;
+    left: 10px;
+}
+.product-tags--right-detail{
+    position: absolute;
+    top: 10px;
+    z-index: 5;
+    right: 10px;
+}           
 

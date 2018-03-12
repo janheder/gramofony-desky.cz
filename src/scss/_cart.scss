@@ -277,7 +277,7 @@
 }
 */
 .cart-item-single__sum{
-	color: #C50000;
+	color: $text-red;
     font-size: 2rem;
     line-height: 1;
     font-weight: 500;
@@ -334,6 +334,7 @@
 	.cart-item-single__name-wrap{
 		padding: 0;
 		width: 100%;
+		padding-right: 30px;
 	}
 	.cart-item-single__inner{
 		width: 100%;
@@ -359,8 +360,8 @@
 		top: 0;
 		padding: 0;
 		width: auto;
-		left: 0;
-		@include translate(-5px, -5px);
+		right: 0;
+		@include translate(-10px, 10px);
 	} 
 }
 
