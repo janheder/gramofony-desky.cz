@@ -235,14 +235,16 @@ html(lang="en")
                     .cart-bottom-btns
                         a.btn.btn-dark(href="#") #[span.btn__icon.arrow-icon.left.white] Zpět do obchodu
                         a.btn.btn-ghost(href="#") #[span.btn__icon.cross-icon] Vyprázdnit košík
-                        button.btn(type="submit") Doprava a platba #[span.btn__icon.arrow-icon.white]               
+                        button.btn(type="submit" id="delivery-form-submit") Osobní údaje #[span.btn__icon.arrow-icon.white]      
+                               
 
             .cart-price-overview-responsive
                 .cart-price-overview-responsive__price-wrap
                     p.cart-price-overview-responsive__text Celková cena s DPH
                     h3.cart-price-overview-responsive__price #[span 16 989] Kč
                 .cart-price-overview-responsive__btn-wrap
-                    a.btn.cart-price-overview-responsive__btn(href="#") Osobní údaje #[span.btn__icon.arrow-icon.white]
+                    button.btn.cart-price-overview-responsive__btn(onclick="$('#delivery-form-submit').trigger('click');") Osobní údaje #[span.btn__icon.arrow-icon.white]  
+
 
         include _footer.pug
 

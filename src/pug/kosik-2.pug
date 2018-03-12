@@ -53,7 +53,7 @@ html(lang="en")
                     .col-12.col-sm-12.col-md-12.col-lg-9.col-xl-9
                         .row
                             .col-12.col-sm-12.col-md-12.col-lg-6.col-xl-6
-                                form(method="post" action="" class="register-form" name="register_form")
+                                form(method="post" action="" class="register-form" name="register_form" id="register_form")
                                     h3 Objednat bez registrace
                                     button.btn.btn-ghost.register-form-toggler(type="button" data-toggle="collapse" data-target="#register-collapse" aria-expanded="false" aria-controls="register-collapse") Objednat bez registrace
                                     .collapse(id="register-collapse")
@@ -193,6 +193,8 @@ html(lang="en")
                                                     | Souhlasím se zpracováním osobních údajů
                                                     span.form-check__box.checkbox
 
+                                        button.d-none(type="submit" id="register-form-submit") Souhrn objednávky
+
 
                             .col-12.col-sm-12.col-md-12.col-lg-6.col-xl-6
                                 form(method="post" action="" class="login-form" name="login_form")
@@ -267,71 +269,66 @@ html(lang="en")
 
                 .cart-bottom-btns
                     a.btn.btn-dark(href="#") #[span.btn__icon.arrow-icon.left.white] Krok zpět
-                    a.btn(href="#") Souhrn objednávky #[span.btn__icon.arrow-icon.white]                   
+                    button.btn(onclick="$('#register-form-submit').trigger('click');") Souhrn objednávky #[span.btn__icon.arrow-icon.white]
+                
 
             .cart-price-overview-responsive
                 .cart-price-overview-responsive__price-wrap
                     p.cart-price-overview-responsive__text Celková cena s DPH
                     h3.cart-price-overview-responsive__price #[span 16 989] Kč
                 .cart-price-overview-responsive__btn-wrap
-                    a.btn.cart-price-overview-responsive__btn(href="#") Souhrn objednávky #[span.btn__icon.arrow-icon.white]
-
-
-
-        script(src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js")
-        script.
-            // Wait for the DOM to be ready
-            $(function() {
-                // Initialize form validation on the registration form.
-                // It has the name attribute "registration"
-                $("form[name='register_form']").validate({
-                    // Specify validation rules
-                    rules: {
-                        // The key name on the left side is the name attribute
-                        // of an input field. Validation rules are defined
-                        // on the right side
-                        register_form_name: "required",      
-                        register_form_email: {
-                            required: true,
-                            email: true
-                        },
-                        register_form_tel: {
-                            required: false,
-                            minlength: 9
-                        },
-                        register_form_password: {
-                            required: true,
-                            minlength: 5
-                        },
-                        register_form_address: {
-                            required: true
-                        },
-                        route: {
-                            required: true
-                        }
-                    },
-                    // Specify validation error messages
-                    messages: {
-                        register_form_name: "Prosím zadejte své celé jméno",
-                        register_form_email: "Prosím zadejte platnou emailovou adresu",
-                        register_form_tel: {required: "Prosím zadejte telefonní číslo", minlength: "Telefonní číslo je neplatné"},
-                        register_form_password: {required: "Prosím zadejte heslo", minlength: "Vaše heslo musí být alespoň 5 znaků dlouhé"},
-                        register_form_address: "Zadejte svou adresu"
-                    },
-                    // Make sure the form is submitted to the destination defined
-                    // in the "action" attribute of the form when valid
-                    submitHandler: function(form) {
-                        form.submit();
-                    }
-                });
-            });
-            jQuery.extend(jQuery.validator.messages, {
-                required: "Toto pole je povinné"
-            });
-
-
-
+                    button.btn.cart-price-overview-responsive__btn(onclick="$('#register-form-submit').trigger('click');") Souhrn objednávky #[span.btn__icon.arrow-icon.white]
 
         include _footer.pug
 
         include _js-include.pug
+
+        script.
+            // Wait for the DOM to be ready
+            $(function() {
+              // Initialize form validation on the registration form.
+              // It has the name attribute "registration"
+              $("form[name='register_form']").validate({
+                // Specify validation rules
+                rules: {
+                  // The key name on the left side is the name attribute
+                  // of an input field. Validation rules are defined
+                  // on the right side
+                  register_form_name: "required",      
+                  register_form_email: {
+                    required: true,
+                    email: true
+                  },
+                  register_form_tel: {
+                    required: false,
+                    minlength: 9
+                  },
+                  register_form_password: {
+                    required: true,
+                    minlength: 5
+                  },
+                  register_form_address: {
+                    required: true
+                  },
+                  route: {
+                    required: true
+                  }
+                },
+                // Specify validation error messages
+                messages: {
+                  register_form_name: "Prosím zadejte své celé jméno",
+                  register_form_email: "Prosím zadejte platnou emailovou adresu",
+                  register_form_tel: {required: "Prosím zadejte telefonní číslo", minlength: "Telefonní číslo je neplatné"},
+                  register_form_password: {required: "Prosím zadejte heslo", minlength: "Vaše heslo musí být alespoň 5 znaků dlouhé"},
+                  register_form_address: "Zadejte svou adresu"
+                },
+                // Make sure the form is submitted to the destination defined
+                // in the "action" attribute of the form when valid
+                submitHandler: function(form) {
+                  form.submit();
+                }
+              });
+            });
+            jQuery.extend(jQuery.validator.messages, {
+                required: "Toto pole je povinné"
+            });

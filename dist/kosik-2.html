@@ -513,7 +513,7 @@
           <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9">
             <div class="row">
               <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                <form class="register-form" method="post" action="" name="register_form">
+                <form class="register-form" method="post" action="" name="register_form" id="register_form">
                   <h3>Objednat bez registrace</h3>
                   <button class="btn btn-ghost register-form-toggler" type="button" data-toggle="collapse" data-target="#register-collapse" aria-expanded="false" aria-controls="register-collapse">Objednat bez registrace</button>
                   <div class="collapse" id="register-collapse">
@@ -657,6 +657,7 @@
                         </label>
                       </div>
                     </div>
+                    <button class="d-none" type="submit" id="register-form-submit">Souhrn objednávky</button>
                   </div>
                 </form>
               </div>
@@ -744,71 +745,20 @@
             </div>
           </div>
         </div>
-        <div class="cart-bottom-btns"><a class="btn btn-dark" href="#"><span class="btn__icon arrow-icon left white"></span> Krok zpět</a><a class="btn" href="#">Souhrn objednávky <span class="btn__icon arrow-icon white"></span>                   </a></div>
+        <div class="cart-bottom-btns"><a class="btn btn-dark" href="#"><span class="btn__icon arrow-icon left white"></span> Krok zpět</a>
+          <button class="btn" onclick="$('#register-form-submit').trigger('click');">Souhrn objednávky <span class="btn__icon arrow-icon white"></span></button>
+        </div>
       </div>
       <div class="cart-price-overview-responsive">
         <div class="cart-price-overview-responsive__price-wrap">
           <p class="cart-price-overview-responsive__text">Celková cena s DPH</p>
           <h3 class="cart-price-overview-responsive__price"><span>16 989</span> Kč</h3>
         </div>
-        <div class="cart-price-overview-responsive__btn-wrap"><a class="btn cart-price-overview-responsive__btn" href="#">Souhrn objednávky <span class="btn__icon arrow-icon white"></span></a></div>
+        <div class="cart-price-overview-responsive__btn-wrap">
+          <button class="btn cart-price-overview-responsive__btn" onclick="$('#register-form-submit').trigger('click');">Souhrn objednávky <span class="btn__icon arrow-icon white"></span></button>
+        </div>
       </div>
-    </main>
-    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
-    <script>
-      // Wait for the DOM to be ready
-      $(function() {
-          // Initialize form validation on the registration form.
-          // It has the name attribute "registration"
-          $("form[name='register_form']").validate({
-              // Specify validation rules
-              rules: {
-                  // The key name on the left side is the name attribute
-                  // of an input field. Validation rules are defined
-                  // on the right side
-                  register_form_name: "required",      
-                  register_form_email: {
-                      required: true,
-                      email: true
-                  },
-                  register_form_tel: {
-                      required: false,
-                      minlength: 9
-                  },
-                  register_form_password: {
-                      required: true,
-                      minlength: 5
-                  },
-                  register_form_address: {
-                      required: true
-                  },
-                  route: {
-                      required: true
-                  }
-              },
-              // Specify validation error messages
-              messages: {
-                  register_form_name: "Prosím zadejte své celé jméno",
-                  register_form_email: "Prosím zadejte platnou emailovou adresu",
-                  register_form_tel: {required: "Prosím zadejte telefonní číslo", minlength: "Telefonní číslo je neplatné"},
-                  register_form_password: {required: "Prosím zadejte heslo", minlength: "Vaše heslo musí být alespoň 5 znaků dlouhé"},
-                  register_form_address: "Zadejte svou adresu"
-              },
-              // Make sure the form is submitted to the destination defined
-              // in the "action" attribute of the form when valid
-              submitHandler: function(form) {
-                  form.submit();
-              }
-          });
-      });
-      jQuery.extend(jQuery.validator.messages, {
-          required: "Toto pole je povinné"
-      });
-      
-      
-      
-      
-    </script><a class="scroll-to-top" href="#anchor-navbar-top"><span class="caret-icon top"></span></a>
+    </main><a class="scroll-to-top" href="#anchor-navbar-top"><span class="caret-icon top"></span></a>
     <footer>
       <section class="footer-bar">
         <div class="footer-bar__img1 post__image-container"><img class="post__featured-image" src="img/footer-bar-poslechova.jpg" alt="#" title="#"></div>
@@ -926,5 +876,55 @@
         </div>
       </div>
     </div>
+    <script>
+      // Wait for the DOM to be ready
+      $(function() {
+        // Initialize form validation on the registration form.
+        // It has the name attribute "registration"
+        $("form[name='register_form']").validate({
+          // Specify validation rules
+          rules: {
+            // The key name on the left side is the name attribute
+            // of an input field. Validation rules are defined
+            // on the right side
+            register_form_name: "required",      
+            register_form_email: {
+              required: true,
+              email: true
+            },
+            register_form_tel: {
+              required: false,
+              minlength: 9
+            },
+            register_form_password: {
+              required: true,
+              minlength: 5
+            },
+            register_form_address: {
+              required: true
+            },
+            route: {
+              required: true
+            }
+          },
+          // Specify validation error messages
+          messages: {
+            register_form_name: "Prosím zadejte své celé jméno",
+            register_form_email: "Prosím zadejte platnou emailovou adresu",
+            register_form_tel: {required: "Prosím zadejte telefonní číslo", minlength: "Telefonní číslo je neplatné"},
+            register_form_password: {required: "Prosím zadejte heslo", minlength: "Vaše heslo musí být alespoň 5 znaků dlouhé"},
+            register_form_address: "Zadejte svou adresu"
+          },
+          // Make sure the form is submitted to the destination defined
+          // in the "action" attribute of the form when valid
+          submitHandler: function(form) {
+            form.submit();
+          }
+        });
+      });
+      jQuery.extend(jQuery.validator.messages, {
+          required: "Toto pole je povinné"
+      });
+    </script>
   </body>
 </html>
