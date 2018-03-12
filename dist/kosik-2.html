@@ -512,11 +512,10 @@
         <div class="row">
           <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9">
             <div class="row">
-              <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+              <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 register-form-col">
                 <form class="register-form" method="post" action="" name="register_form" id="register_form">
-                  <h3>Objednat bez registrace</h3>
-                  <button class="btn btn-ghost register-form-toggler" type="button" data-toggle="collapse" data-target="#register-collapse" aria-expanded="false" aria-controls="register-collapse">Objednat bez registrace</button>
-                  <div class="collapse" id="register-collapse">
+                  <h3>Objednat bez registrace</h3><a class="register-form-toggler" data-toggle="collapse" href="#register-collapse" aria-expanded="false" aria-controls="register-collapse">Objednat bez registrace</a>
+                  <div class="collapse register-form-collapse" id="register-collapse">
                     <div class="form-group">
                       <label for="register_form_name">Jméno a příjmení</label>
                       <input class="form-control" type="text" name="register_form_name" id="register_form_name" autocomplete="name" required>
@@ -661,11 +660,10 @@
                   </div>
                 </form>
               </div>
-              <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+              <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 login-form-col">
                 <form class="login-form" method="post" action="" name="login_form">
-                  <h3>Přihlásit se k existujícímu účtu</h3>
-                  <button class="btn btn-ghost login-form-toggler" type="button" data-toggle="collapse" data-target="#login-collapse" aria-expanded="false" aria-controls="login-collapse">Přihlásit se k existujícímu účtu</button>
-                  <div class="collapse" id="login-collapse">
+                  <h3>Přihlásit se k existujícímu účtu</h3><a class="login-form-toggler" data-toggle="collapse" href="#login-collapse" aria-expanded="false" aria-controls="login-collapse">Přihlásit se k existujícímu účtu</a>
+                  <div class="collapse login-form-collapse" id="login-collapse">
                     <div class="form-group">
                       <label for="login_form-email">Emailová adresa</label>
                       <input class="form-control" type="email" name="login_form_email" id="login_form_email" required>

@@ -239,13 +239,37 @@ input[type=number]::-webkit-outer-spin-button {
     & .register-form-info-collapse-wrap{
         padding: 3rem 0;
     }
-    & .register-form-toggler, & .login-form-toggler{
-        cursor: pointer;
-    }
     .billing-address-wrap, .shipping-address-wrap, .cart-register-wrap {
         display: none;
     }
-}       
+}   
+
+@media screen and (max-width: 991px){
+    .register-form-col, .login-form-col{
+        padding-top: 20px;
+    }
+    .login-form-col{
+        padding-bottom: 20px;
+    }
+    .register-form-toggler, .login-form-toggler{
+        cursor: pointer;
+        background: $bg-light;
+        padding: 2rem;
+        display: block;
+        color: $text-primary;
+        border: 1px solid $border-primary;
+        margin: 0;
+        
+        &[aria-expanded="true"]{
+            background: $bg-white;
+        }
+    }    
+    .register-form-collapse, .login-form-collapse{
+        border: 1px solid $border-primary;
+        border-top: 0;
+        padding: 20px;
+    }
+}
 @media screen and (min-width: 992px){
     .form-row-wide{
         & .col-12{
@@ -263,23 +287,19 @@ input[type=number]::-webkit-outer-spin-button {
         & h3{
             display: block;
         }
-        & .register-form-toggler, & .login-form-toggler{
-            display: none;
-            cursor: pointer;
-        }
         & .collapse{
             display: block;
         }
+    }
+    .register-form-toggler, .login-form-toggler{
+        display: none;
+        cursor: pointer;
     }
 }
 @media screen and (max-width: 991px){
     .register-form, .login-form{
         padding: 0;
         margin: 0;
-
-        & .register-form-toggler, & .login-form-toggler{
-            margin: 10px 0;
-        }
     }
 }
 

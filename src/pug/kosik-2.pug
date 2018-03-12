@@ -52,11 +52,11 @@ html(lang="en")
                 .row
                     .col-12.col-sm-12.col-md-12.col-lg-9.col-xl-9
                         .row
-                            .col-12.col-sm-12.col-md-12.col-lg-6.col-xl-6
+                            .col-12.col-sm-12.col-md-12.col-lg-6.col-xl-6.register-form-col
                                 form(method="post" action="" class="register-form" name="register_form" id="register_form")
                                     h3 Objednat bez registrace
-                                    button.btn.btn-ghost.register-form-toggler(type="button" data-toggle="collapse" data-target="#register-collapse" aria-expanded="false" aria-controls="register-collapse") Objednat bez registrace
-                                    .collapse(id="register-collapse")
+                                    a.register-form-toggler(data-toggle="collapse" href="#register-collapse" aria-expanded="false" aria-controls="register-collapse") Objednat bez registrace
+                                    .collapse.register-form-collapse(id="register-collapse")
                                         .form-group
                                             label(for="register_form_name") Jméno a příjmení
                                             input.form-control(type="text" name="register_form_name" id="register_form_name" autocomplete="name" required)
@@ -196,11 +196,11 @@ html(lang="en")
                                         button.d-none(type="submit" id="register-form-submit") Souhrn objednávky
 
 
-                            .col-12.col-sm-12.col-md-12.col-lg-6.col-xl-6
+                            .col-12.col-sm-12.col-md-12.col-lg-6.col-xl-6.login-form-col
                                 form(method="post" action="" class="login-form" name="login_form")
                                     h3 Přihlásit se k existujícímu účtu
-                                    button.btn.btn-ghost.login-form-toggler(type="button" data-toggle="collapse" data-target="#login-collapse" aria-expanded="false" aria-controls="login-collapse") Přihlásit se k existujícímu účtu
-                                    .collapse(id="login-collapse")
+                                    a.login-form-toggler(data-toggle="collapse" href="#login-collapse" aria-expanded="false" aria-controls="login-collapse") Přihlásit se k existujícímu účtu
+                                    .collapse.login-form-collapse(id="login-collapse")
                                         .form-group
                                             label(for="login_form-email") Emailová adresa
                                             input.form-control(type="email" name="login_form_email" id="login_form_email" required)
