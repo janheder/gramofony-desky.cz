@@ -261,6 +261,7 @@
         @include flex-grow(1);
         @include flex-basis(auto);
         margin: 10px 0;
+        @include justify-content(flex-start);
 
         &:nth-child(2n+2){
             border-right: none;  
@@ -278,6 +279,7 @@
     }
     .benefits__text{
         padding: 0;
+        padding-top: 10px;
     }
 }
 
