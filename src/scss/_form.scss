@@ -40,18 +40,19 @@ select.form-control:not([size]):not([multiple]) {
     cursor: pointer;
     border: 0;
     }
-    & label.error{
+    .error{
         color: $red-main;
         font-size: 13px;
         order: 1;
+        margin: 0;
     }
-    & label{
+    label{
         width: 100%;
     }
-    & h3{
+    h3{
         margin: 2rem 0;
     }  
-    & #show_password_toggler{
+    #show_password_toggler{
         cursor: pointer;
         position: absolute;
         top: 40px;
@@ -63,6 +64,13 @@ select.form-control:not([size]):not([multiple]) {
             opacity: 1;
         }
     }
+}
+
+.form-check__label .error::after{
+    content: "";
+    @include absolute-position(-1px,-1px,-1px,-1px);
+    border: 1px solid $border-red;
+    border-radius: $border-radius-primary;
 }
 .label__muted{
     opacity: 0.7;
@@ -180,6 +188,7 @@ select.form-control:not([size]):not([multiple]) {
     z-index: -2;
 }
 
+
 /*
 .form-check + .form-check{
     border-top: 0;
@@ -248,9 +257,28 @@ input[type=number]::-webkit-outer-spin-button {
     .register-form-col, .login-form-col{
         padding-top: 20px;
     }
-    .login-form-col{
+    .register-form-col{
+        order: 1;
         padding-bottom: 20px;
     }
+    .login-form-col{
+        order: 0;
+    }
+    .register-form-toggler__icon{
+        @include center(vertical);
+        right: 2rem;
+        background: $bg-dark;
+        height: 2px;
+        width: 10px;
+
+        &::after{
+            content: "";
+            @include center(both);
+            height: 10px;
+            width: 2px;
+            background: $bg-dark;
+        }
+    }  
     .register-form-toggler, .login-form-toggler{
         cursor: pointer;
         background: $bg-light;
@@ -259,11 +287,15 @@ input[type=number]::-webkit-outer-spin-button {
         color: $text-primary;
         border: 1px solid $border-primary;
         margin: 0;
+        position: relative;
         
         &[aria-expanded="true"]{
             background: $bg-white;
         }
-    }    
+        &[aria-expanded="true"] .register-form-toggler__icon::after{
+            content: none;
+        }
+    }
     .register-form-collapse, .login-form-collapse{
         border: 1px solid $border-primary;
         border-top: 0;
@@ -305,4 +337,13 @@ input[type=number]::-webkit-outer-spin-button {
 
 .tooltip{
     font-size: 12px;
+}
+
+.form-responsive-error{
+    display: none;
+    background: $bg-red;
+    padding: 20px;
+    color: $text-white;
+    margin-top: 20px;
+    border-radius: $border-radius-primary;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
   <head>
     <meta charset="utf-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
@@ -511,11 +511,12 @@
       <div class="container">
         <div class="row">
           <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9">
+            <div class="form-responsive-error">Prosím zadejte své osobní údaje nebo se přihlaste.</div>
             <div class="row">
               <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 register-form-col">
                 <form class="register-form" method="post" action="" name="register_form" id="register_form">
-                  <h3>Objednat bez registrace</h3><a class="register-form-toggler" data-toggle="collapse" href="#register-collapse" aria-expanded="false" aria-controls="register-collapse">Objednat bez registrace</a>
-                  <div class="collapse register-form-collapse" id="register-collapse">
+                  <h3>Objednat bez registrace</h3><a class="register-form-toggler" data-toggle="collapse" href="#register-collapse" aria-expanded="true" aria-controls="register-collapse">Objednat bez registrace <span class="register-form-toggler__icon"></span></a>
+                  <div class="collapse register-form-collapse show" id="register-collapse">
                     <div class="form-group">
                       <label for="register_form_name">Jméno a příjmení</label>
                       <input class="form-control" type="text" name="register_form_name" id="register_form_name" autocomplete="name" required>
@@ -529,20 +530,20 @@
                       <input class="form-control" type="tel" name="register_form_tel" id="register_form_tel" autocomplete="tel">
                     </div>
                     <div class="form-group">
-                      <label for="route">Ulice a č. p.</label>
-                      <input class="form-control" type="text" name="register-form-route" id="route" autocomplete="street-address" required>
+                      <label for="register_form_address">Ulice a č. p.</label>
+                      <input class="form-control" type="text" name="register_form_address" id="register_form_address" autocomplete="street-address" required>
                     </div>
                     <div class="form-group">
-                      <label for="locality">Město</label>
-                      <input class="form-control" type="text" name="register-form-locality" id="locality" autocomplete="address-level2" required>
+                      <label for="register_form_locality">Město</label>
+                      <input class="form-control" type="text" name="register_form_locality" id="register_form_locality" autocomplete="address-level2" required>
                     </div>
                     <div class="form-group">
-                      <label for="postal_code">PSČ</label>
-                      <input class="form-control" type="text" name="register-form-postal_code" id="postal_code" autocomplete="postal-code" required>
+                      <label for="register_form_postal_code">PSČ</label>
+                      <input class="form-control" type="text" name="register_form_postal_code" id="register_form_postal_code" autocomplete="postal-code" required>
                     </div>
                     <div class="form-group">
-                      <label for="country">Stát</label>
-                      <select class="form-control" type="text" name="register-form-country" id="country" required>
+                      <label for="register_form_country">Stát</label>
+                      <select class="form-control" type="text" name="register_form_country" id="register_form_country" required>
                         <option value="cz">Česká republika</option>
                         <option value="sk">Slovensko</option>
                       </select>
@@ -678,6 +679,16 @@
                   </div>
                 </form>
               </div>
+              <script>
+                function responsive_check(){
+                    if($(".register-form-toggler").attr("aria-expanded") === "false"){
+                        $(".form-responsive-error").fadeToggle(200);
+                    }else{
+                        $("#register-form-submit").trigger("click");
+                    }
+                }
+                
+              </script>
             </div>
           </div>
           <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
@@ -744,7 +755,7 @@
           </div>
         </div>
         <div class="cart-bottom-btns"><a class="btn btn-dark" href="#"><span class="btn__icon arrow-icon left white"></span> Krok zpět</a>
-          <button class="btn" onclick="$('#register-form-submit').trigger('click');">Souhrn objednávky <span class="btn__icon arrow-icon white"></span></button>
+          <button class="btn" onclick="responsive_check()">Souhrn objednávky <span class="btn__icon arrow-icon white"></span></button>
         </div>
       </div>
       <div class="cart-price-overview-responsive">
@@ -753,7 +764,7 @@
           <h3 class="cart-price-overview-responsive__price"><span>16 989</span> Kč</h3>
         </div>
         <div class="cart-price-overview-responsive__btn-wrap">
-          <button class="btn cart-price-overview-responsive__btn" onclick="$('#register-form-submit').trigger('click');">Souhrn objednávky <span class="btn__icon arrow-icon white"></span></button>
+          <button class="btn cart-price-overview-responsive__btn" onclick="responsive_check()">Souhrn objednávky <span class="btn__icon arrow-icon white"></span></button>
         </div>
       </div>
     </main><a class="scroll-to-top" href="#anchor-navbar-top"><span class="caret-icon top"></span></a>
@@ -877,48 +888,57 @@
     <script>
       // Wait for the DOM to be ready
       $(function() {
-        // Initialize form validation on the registration form.
-        // It has the name attribute "registration"
-        $("form[name='register_form']").validate({
-          // Specify validation rules
-          rules: {
-            // The key name on the left side is the name attribute
-            // of an input field. Validation rules are defined
-            // on the right side
-            register_form_name: "required",      
-            register_form_email: {
-              required: true,
-              email: true
-            },
-            register_form_tel: {
-              required: false,
-              minlength: 9
-            },
-            register_form_password: {
-              required: true,
-              minlength: 5
-            },
-            register_form_address: {
-              required: true
-            },
-            route: {
-              required: true
-            }
-          },
-          // Specify validation error messages
-          messages: {
-            register_form_name: "Prosím zadejte své celé jméno",
-            register_form_email: "Prosím zadejte platnou emailovou adresu",
-            register_form_tel: {required: "Prosím zadejte telefonní číslo", minlength: "Telefonní číslo je neplatné"},
-            register_form_password: {required: "Prosím zadejte heslo", minlength: "Vaše heslo musí být alespoň 5 znaků dlouhé"},
-            register_form_address: "Zadejte svou adresu"
-          },
-          // Make sure the form is submitted to the destination defined
-          // in the "action" attribute of the form when valid
-          submitHandler: function(form) {
-            form.submit();
-          }
-        });
+          // Initialize form validation on the registration form.
+          // It has the name attribute "registration"
+          $("form[name='register_form']").validate({
+              // Specify validation rules
+              errorElement: 'span',
+              rules: {
+                  // The key name on the left side is the name attribute
+                  // of an input field. Validation rules are defined
+                  // on the right side
+                  register_form_name:{
+                      required: true
+                  },
+                  register_form_email: {
+                      required: true,
+                      email: true
+                  },
+                  register_form_tel: {
+                      required: false,
+                      minlength: 9
+                  },
+                  register_form_password: {
+                      required: true,
+                      minlength: 5
+                  },
+                  register_form_address: {
+                      required: true
+                  },
+                  register_form_postal_code: {
+                      required: true,
+                      minlength: 5,
+                      maxlength: 6
+                  }
+                  },
+              // Specify validation error messages
+              messages: {
+              register_form_name: "Prosím zadejte své celé jméno",
+              register_form_email: "Prosím zadejte platnou emailovou adresu",
+              register_form_tel: {required: "Prosím zadejte telefonní číslo", minlength: "Telefonní číslo je neplatné"},
+              register_form_password: {required: "Prosím zadejte heslo", minlength: "Vaše heslo musí být alespoň 5 znaků dlouhé"},
+              register_form_address: "Prosím zadejte svou adresu",
+              register_form_locality: "Prosím zadejte město",
+              register_form_postal_code: {required: "Prosím zadejte Poštovní směrovací číslo", 
+                  minlength: "Nesprávně zadané PSČ, zadejte prosím ve tvaru s mezerou (např. 102 00) nebo bez (např. 10200)", 
+                  maxlength: "Nesprávně zadané PSČ, zadejte prosím ve tvaru s mezerou (např. 102 00) nebo bez (např. 10200)"},
+              },
+              // Make sure the form is submitted to the destination defined
+              // in the "action" attribute of the form when valid
+              submitHandler: function(form) {
+              form.submit();
+              }
+          });
       });
       jQuery.extend(jQuery.validator.messages, {
           required: "Toto pole je povinné"
