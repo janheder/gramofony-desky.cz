@@ -149,41 +149,41 @@ article{
         margin-bottom: 2.5rem;
         font-size: 2.25rem;
     }
-    & .login-form-toggler{
-        display: none;
-    }
-    & .order-history-single-wrap{
-        display: table;
-        width: 100%;
-    }
-    & .order-history-single{
-        display: table-row;
+}
+.login-form-toggler{
+    display: none;
+}
+.order-history-single-wrap{
+    display: table;
+    width: 100%;
+}
+.order-history-single{
+    display: table-row;
 
-        &.head p{
-            font-weight: 600;
-        }
-        & .order-history-single-col{
-            display: table-cell;
-            padding: 10px;
-            max-width: 200px;
-            border-bottom: 1px solid $border-grey;
-            & a{
-                display: block;
-            }
-            & p{
-                margin: 0;
-                line-height: 1.5;
-                margin: 5px 0;
-            }
-            & .price{
-                color: $red-main;
-                font-weight: 600;
-            }
-            & .status{
-                color: $green-main;
-                font-weight: 600;
-            }
-        }
+    &.head p{
+        font-weight: 600;
+    }
+}
+.order-history-single-col{
+    display: table-cell;
+    padding: 10px;
+    max-width: 200px;
+    border-bottom: 1px solid $border-grey;
+    & a{
+        display: block;
+    }
+    & p{
+        margin: 0;
+        line-height: 1.5;
+        margin: 5px 0;
+    }
+    & .price{
+        color: $red-main;
+        font-weight: 600;
+    }
+    & .status{
+        color: $green-main;
+        font-weight: 600;
     }
 }
 @media screen and (max-width: 991px){
@@ -194,13 +194,31 @@ article{
         & .login-form-toggler{
             display: block;
             width: 100%;
-                margin: 10px 0;
+            margin: 0;
         }
     }
 }
 @media screen and (min-width: 992px){
     .order-history .collapse {
         display: block;
+    }
+}
+@media screen and (max-width: 768px){
+    .order-history-single.head{
+        display: none;
+    }
+    .order-history-single {
+        padding: 20px 0;
+        display: block;
+        border-bottom: 3px solid $border-primary;
+    }
+    .order-history-single-col{
+        display: block;
+        max-width: 100%;
+
+        &:last-child{
+            border: 0;
+        }
     }
 }
 

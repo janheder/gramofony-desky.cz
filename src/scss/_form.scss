@@ -40,7 +40,7 @@ select.form-control:not([size]):not([multiple]) {
     cursor: pointer;
     border: 0;
     }
-    .error{
+    span.error{
         color: $red-main;
         font-size: 13px;
         order: 1;
@@ -119,11 +119,15 @@ select.form-control:not([size]):not([multiple]) {
 .form-check__box.checkbox::before{
     content: "";
     background: transparent;
-    border: 2px solid $dark-grey;
+    border: 2px solid $bg-dark;
     height: 100%;
     width: 100%;
     display: block;
     @include absolute-position(0, 0, 0, 0);
+}
+.form-check__input:checked ~ .form-check__box.checkbox::before{
+    background: $brand-primary;
+    border: 2px solid $brand-primary;
 }
 .form-check__input:checked ~ .form-check__box.checkbox::after{
     content: "";
@@ -131,7 +135,7 @@ select.form-control:not([size]):not([multiple]) {
     @include absolute-position(2px, 0, 0, 5px);
     width: 4px;
     height: 8px;
-    border: solid $dark-grey;
+    border: solid $bg-white;
     border-width: 0 2px 2px 0;
     @include rotate(45);
 }
@@ -248,7 +252,7 @@ input[type=number]::-webkit-outer-spin-button {
     & .register-form-info-collapse-wrap{
         padding: 3rem 0;
     }
-    .billing-address-wrap, .shipping-address-wrap, .cart-register-wrap {
+    .register-form-billing__wrap, .register-form-shipping__wrap, .register-form-register__wrap {
         display: none;
     }
 }   
