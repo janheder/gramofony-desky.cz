@@ -1049,12 +1049,11 @@
             margin-left: 0px;
     }
     .dropdown-column{
-            padding: 0;
-            padding: 5px 0;
+            padding: 0 !important;
     }
     .dropdown-column__link{
-        padding: 0 2rem 0 3rem;
-        min-height: 42px;
+        padding: 5px 2rem 5px 3rem;
+        min-height: 46px;
         white-space: normal;
         line-height: 1.2;
         @include flexbox();

@@ -142,12 +142,16 @@ select.form-control:not([size]):not([multiple]) {
 .form-check__box.radio::before{
     content: "";
     background: transparent;
-    border: 2px solid $dark-grey;
+    border: 2px solid $bg-dark;
     height: 100%;
     width: 100%;
     border-radius: 999px;
     display: block;
     @include absolute-position(0, 0, 0, 0);
+}
+.form-check__input:checked ~ .form-check__box.radio::before{
+    background: transparent;
+    border: 2px solid $brand-primary;
 }
 .form-check__input:checked ~ .form-check__box.radio::after{
     content: "";
@@ -155,7 +159,7 @@ select.form-control:not([size]):not([multiple]) {
     @include center(both);
     width: 6px;
     height: 6px;
-    background: $dark-grey;
+    background: $brand-primary;
     border-radius: 999px;
 }
 .form-check__input{

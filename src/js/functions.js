@@ -1,15 +1,9 @@
 /***  LAZY LOAD  ***/
-/*
-$("img:not(.swiper-lazy)").unveil(200, function() {
-  $(this).on(function() {
-    this.style.opacity = 1;
-  });
-});*/
-
 
 var myLazyLoad = new LazyLoad({
 elements_selector: ".lazy"
 });
+
 
 /***  SCROLL NAV  ***/
 
@@ -57,6 +51,8 @@ policyURL: 'http://www.google.com/intl/en/policies/technologies/cookies/',
 });
 
 
+//OBJECT FIT FALLBACK
+
 var styletotest = "object-fit";
 
 if (styletotest in document.body.style)
@@ -79,6 +75,8 @@ if (styletotest in document.body.style)
 
 }
 
+
+//VARIOUS TOGGLES
 
   $(".navbar-toggler").click(function() { 
     $("body").toggleClass("active");
@@ -171,9 +169,9 @@ if (styletotest in document.body.style)
   });
 
 $(document).ready(function() {
-$( "#eac-container-searchbox" ).click(function() {
-  $( "#search-form" ).submit();
-});
+    $( "#eac-container-searchbox" ).click(function() {
+        $( "#search-form" ).submit();
+    });
 });
 
 
