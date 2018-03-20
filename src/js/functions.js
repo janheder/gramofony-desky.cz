@@ -91,7 +91,7 @@ if (styletotest in document.body.style)
     $("#dark-overlay").toggleClass("active");
   });
 
-  $(".cart-wrap a").click(function() { 
+  $(".navbar-cart__link").click(function() { 
     $("body").toggleClass("active-right");
     $("#dark-overlay-cart").toggleClass("active");
   });
@@ -101,14 +101,12 @@ if (styletotest in document.body.style)
   });
 
   $("#search-toggler-responsive").click(function() { 
-    $(".search-wrap").fadeToggle(200);
-    $("#search-toggler-responsive").toggleClass("open");
+    $(".navbar-search").fadeToggle(200);
     $("body").toggleClass("stop-scroll");
   });
 
   $("#search-toggler-responsive-close").click(function() { 
-    $(".search-wrap").fadeToggle(200);
-    $("#search-toggler-responsive").toggleClass("open");
+    $(".navbar-search").fadeToggle(200);
     $("body").toggleClass("stop-scroll");
   });
 
@@ -416,7 +414,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
                 // parse slide data (url, title, size ...) from DOM elements 
                 // (children of gallerySelector)
                 var parseThumbnailElements = function(el) {
-                    var thumbElements = Array.prototype.slice.call(document.querySelectorAll('.swiper-container-product figure')),
+                    var thumbElements = Array.prototype.slice.call(document.querySelectorAll('.product-detail-gallery__figure')),
                         numNodes = thumbElements.length,
                         items = [],
                         figureEl,
@@ -486,7 +484,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 
                     // find index of clicked item by looping through all child nodes
                     // alternatively, you may define index via data- attribute
-                    var clickedGallery =  document.querySelectorAll('.product-detail-gallery')[0], childNodes = Array.prototype.slice.call(document.querySelectorAll('.swiper-container-product figure')),
+                    var clickedGallery =  document.querySelectorAll('.product-detail-gallery')[0], childNodes = Array.prototype.slice.call(document.querySelectorAll('.product-detail-gallery__figure')),
                         numChildNodes = childNodes.length,
                         nodeIndex = 0,
                         index;
@@ -623,7 +621,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
                 // parse slide data (url, title, size ...) from DOM elements 
                 // (children of gallerySelector)
                 var parseThumbnailElements = function(el) {
-                    var thumbElements = Array.prototype.slice.call(document.querySelectorAll('.container-product-thumbs-single figure')),
+                    var thumbElements = Array.prototype.slice.call(document.querySelectorAll('.product-detail-gallery-thumbs__figure')),
                         numNodes = thumbElements.length,
                         items = [],
                         figureEl,
@@ -693,7 +691,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 
                     // find index of clicked item by looping through all child nodes
                     // alternatively, you may define index via data- attribute
-                    var clickedGallery =  document.querySelectorAll('.product-detail-gallery2')[0], childNodes = Array.prototype.slice.call(document.querySelectorAll('.container-product-thumbs-single figure')),
+                    var clickedGallery =  document.querySelectorAll('.product-detail-gallery2')[0], childNodes = Array.prototype.slice.call(document.querySelectorAll('.product-detail-gallery-thumbs__figure')),
                         numChildNodes = childNodes.length,
                         nodeIndex = 0,
                         index;

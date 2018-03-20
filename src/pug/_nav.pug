@@ -12,125 +12,142 @@ header
 				a.navbar-top__link(href="#") Kontakty
 
 	nav.navbar.navbar-expand-lg.navbar-main
-		.container
+		.container.navbar-main__container
+
 			.navbar-toggler(aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-toggle="collapse" data-target="#navbarNav" role="button")
 				span.hamburger-icon
 				p Menu
 
 			a.navbar-brand(href="#")
-				img(src="images/logo.svg" title="#" alt="#")
+				img.navbar-brand__img(src="images/logo.svg" title="#" alt="#")
 
-			.search-wrap-responsive(id="search-toggler-responsive")
+			.navbar-search-responsive-toggler(id="search-toggler-responsive")
 				span.search-icon
 
-			.search-wrap
-				form(method="POST" id="search-form")
-					span.search-icon
-					.form-group
-						.search-wrap-responsive-close.open(id="search-toggler-responsive-close")
-							span.search-icon
-						input(class="form-control" type="text" name="searchbox" id="searchbox" placeholder="Hledejte název produktu, značku nebo typ...")
-						.search-submit-wrap
-							.search-submit-speech
+			.navbar-search
+				form.navbar-search__form(method="POST" id="search-form")
+					span.search-icon.navbar-search__input-icon
+					.form-group.navbar-search__form-group
+						.navbar-search__responsive-close(id="search-toggler-responsive-close")
+							span.cross-icon.navbar-search__responsive-close-icon
+						input.form-control.navbar-search__input(type="text" name="searchbox" id="searchbox" placeholder="Hledejte název produktu, značku nebo typ...")
+						.navbar-search__submit-wrap
+							.navbar-search__submit-speech
 								span.fa.fa-microphone.microphone-icon(onclick="startDictation()" title="Vyhledávejte hlasem")
-							button.btn(class="form-control" type="submit" name="search-button" id="search-button") Hledat
-								span.search-icon
-				.search-responsive-content
-					.search-responsive-content-section
-						h5 Zákazníci často vyhledávají:
-						.search-responsive-content-tag-group
-							a.search-responsive-content-tag-single(href="#") Lorem ipsum
-							a.search-responsive-content-tag-single(href="#") Dolor sit amet
-							a.search-responsive-content-tag-single(href="#") Consectetur adipiscing elit
-							a.search-responsive-content-tag-single(href="#") Do eiusmod
-					.search-responsive-content-section
-						h5 Akční nabídka:
-						.search-responsive-content-tag-group
-							a.search-responsive-content-tag-single(href="#") Sed ut perspiciatis
-							a.search-responsive-content-tag-single(href="#") Unde omnis
-							a.search-responsive-content-tag-single(href="#") Iste natus error
-					.search-responsive-content-section
-						h5 Doporučené kategorie:
-						.search-responsive-content-tag-group
-							a.search-responsive-content-tag-single(href="#") Mobily, tablety
-							a.search-responsive-content-tag-single(href="#") PC, notebooky
-							a.search-responsive-content-tag-single(href="#") Komponenty
+							button.btn.navbar-search__button(class="form-control" type="submit" name="search-button" id="search-button") Hledat
+								span.search-icon.white.navbar-search__button-icon
+
+
+				.navbar-search-responsive
+
+					.navbar-search-responsive__section
+						h5.navbar-search-responsive__title Zákazníci často vyhledávají:
+						.navbar-search-responsive__group
+							a.navbar-search-responsive__single(href="#") Lorem ipsum
+							a.navbar-search-responsive__single(href="#") Dolor sit amet
+							a.navbar-search-responsive__single(href="#") Consectetur adipiscing elit
+							a.navbar-search-responsive__single(href="#") Do eiusmod
+
+					.navbar-search-responsive__section
+						h5.navbar-search-responsive__title Akční nabídka:
+						.navbar-search-responsive__group
+							a.navbar-search-responsive__single(href="#") Lorem ipsum
+							a.navbar-search-responsive__single(href="#") Dolor sit amet
+							a.navbar-search-responsive__single(href="#") Consectetur adipiscing elit
+							a.navbar-search-responsive__single(href="#") Do eiusmod
+
+					.navbar-search-responsive__section
+						h5.navbar-search-responsive__title Doporučené kategorie:
+						.navbar-search-responsive__group
+							a.navbar-search-responsive__single(href="#") Lorem ipsum
+							a.navbar-search-responsive__single(href="#") Dolor sit amet
+							a.navbar-search-responsive__single(href="#") Consectetur adipiscing elit
+							a.navbar-search-responsive__single(href="#") Do eiusmod
+
+			
+			.navbar-user
+				.dropdown.navbar-user__dropdown
+					.dropdown-toggle.navbar-user__dropdown-toggle(id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+						span.user-icon.white.navbar-user__icon
+						.navbar-user__text-wrap
+							p.navbar-user__text Petroslav Novakovič
+						span.caret-icon.white.navbar-user__caret
+					.dropdown-menu.dropdown-menu-left.navbar-user__dropdown-menu(aria-labelledby="userDropdown")
+						a.dropdown-item.navbar-user__item(href="#") Detail účtu
+						a.dropdown-item.navbar-user__item(href="#") Historie objednávek
+						a.dropdown-item.navbar-user__item(href="#") Odhlásit
+						
 			// Přihlášený uživatel
-				.user-wrap
-					.dropdown
-						.dropdown-toggle(id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
-							span.user-icon.white
-							.user-text
-								p Petroslav Novakovič
-							span.caret-icon.white
-						.dropdown-menu.dropdown-menu-left(aria-labelledby="userDropdown")
-							a.dropdown-item(href="#") Detail účtu
-							a.dropdown-item(href="#") Historie objednávek
-							a.dropdown-item(href="#") Odhlásit
-			.user-wrap
-				a(href="#")
-					span.user-icon.white
-					.user-text
-						p Můj účet
+				.navbar-user
+					a.navbar-user__link(href="#")
+						span.user-icon.white.navbar-user__icon
+						.navbar-user__text-wrap
+							p.navbar-user__text Můj účet
 
-			.cart-wrap
-				a(href="#")
-					span.cart-icon
-						span.cart-number 3
-					.cart-text
-						p 5 899Kč
-					span.caret-icon.white
+			.navbar-cart
+				a.navbar-cart__link(href="#")
+					span.cart-icon.navbar-cart__cart-icon
+						span.navbar-cart__icon-number 3
+					.navbar-cart__text-wrap
+						p.navbar-cart__text 5 899Kč
+					span.caret-icon.white.navbar-cart__caret-icon
 
-				.cart-dropdown
-					.cart-dropdown-inner
-						a.cart-dropdown-item(href="#")
-							.cart-dropdown-item-img
-								img.lazy(src="http://via.placeholder.com/60x60" data-src="http://via.placeholder.com/60x60" alt="#" title="#")
-							.cart-dropdown-item-text
-								h5 #{ProductName}
-								p 3 kusy
-								.cart-dropdown-item-price
-									.cart-dropdown-item-price-old 1099 Kč
-									.cart-dropdown-item-price-main 899 Kč
-						a.cart-dropdown-item(href="#")
-							.cart-dropdown-item-img
-								img.lazy(src="http://via.placeholder.com/60x60" data-src="http://via.placeholder.com/60x60" alt="#" title="#")
-							.cart-dropdown-item-text
-								h5 #{ProductName}
-								p 3 kusy
-								.cart-dropdown-item-price
-									.cart-dropdown-item-price-old 1099 Kč
-									.cart-dropdown-item-price-main 899 Kč
-						a.cart-dropdown-item(href="#")
-							.cart-dropdown-item-img
-								img.lazy(src="http://via.placeholder.com/60x60" data-src="http://via.placeholder.com/60x60" alt="#" title="#")
-							.cart-dropdown-item-text
-								h5 #{ProductName}
-								p 3 kusy
-								.cart-dropdown-item-price
-									.cart-dropdown-item-price-old 1099 Kč
-									.cart-dropdown-item-price-main 899 Kč
-						.cart-dropdown-price-summary
-							p Celková cena
-								span Včetně DPH
-							h4 2697 Kč
-						.cart-dropdown-delivery 
-							.cart-dropdown-delivery-free
-								p Nakupte ještě za 303 Kč a máte Dopravu zdarma
-						.cart-dropdown-checkout-btn
-							a.btn.btn-grey.btn-ghost-grey(href="#") #[span.cross-icon] Vyprázdnit
-							a.btn(href="#") Objednat zboží
-								span.arrow-icon.white
+				.navbar-cart__dropdown
+					.navbar-cart__dropdown-inner
+
+						a.navbar-cart__dropdown-item.navbar-cart-item(href="#")
+							.navbar-cart-item__img-wrap
+								img.navbar-cart-item__img(src="http://via.placeholder.com/60x60" data-src="http://via.placeholder.com/60x60" alt="#" title="#")
+							.navbar-cart-item__text-wrap
+								h5.navbar-cart-item__title #{ProductName}
+								p.navbar-cart-item__text 3 kusy
+								.navbar-cart-item__price-wrap
+									.navbar-cart-item__price-old 1099 Kč
+									.navbar-cart-item__price-main 899 Kč
+
+						a.navbar-cart__dropdown-item.navbar-cart-item(href="#")
+							.navbar-cart-item__img-wrap
+								img.navbar-cart-item__img(src="http://via.placeholder.com/60x60" data-src="http://via.placeholder.com/60x60" alt="#" title="#")
+							.navbar-cart-item__text-wrap
+								h5.navbar-cart-item__title #{ProductName}
+								p.navbar-cart-item__text 3 kusy
+								.navbar-cart-item__price-wrap
+									.navbar-cart-item__price-old 1099 Kč
+									.navbar-cart-item__price-main 899 Kč
+
+						a.navbar-cart__dropdown-item.navbar-cart-item(href="#")
+							.navbar-cart-item__img-wrap
+								img.navbar-cart-item__img(src="http://via.placeholder.com/60x60" data-src="http://via.placeholder.com/60x60" alt="#" title="#")
+							.navbar-cart-item__text-wrap
+								h5.navbar-cart-item__title #{ProductName}
+								p.navbar-cart-item__text 3 kusy
+								.navbar-cart-item__price-wrap
+									.navbar-cart-item__price-old 1099 Kč
+									.navbar-cart-item__price-main 899 Kč
+
+						.navbar-cart__dropdown-price-summary.navbar-cart-price
+							p.navbar-cart-price__text Celková cena
+								span.navbar-cart-price__small Včetně DPH
+							h4.navbar-cart-price__title 2697 Kč
+
+						.navbar-cart__dropdown-delivery.navbar-cart-delivery 
+							.navbar-cart-delivery__text-wrap
+								p.navbar-cart-delivery__text Nakupte ještě za 303 Kč a máte Dopravu zdarma
+
+						.navbar-cart__dropdown-checkout-btn.navbar-cart-checkout-btn
+							a.btn.btn-grey.btn-ghost-grey.navbar-cart-checkout-btn__button(href="#") #[span.cross-icon.navbar-cart-checkout-btn__button-icon] Vyprázdnit
+							a.btn.navbar-cart-checkout-btn__button(href="#") Objednat zboží #[span.arrow-icon.white.navbar-cart-checkout-btn__button-icon]
 								
 				// Prázdný košík
-					.cart-dropdown
-						.cart-dropdown-inner
-							.cart-dropdown-empty-alert
-								h3 Váš košík je prázdný
-								p Před nákupem prosím do svého košíku vložte produkt
-							.cart-dropdown-checkout-btn
-								a.btn.btn-grey.btn-ghost-grey(href="#") Kontakty
-								a.btn(href="#") Akční nabídka #[span.arrow-icon.white]											
+					.navbar-cart__dropdown
+						.navbar-cart__dropdown-inner
+							.navbar-cart__dropdown-empty
+								h3.navbar-cart__dropdown-empty-title Váš košík je prázdný
+								p.navbar-cart__dropdown-empty-text Před nákupem prosím do svého košíku vložte produkt
+							.navbar-cart__dropdown-checkout-btn.navbar-cart-checkout-btn
+								a.btn.btn-grey.btn-ghost-grey.navbar-cart-checkout-btn__button(href="#") Kontakty
+								a.btn.navbar-cart-checkout-btn__button(href="#") Akční nabídka #[span.arrow-icon.white.navbar-cart-checkout-btn__button-icon]											
+
 
 	nav.navbar.navbar-expand-lg.navbar-menu
 		.container.navbar-menu__container
