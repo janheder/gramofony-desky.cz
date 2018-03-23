@@ -320,6 +320,27 @@
     @include justify-content(center);
     @include align-items(center);
     margin-bottom: 20px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border-radius: $border-radius-primary;
+
+    &:hover, &:active, &:focus{
+        &::before{
+            opacity: 1;
+        }
+    }
+    &::before{
+        content: "Zobrazit kalkulačku splátek";
+        @include absolute-position(0,0,0,0);
+        background: rgba(0,0,0,0.8);
+        color: $text-white;
+        @include justify-content(center);
+        @include align-items(center);
+        @include flexbox();
+        opacity: 0;
+        @include transition(0.3s ease all);
+    }
 }
 .essox-bar__text{
     margin: 0;
@@ -454,6 +475,17 @@
 }
 .product-description__nav{
     border: 0;
+}
+.product-description__file{
+    display: block;
+    border: 1px solid $border-primary;
+    border-radius: $border-radius-primary;
+    padding: 10px 20px;
+    margin: 5px 0;
+    &:hover, &:active, &:focus{
+        text-decoration: none;
+        background: $bg-light;
+    }
 }
 
 @media screen and (min-width: 501px){

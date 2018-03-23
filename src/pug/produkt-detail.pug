@@ -4,13 +4,12 @@ html(lang=lang)
     head
         meta(charset="utf-8")
         meta(content="IE=edge" http-equiv="X-UA-Compatible")
-        meta(content="width=device-width, initial-scale=1" name="viewport")
+        meta(content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport")
         title #{title}
         meta(content="index,follow,snippet,archive" name="robots")
         meta(content=metaDescription name="description")
         meta(content=metaKeywords lang="cs" name="keywords")
         meta(content=metaAuthor name="author")
-        meta(content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport")
 
         link(rel="canonical" href=metaURL)
         meta(property="og:locale" content="cs_CZ")
@@ -116,8 +115,9 @@ html(lang=lang)
                                                         figcaption.product-detail-gallery__figcaption(itemprop="caption description") Popis obrázku 1
                                                     .swiper-lazy-preloader.swiper-lazy-preloader-white
 
-                                        .swiper-pagination.swiper-pagination-white.swiper-pagination--product
-                           
+                                        .swiper-pagination.swiper-pagination-white.swiper-pagination--product 
+                                        .swiper-button-prev.swiper-button-prev--product 
+                                        .swiper-button-next.swiper-button-next--product
 
                                     .product-detail-gallery-responsive-thumbs
                                         .product-detail-gallery-responsive-thumbs__container                                      
@@ -125,27 +125,27 @@ html(lang=lang)
                                                 
                                                 .swiper-slide.product-detail-gallery-responsive-thumbs__slide.swiper-slide-active
                                                     .product-detail-gallery-responsive-thumbs__slide-single
-                                                        img.lazy.product-detail-gallery-responsive-thumbs__img(src="http://via.placeholder.com/200x200" data-src=URLbase+"img/product-thumb-small.jpg")
+                                                        img.lazy.product-detail-gallery-responsive-thumbs__img(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
                                                 
                                                 .swiper-slide.product-detail-gallery-responsive-thumbs__slide.swiper-slide-active
                                                     .product-detail-gallery-responsive-thumbs__slide-single
-                                                        img.lazy.product-detail-gallery-responsive-thumbs__img(src="http://via.placeholder.com/200x200" data-src=URLbase+"img/product-thumb-small.jpg")
+                                                        img.lazy.product-detail-gallery-responsive-thumbs__img(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
                                                 
                                                 .swiper-slide.product-detail-gallery-responsive-thumbs__slide.swiper-slide-active
                                                     .product-detail-gallery-responsive-thumbs__slide-single
-                                                        img.lazy.product-detail-gallery-responsive-thumbs__img(src="http://via.placeholder.com/200x200" data-src=URLbase+"img/product-thumb-small.jpg")
+                                                        img.lazy.product-detail-gallery-responsive-thumbs__img(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
                                                       
                                                 .swiper-slide.product-detail-gallery-responsive-thumbs__slide.swiper-slide-active
                                                     .product-detail-gallery-responsive-thumbs__slide-single
-                                                        img.lazy.product-detail-gallery-responsive-thumbs__img(src="http://via.placeholder.com/200x200" data-src=URLbase+"img/product-thumb-small.jpg")
+                                                        img.lazy.product-detail-gallery-responsive-thumbs__img(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
                                                          
                                                 .swiper-slide.product-detail-gallery-responsive-thumbs__slide.swiper-slide-active
                                                     .product-detail-gallery-responsive-thumbs__slide-single
-                                                        img.lazy.product-detail-gallery-responsive-thumbs__img(src="http://via.placeholder.com/200x200" data-src=URLbase+"img/product-thumb-small.jpg")
+                                                        img.lazy.product-detail-gallery-responsive-thumbs__img(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
                                                          
                                                 .swiper-slide.product-detail-gallery-responsive-thumbs__slide.swiper-slide-active
                                                     .product-detail-gallery-responsive-thumbs__slide-single
-                                                        img.lazy.product-detail-gallery-responsive-thumbs__img(src="http://via.placeholder.com/200x200" data-src=URLbase+"img/product-thumb-small.jpg")
+                                                        img.lazy.product-detail-gallery-responsive-thumbs__img(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
                                                 
 
 
@@ -225,7 +225,7 @@ html(lang=lang)
 
                                         .product-detail-main__cta-button-wrap
                                             button.btn.product-detail-main__cta-button(type="submit" name="buy-button") #[span.btn__icon.cart-icon] Přidat do košíku
-                                .essox-bar
+                                a.essox-bar(onclick="window.open('https://e-smlouvy.essox.cz/?ESXCode=5&ESXAuth=PEZpbml0U2VydmljZVJlcXVlc3Q+DQoJPFZlcnNpb24+MS4wPC9WZXJzaW9uPg0KCTxTZXJ2aWNlTmFtZT5DYWxjdWxhdGlvbjwvU2VydmljZU5hbWU+DQoJPEJhc2VQYXJhbWV0ZXJzPg0KCQk8VXNlck5hbWU+MzAwMTEwMDAxZ3JhbW9mb255ZGU8L1VzZXJOYW1lPg0KCQk8UHJpY2U+MTI5OTA8L1ByaWNlPg0KCQk8VGltZXN0YW1wPjIwMTgwMzIzMTQyNjI0PC9UaW1lc3RhbXA+DQoJCTxIYXNoS2V5PjY1YWVlNDljNjBmM2JmMGVlMmZjOWFiY2EwYjAxZDAyZDUwM2E4NDM8L0hhc2hLZXk+DQoJPC9CYXNlUGFyYW1ldGVycz4NCjwvRmluaXRTZXJ2aWNlUmVxdWVzdD4=', '_blank', 'toolbar=0,resizable=1, status=1, width=700, height=650');")
                                     img.essox-bar__img(src=URLbase+"img/essox-logo.png")
                                     p.essox-bar__text Nákup na splátky s Essoxem
 
@@ -327,12 +327,24 @@ html(lang=lang)
                                                     tr
                                                         td Výstupní výkon
                                                         td 160 W/k (6 Ω, 1 kHz, 1%, 1 kanál řízený, IEC); 170 W/k (6 Ω, 1 kHz, 10%, 1 kanál řízený, JEITA)
+                                                    tr
+                                                        td Výstupní výkon
+                                                        td 160 W/k (6 Ω, 1 kHz, 1%, 1 kanál řízený, IEC); 170 W/k (6 Ω, 1 kHz, 10%, 1 kanál řízený, JEITA)
+                                                    tr
+                                                        td Výstupní výkon
+                                                        td 160 W/k (6 Ω, 1 kHz, 1%, 1 kanál řízený, IEC); 170 W/k (6 Ω, 1 kHz, 10%, 1 kanál řízený, JEITA)
+                                                    tr
+                                                        td Výstupní výkon
+                                                        td 160 W/k (6 Ω, 1 kHz, 1%, 1 kanál řízený, IEC); 170 W/k (6 Ω, 1 kHz, 10%, 1 kanál řízený, JEITA)
 
                             .tab-pane.product-description__tab-content(id="product-description-3" role="tabpanel" aria-expanded="false")
                                 a.product-description__collapse.collapsed(data-toggle="collapse" href="#product-description-c-3" aria-controls="product-description-c-3" aria-expanded="false") Přílohy produktu
                                 .panel-collapse.collapse.product-description__collapse-wrap(id="product-description-c-3")
                                     .product-description__content
-                                        p FireConnect zrcadlí síťový zvuk
+                                        a.product-description__file(href="#") #[span.fas.fa-download] [PDF] Příloha pro produkt (23KB)
+                                        a.product-description__file(href="#") #[span.fas.fa-download] [PDF] Příloha pro produkt (23KB)
+                                        a.product-description__file(href="#") #[span.fas.fa-download] [PDF] Příloha pro produkt (23KB)
+                                        a.product-description__file(href="#") #[span.fas.fa-download] [PDF] Příloha pro produkt (23KB)
 
                     .product-similar
                         h2.product-accessories__heading Obdobné produkty

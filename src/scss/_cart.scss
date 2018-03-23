@@ -405,7 +405,7 @@
 		position: fixed;
 		display: block;
 		bottom: 0;
-		left: auto;
+		left: 0;
 		background: $white;
 		z-index: 8;
 		padding: 5px;
@@ -651,6 +651,10 @@
 }
 .cart-user-info-overview__text{
 	font-size: 1.5rem;
+
+	&:last-child{
+		margin: 0;
+	}
 }
 .cart-user-info-overview__strong{
 	font-weight: 500;

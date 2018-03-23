@@ -19,6 +19,9 @@
                 background: transparent;
                 border-bottom-color: $white;
             }
+            &:hover, &:active, &:focus{
+                background: $bg-white;
+            }
         }
         &:last-child .nav-link{
             border-right: 1px solid $border-grey;

@@ -4,13 +4,12 @@ html(lang=lang)
     head
         meta(charset="utf-8")
         meta(content="IE=edge" http-equiv="X-UA-Compatible")
-        meta(content="width=device-width, initial-scale=1" name="viewport")
+        meta(content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport")
         title #{title}
         meta(content="index,follow,snippet,archive" name="robots")
         meta(content=metaDescription name="description")
         meta(content=metaKeywords lang="cs" name="keywords")
         meta(content=metaAuthor name="author")
-        meta(content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport")
 
         link(rel="canonical" href=metaURL)
         meta(property="og:locale" content="cs_CZ")
@@ -70,7 +69,7 @@ html(lang=lang)
                         .cart-item-single__col-1  
                             .cart-item-single__thumb-wrap
                                 .cart-item-single__thumb
-                                    img.cart-item-single__img.lazy(src="http://via.placeholder.com/200x200" data-src=URLbase+"img/product-thumb-small.jpg")
+                                    img.cart-item-single__img.lazy(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
 
 
                         .cart-item-single__col-2   
@@ -102,7 +101,7 @@ html(lang=lang)
                         .cart-item-single__col-1  
                             .cart-item-single__thumb-wrap
                                 .cart-item-single__thumb
-                                    img.cart-item-single__img.lazy(src="http://via.placeholder.com/200x200" data-src=URLbase+"img/product-thumb-small.jpg")
+                                    img.cart-item-single__img.lazy(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
 
                         .cart-item-single__col-2   
                             .cart-item-single__name-wrap
@@ -148,8 +147,8 @@ html(lang=lang)
                                 span.form-check__box.radio
 
                         .form-check
-                            label.form-check__label
-                                input.form-check__input(type="radio" name="cart_form_shipping" id="cp" required)
+                            label.form-check__label.disabled
+                                input.form-check__input(type="radio" name="cart_form_shipping" id="cp" required disabled)
                                 | Česká pošta Balík na poštu
                                 span.form-check__description Zde je nutné uvést do poznámky v objednávce (bod č. 3) PSČ pošty, na kterou si zásilku přejete zaslat. Doručuje následující pracovní den od odeslání. Max. hmotnost zásilky 30 kg.
                                 span.form-check__price 99 Kč
@@ -172,7 +171,7 @@ html(lang=lang)
                                 span.form-check__box.radio
 
                         .form-check
-                            label.form-check__label
+                            label.form-check__label(onclick="navigateToUrl('https://www.pplbalik.cz/Main3.aspx?cls=KTMMap&CountryCode=CZ&KTMAddress=73801,Podpuklí 288&ReturnUrl=https%3A%2F%2Fwww.gramofony-desky.cz%2Fkosik.html%3Fsessid%3D2t617d17oqqlam0vrup08bone7%26KTMID%3D%7B0%7D%26KTMaddress%3D%7B1%7D%26KTMname%3D%7B2%7D');")
                                 input.form-check__input(type="radio" name="cart_form_shipping" id="ppl3" required)
                                 | PPL partner
                                 span.form-check__description Při výběru tohoto typu dopravy budete přesměrováni na pplbalik.cz, kde vyberte konkretní odběrné místo, následně budete navráceni do našeho nákupního košíku.
@@ -207,8 +206,8 @@ html(lang=lang)
                                 span.form-check__box.radio
                             
                         .form-check
-                            label.form-check__label
-                                input.form-check__input(type="radio" name="cart_form_payment" id="bankovni" required)
+                            label.form-check__label.disabled
+                                input.form-check__input(type="radio" name="cart_form_payment" id="bankovni" required disabled)
                                 | Dobírka
                                 span.form-check__description Celkovou částku za zboží a přepravu uhradíte dovozci nebo na odběrném místě
                                 span.form-check__price 20 Kč

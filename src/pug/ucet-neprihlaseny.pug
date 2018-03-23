@@ -4,13 +4,12 @@ html(lang=lang)
     head
         meta(charset="utf-8")
         meta(content="IE=edge" http-equiv="X-UA-Compatible")
-        meta(content="width=device-width, initial-scale=1" name="viewport")
+        meta(content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport")
         title #{title}
         meta(content="index,follow,snippet,archive" name="robots")
         meta(content=metaDescription name="description")
         meta(content=metaKeywords lang="cs" name="keywords")
         meta(content=metaAuthor name="author")
-        meta(content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport")
 
         link(rel="canonical" href=metaURL)
         meta(property="og:locale" content="cs_CZ")
@@ -30,7 +29,7 @@ html(lang=lang)
         section.page-heading.post__image-container
             .container
                 h1.page-heading__title Uživatelský účet
-            img.lazy.post__featured-image(src="http://via.placeholder.com/510x510" data-src=URLbase+"img/user-thumb-large.jpg" alt="#" title="#")
+            img.lazy.post__featured-image(src=URLbase+"img/lazy/lazy-user-thumb-large.jpg" data-src=URLbase+"img/user-thumb-large.jpg" alt="#" title="#")
                 
         include _breadcrumb.pug
         main
@@ -42,8 +41,16 @@ html(lang=lang)
                             a.register-form-toggler(data-toggle="collapse" href="#register-collapse" aria-expanded="true" aria-controls="register-collapse") Vytvořit nový účet #[span.register-form-toggler__icon]
                             .collapse.register-form-collapse.show(id="register-collapse")
                                 .form-group
-                                    label(for="register_form_name") Jméno a příjmení
+                                    label(for="register_form_name") Jméno
                                     input.form-control(type="text" name="register_form_name" id="register_form_name" autocomplete="name" required)
+
+                                .form-group
+                                    label(for="register_form_surname") Příjmení
+                                    input.form-control(type="text" name="register_form_surname" id="register_form_surname" autocomplete="surname" required)
+
+                                .form-group
+                                    label(for="register_form_username") Uživatelské jméno
+                                    input.form-control(type="text" name="register_form_username" id="register_form_username" autocomplete="username" required)
 
                                 .form-group
                                     label(for="register_form_email") Emailová adresa
@@ -59,8 +66,12 @@ html(lang=lang)
                                     input.form-control(type="tel" name="register_form_tel" id="register_form_tel" autocomplete="tel")
 
                                 .form-group
-                                    label(for="register_form_address") Ulice a č. p.
+                                    label(for="register_form_address") Ulice
                                     input.form-control(type="text" name="register_form_address" id="register_form_address" autocomplete="street-address" required)
+
+                                .form-group
+                                    label(for="register_form_descriptive") Číslo popisné
+                                    input.form-control(type="text" name="register_form_descriptive" id="register_form_descriptive" autocomplete="descriptive-address" required)
 
                                 .form-group
                                     label(for="register_form_locality") Město
@@ -102,8 +113,12 @@ html(lang=lang)
                                             input.form-control(type="text" name="register_form_billing_dic" id="register_form_billing_dic" autocomplete="dic")
 
                                         .form-group
-                                            label(for="register_form_billing_address") Ulice a č. p.
+                                            label(for="register_form_billing_address") Ulice
                                             input.form-control(type="text" name="register_form_billing_address" id="register_form_billing_address" autocomplete="street-address")
+                                        
+                                        .form-group
+                                            label(for="register_form_billing_descriptive") Číslo popisné
+                                            input.form-control(type="text" name="register_form_billing_descriptive" id="register_form_billing_descriptive" autocomplete="descriptive-address")
 
                                         .form-group
                                             label(for="register_form_billing_locality") Město
@@ -136,8 +151,12 @@ html(lang=lang)
                                             input.form-control(type="text" name="register_form_shipping_company" id="register_form_shipping_company"  autocomplete="org")
 
                                         .form-group
-                                            label(for="register_form_shipping_address") Ulice a č. p.
+                                            label(for="register_form_shipping_address") Ulice
                                             input.form-control(type="text" name="register_form_shipping_address" id="register_form_shipping_address" autocomplete="street-address")
+                                        
+                                        .form-group
+                                            label(for="register_form_shipping_descriptive") Číslo popisné
+                                            input.form-control(type="text" name="register_form_shipping_descriptive" id="register_form_shipping_descriptive" autocomplete="descriptive-address")
 
                                         .form-group
                                             label(for="register_form_shipping_locality") Město
@@ -177,8 +196,8 @@ html(lang=lang)
                             a.login-form-toggler(data-toggle="collapse" href="#login-collapse" aria-expanded="false" aria-controls="login-collapse") Přihlásit se k existujícímu účtu #[span.register-form-toggler__icon]
                             .collapse.login-form-collapse(id="login-collapse")
                                 .form-group
-                                    label(for="login_form_email") Emailová adresa
-                                    input.form-control(type="email" name="login_form_email" id="login_form_email" required)
+                                    label(for="login_form_username") Uživatelské jméno
+                                    input.form-control(type="text" name="login_form_username" id="login_form_username" required)
 
                                 .form-group
                                     label(for="login_form_password") Heslo
@@ -263,7 +282,7 @@ html(lang=lang)
                         },
                     // Specify validation error messages
                     messages: {
-                        register_form_name: "Prosím zadejte své celé jméno",
+                        register_form_name: "Prosím zadejte své jméno",
 
                         register_form_email: "Prosím zadejte platnou emailovou adresu",
 

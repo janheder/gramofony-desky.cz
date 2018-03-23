@@ -169,6 +169,10 @@ article{
     border-bottom: 1px solid $border-grey;
     & a{
         display: block;
+        margin: 5px 0;
+        &:last-child{
+            margin: 0;
+        }
     }
     & p{
         margin: 0;
