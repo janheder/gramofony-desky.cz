@@ -164,3 +164,46 @@
         display: block;
     }
 }
+
+
+.filter-badges{
+    @include flexbox();
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    margin-bottom: 3rem;
+}
+.filter-badges__single{
+    background: $bg-dark;
+    border-radius: $border-primary;
+    border-radius: $border-radius-primary;
+    @include flexbox();
+    @include flex-direction(row);
+    @include justify-content(center);
+    @include align-items(center);
+    overflow: hidden;
+    margin: 5px 0;
+}
+.filter-badges__title{
+    font-size: 13px;
+    color: $text-white;
+    margin: 0;
+    padding: 5px 10px;
+}
+.filter-badges__remove-wrap{
+    padding: 5px 10px;
+    cursor: pointer;
+    height: 100%;
+    border-left: 1px solid $white-transparent;
+    @include flexbox();
+    @include flex-direction(row);
+    @include justify-content(center);
+    @include align-items(center);
+
+    &:hover, &:active, &:focus{
+        background: $brand-primary;
+    }
+}
+.filter-badges__remove{
+    height: 10px;
+    width: 10px;
+}

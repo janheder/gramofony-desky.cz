@@ -76,6 +76,22 @@ if (styletotest in document.body.style)
 }
 
 
+//HERO CAROUSEL CONTROL
+setInterval(function(){
+    var slide_org = $(".swiper-slide-active").attr("data-slide");
+    var slide = parseInt(slide_org);
+
+    var slide_nav_org = $(".hero__tab-single.active").attr("data-slide-nav");
+    var slide_nav = parseInt(slide_nav_org);
+
+    if (slide != slide_nav){
+        $(".hero__tab-single.active").removeClass("active");
+
+        var slide__string = '' + slide;
+        $('.hero__tab-single[data-slide-nav = '+slide__string+']').addClass('active');
+    }
+}, 100);
+
 //VARIOUS TOGGLES
 
   $(".navbar-toggler").click(function() { 
@@ -91,7 +107,7 @@ if (styletotest in document.body.style)
     $("#dark-overlay").toggleClass("active");
   });
 
-  $(".cart-wrap a").click(function() { 
+  $(".navbar-cart__link").click(function() { 
     $("body").toggleClass("active-right");
     $("#dark-overlay-cart").toggleClass("active");
   });
@@ -101,14 +117,12 @@ if (styletotest in document.body.style)
   });
 
   $("#search-toggler-responsive").click(function() { 
-    $(".search-wrap").fadeToggle(200);
-    $("#search-toggler-responsive").toggleClass("open");
+    $(".navbar-search").fadeToggle(200);
     $("body").toggleClass("stop-scroll");
   });
 
   $("#search-toggler-responsive-close").click(function() { 
-    $(".search-wrap").fadeToggle(200);
-    $("#search-toggler-responsive").toggleClass("open");
+    $(".navbar-search").fadeToggle(200);
     $("body").toggleClass("stop-scroll");
   });
 
@@ -147,11 +161,11 @@ if (styletotest in document.body.style)
   });
 
   $('#show_password_toggler').click(function() {
-      if($("#register_form_password").prop("type") == "text"){
-        $("#register_form_password").prop("type","password");
+      if($("#register_form_password, #register_form_register_password").prop("type") == "text"){
+        $("#register_form_password, #register_form_register_password").prop("type","password");
       }
       else {
-        $("#register_form_password").prop("type","text");
+        $("#register_form_password, #register_form_register_password").prop("type","text");
       }
       
   });
@@ -416,7 +430,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
                 // parse slide data (url, title, size ...) from DOM elements 
                 // (children of gallerySelector)
                 var parseThumbnailElements = function(el) {
-                    var thumbElements = Array.prototype.slice.call(document.querySelectorAll('.swiper-container-product figure')),
+                    var thumbElements = Array.prototype.slice.call(document.querySelectorAll('.product-detail-gallery__figure')),
                         numNodes = thumbElements.length,
                         items = [],
                         figureEl,
@@ -486,7 +500,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 
                     // find index of clicked item by looping through all child nodes
                     // alternatively, you may define index via data- attribute
-                    var clickedGallery =  document.querySelectorAll('.product-detail-gallery')[0], childNodes = Array.prototype.slice.call(document.querySelectorAll('.swiper-container-product figure')),
+                    var clickedGallery =  document.querySelectorAll('.product-detail-gallery')[0], childNodes = Array.prototype.slice.call(document.querySelectorAll('.product-detail-gallery__figure')),
                         numChildNodes = childNodes.length,
                         nodeIndex = 0,
                         index;
@@ -623,7 +637,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
                 // parse slide data (url, title, size ...) from DOM elements 
                 // (children of gallerySelector)
                 var parseThumbnailElements = function(el) {
-                    var thumbElements = Array.prototype.slice.call(document.querySelectorAll('.container-product-thumbs-single figure')),
+                    var thumbElements = Array.prototype.slice.call(document.querySelectorAll('.product-detail-gallery-thumbs__figure')),
                         numNodes = thumbElements.length,
                         items = [],
                         figureEl,
@@ -693,7 +707,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 
                     // find index of clicked item by looping through all child nodes
                     // alternatively, you may define index via data- attribute
-                    var clickedGallery =  document.querySelectorAll('.product-detail-gallery2')[0], childNodes = Array.prototype.slice.call(document.querySelectorAll('.container-product-thumbs-single figure')),
+                    var clickedGallery =  document.querySelectorAll('.product-detail-gallery-thumbs')[0], childNodes = Array.prototype.slice.call(document.querySelectorAll('.product-detail-gallery-thumbs__figure')),
                         numChildNodes = childNodes.length,
                         nodeIndex = 0,
                         index;

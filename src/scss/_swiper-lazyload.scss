@@ -68,3 +68,9 @@ width: 100%;
         @include box-shadow(0px,0px,0px,$black-transparent-25);
     }  
 }
+.swiper-button-prev--product, .swiper-button-next--product{
+    @include transform(translateX(-10px));  
+}
+.swiper-button-prev--product{
+    @include transform(translateX(10px) rotate(180deg)); 
+}

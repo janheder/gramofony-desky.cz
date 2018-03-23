@@ -1,6 +1,6 @@
-/*------------------------------------*\
-	CART
-\*------------------------------------*/
+/* ========================================================================== */
+/* CART */
+/* ========================================================================== */
 
 .page-heading--cart{
 	padding: 0;
@@ -76,7 +76,7 @@
 		@include flex-grow(1);
 		margin: 0;
 
-		& span{
+		span{
 			position: absolute;
 			top: 50%;
 			left: 50%;
@@ -304,8 +304,6 @@
 	width: 12px;	
 }
 
-
-
 @media screen and (max-width: 768px){
 	.cart-item-single{
 		background: $bg-light;
@@ -407,7 +405,7 @@
 		position: fixed;
 		display: block;
 		bottom: 0;
-		left: auto;
+		left: 0;
 		background: $white;
 		z-index: 8;
 		padding: 5px;
@@ -653,6 +651,10 @@
 }
 .cart-user-info-overview__text{
 	font-size: 1.5rem;
+
+	&:last-child{
+		margin: 0;
+	}
 }
 .cart-user-info-overview__strong{
 	font-weight: 500;

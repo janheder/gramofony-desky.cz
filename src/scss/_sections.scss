@@ -47,10 +47,11 @@
 }
 .hero__text{
     font-weight: 400;
-    color: $text-grey;
+    color: $text-primary;
     font-size: 1.8rem;
     margin: 1rem 0 3rem 0;
     max-width: 90%;
+    opacity: 0.75;
 }
 .hero__price-old{
     font-size: 1.6rem;
@@ -131,9 +132,7 @@
 .hero__tab-single.active .hero__tab-single-text{
     color: $brand-primary;
 }
-.swiper-button-next--hero, .swiper-button-prev--hero{
-    display: none;
-}
+
 @media screen and (max-width:991px){
     .hero {
         padding: 0;
@@ -147,6 +146,9 @@
     }
     .swiper-pagination--hero .swiper-pagination-bullet-active{
         background: $brand-primary;
+    }
+    .swiper-button-next--hero, .swiper-button-prev--hero{
+        display: none;
     }
 }
 @media screen and (max-width:768px){
@@ -283,9 +285,9 @@
     }
 }
 
-/*------------------------------------*\
-    INDEX-CATEGORIES SECTION
-\*------------------------------------*/
+/* ========================================================================== */
+/* INDEX-CATEGORIES SECTION */
+/* ========================================================================== */
 
 .index-categories{
     padding: 8rem 0;

@@ -4,13 +4,12 @@ html(lang=lang)
     head
         meta(charset="utf-8")
         meta(content="IE=edge" http-equiv="X-UA-Compatible")
-        meta(content="width=device-width, initial-scale=1" name="viewport")
+        meta(content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport")
         title #{title}
         meta(content="index,follow,snippet,archive" name="robots")
         meta(content=metaDescription name="description")
         meta(content=metaKeywords lang="cs" name="keywords")
         meta(content=metaAuthor name="author")
-        meta(content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport")
 
         link(rel="canonical" href=metaURL)
         meta(property="og:locale" content="cs_CZ")
@@ -35,18 +34,16 @@ html(lang=lang)
                 .container
                     .row.product-detail__row
                         .col-12.col-sm-12.col-md-12.col-lg-12.col-xl-12.product-detail__column
-                            .product-detail-side-info-name
-                                h1 #{ProductName}
-                                .product-detail-side-info-undername
-                                    .product-detail-side-info-rating
-                                        p Výrobce: Onkyo
-                                    .product-detail-side-info-code
-                                        p Katalogové číslo: TX8270+CH706
+                            .product-detail__name
+                                h1.product-detail__title #{ProductName}
+                                .product-detail__under-title
+                                    p.product-detail__brand Výrobce: Onkyo
+                                    p.product-detail__code Katalogové číslo: TX8270+CH706
 
 
 
                         .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6.product-detail__column
-                            .product-detail-images
+                            .product-detail__images
 
                                 .product-tags.product-tags--detail
                                     .product-tags__single
@@ -67,141 +64,158 @@ html(lang=lang)
                                         .product-tags__text.cd.circle.bottom CD
 
                                 .product-detail-gallery(itemscope itemtype="http://schema.org/ImageGallery")
-                                    .swiper-container-product
-                                        .swiper-wrapper.swiper-wrapper-product
-                                            .swiper-slide
-                                                .swiper-zoom-container
-                                                    figure.find-them-all(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
-                                                        a(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="1920x1920")
-                                                            img.swiper-lazy(data-src=URLbase+"img/product-thumb-medium.jpg" itemprop="thumbnail" alt="Image description" data-index="1")
-                                                        figcaption(itemprop="caption description") Popis obrázku 1
-                                                    .swiper-lazy-preloader.swiper-lazy-preloader-white
-                                            .swiper-slide
-                                                .swiper-zoom-container
-                                                    figure.find-them-all(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
-                                                        a(href="http://via.placeholder.com/1920x1920" itemprop="contentUrl" data-size="1920x1920")
-                                                            img.swiper-lazy(data-src="http://via.placeholder.com/800x800" itemprop="thumbnail" alt="Image description" data-index="2")
-                                                        figcaption(itemprop="caption description") Popis obrázku 2
-                                                    .swiper-lazy-preloader.swiper-lazy-preloader-white
-                                            .swiper-slide
-                                                .swiper-zoom-container
-                                                    figure.find-them-all(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
-                                                        a(href="http://via.placeholder.com/1920x1920" itemprop="contentUrl" data-size="1920x1920")
-                                                            img.swiper-lazy(data-src="http://via.placeholder.com/800x800" itemprop="thumbnail" alt="Image description" data-index="3")
-                                                        figcaption(itemprop="caption description") Popis obrázku 3
-                                                    .swiper-lazy-preloader.swiper-lazy-preloader-white
-                                            .swiper-slide
-                                                .swiper-zoom-container
-                                                    figure.find-them-all(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
-                                                        a(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="1920x1920")
-                                                            img.swiper-lazy(data-src=URLbase+"img/product-thumb-medium.jpg" itemprop="thumbnail" alt="Image description" data-index="4")
-                                                        figcaption(itemprop="caption description") Popis obrázku 1
-                                                    .swiper-lazy-preloader.swiper-lazy-preloader-white
-                                            .swiper-slide
-                                                .swiper-zoom-container
-                                                    figure.find-them-all(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
-                                                        a(href="http://via.placeholder.com/1920x1920" itemprop="contentUrl" data-size="1920x1920")
-                                                            img.swiper-lazy(data-src="http://via.placeholder.com/800x800" itemprop="thumbnail" alt="Image description" data-index="5")
-                                                        figcaption(itemprop="caption description") Popis obrázku 2
-                                                    .swiper-lazy-preloader.swiper-lazy-preloader-white
-                                            .swiper-slide
-                                                .swiper-zoom-container
-                                                    figure.find-them-all(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
-                                                        a(href="http://via.placeholder.com/1920x1920" itemprop="contentUrl" data-size="1920x1920")
-                                                            img.swiper-lazy(data-src="http://via.placeholder.com/800x800" itemprop="thumbnail" alt="Image description" data-index="6")
-                                                        figcaption(itemprop="caption description") Popis obrázku 3
+                                    .product-detail-gallery__container
+                                        .swiper-wrapper.product-detail-gallery__wrapper
+
+                                            .swiper-slide.product-detail-gallery__slide
+                                                .product-detail-gallery__zoom-container
+                                                    figure.product-detail-gallery__figure(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                                        a.product-detail-gallery__link(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="1920x1920")
+                                                            img.swiper-lazy.product-detail-gallery__img(data-src=URLbase+"img/product-thumb-medium.jpg" itemprop="thumbnail" alt="Image description" data-index="1")
+                                                        figcaption.product-detail-gallery__figcaption(itemprop="caption description") Popis obrázku 1
                                                     .swiper-lazy-preloader.swiper-lazy-preloader-white
 
-                                        .swiper-pagination.swiper-pagination-white.swiper-pagination--product
-                           
+                                            .swiper-slide.product-detail-gallery__slide
+                                                .product-detail-gallery__zoom-container
+                                                    figure.product-detail-gallery__figure(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                                        a.product-detail-gallery__link(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="1920x1920")
+                                                            img.swiper-lazy.product-detail-gallery__img(data-src=URLbase+"img/product-thumb-medium.jpg" itemprop="thumbnail" alt="Image description" data-index="1")
+                                                        figcaption.product-detail-gallery__figcaption(itemprop="caption description") Popis obrázku 1
+                                                    .swiper-lazy-preloader.swiper-lazy-preloader-white
 
-                                    .swiper-responsive-thumbs
-                                        .swiper-container-product-thumbs                                        
-                                            .swiper-wrapper
-                                                .swiper-slide
-                                                    .swiper-slide__single
-                                                        img.lazy(src="http://via.placeholder.com/200x200" data-src=URLbase+"img/product-thumb-small.jpg")
-                                                .swiper-slide
-                                                    .swiper-slide__single
-                                                        img.lazy(src="http://via.placeholder.com/200x200" data-src=URLbase+"img/product-thumb-small.jpg")
-                                                .swiper-slide
-                                                    .swiper-slide__single
-                                                        img.lazy(src="http://via.placeholder.com/200x200" data-src=URLbase+"img/product-thumb-small.jpg")
-                                                .swiper-slide
-                                                    .swiper-slide__single
-                                                        img.lazy(src="http://via.placeholder.com/200x200" data-src=URLbase+"img/product-thumb-small.jpg")
-                                                .swiper-slide
-                                                    .swiper-slide__single
-                                                        img.lazy(src="http://via.placeholder.com/200x200" data-src=URLbase+"img/product-thumb-small.jpg")
-                                                .swiper-slide
-                                                    .swiper-slide__single
-                                                        img.lazy(src="http://via.placeholder.com/200x200" data-src=URLbase+"img/product-thumb-small.jpg")
+                                            .swiper-slide.product-detail-gallery__slide
+                                                .product-detail-gallery__zoom-container
+                                                    figure.product-detail-gallery__figure(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                                        a.product-detail-gallery__link(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="1920x1920")
+                                                            img.swiper-lazy.product-detail-gallery__img(data-src=URLbase+"img/product-thumb-medium.jpg" itemprop="thumbnail" alt="Image description" data-index="1")
+                                                        figcaption.product-detail-gallery__figcaption(itemprop="caption description") Popis obrázku 1
+                                                    .swiper-lazy-preloader.swiper-lazy-preloader-white
 
-                                .product-detail-gallery2(itemscope itemtype="http://schema.org/ImageGallery")
-                                    .container-product-thumbs
-                                        .container-product-thumbs-single
-                                            figure.find-them-all(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
-                                                a(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="1920x1920")
-                                                    img(src=URLbase+"img/product-thumb-small.jpg" itemprop="thumbnail" alt="Image description" data-index="1")
-                                                figcaption(itemprop="caption description") Popis obrázku 1
+                                            .swiper-slide.product-detail-gallery__slide
+                                                .product-detail-gallery__zoom-container
+                                                    figure.product-detail-gallery__figure(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                                        a.product-detail-gallery__link(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="1920x1920")
+                                                            img.swiper-lazy.product-detail-gallery__img(data-src=URLbase+"img/product-thumb-medium.jpg" itemprop="thumbnail" alt="Image description" data-index="1")
+                                                        figcaption.product-detail-gallery__figcaption(itemprop="caption description") Popis obrázku 1
+                                                    .swiper-lazy-preloader.swiper-lazy-preloader-white
 
-                                        .container-product-thumbs-single
-                                            figure.find-them-all(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
-                                                a(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="1920x1920")
-                                                    img(src=URLbase+"img/product-thumb-small.jpg" itemprop="thumbnail" alt="Image description" data-index="2")
-                                                figcaption(itemprop="caption description") Popis obrázku 1
+                                            .swiper-slide.product-detail-gallery__slide
+                                                .product-detail-gallery__zoom-container
+                                                    figure.product-detail-gallery__figure(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                                        a.product-detail-gallery__link(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="1920x1920")
+                                                            img.swiper-lazy.product-detail-gallery__img(data-src=URLbase+"img/product-thumb-medium.jpg" itemprop="thumbnail" alt="Image description" data-index="1")
+                                                        figcaption.product-detail-gallery__figcaption(itemprop="caption description") Popis obrázku 1
+                                                    .swiper-lazy-preloader.swiper-lazy-preloader-white
 
-                                        .container-product-thumbs-single
-                                            figure.find-them-all(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
-                                                a(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="1920x1920")
-                                                    img(src=URLbase+"img/product-thumb-small.jpg" itemprop="thumbnail" alt="Image description" data-index="3")
-                                                figcaption(itemprop="caption description") Popis obrázku 1
+                                            .swiper-slide.product-detail-gallery__slide
+                                                .product-detail-gallery__zoom-container
+                                                    figure.product-detail-gallery__figure(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                                        a.product-detail-gallery__link(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="1920x1920")
+                                                            img.swiper-lazy.product-detail-gallery__img(data-src=URLbase+"img/product-thumb-medium.jpg" itemprop="thumbnail" alt="Image description" data-index="1")
+                                                        figcaption.product-detail-gallery__figcaption(itemprop="caption description") Popis obrázku 1
+                                                    .swiper-lazy-preloader.swiper-lazy-preloader-white
 
-                                        .container-product-thumbs-single
-                                            figure.find-them-all(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
-                                                a(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="1920x1920")
-                                                    img(src=URLbase+"img/product-thumb-small.jpg" itemprop="thumbnail" alt="Image description" data-index="4")
-                                                figcaption(itemprop="caption description") Popis obrázku 1
+                                        .swiper-pagination.swiper-pagination-white.swiper-pagination--product 
+                                        .swiper-button-prev.swiper-button-prev--product 
+                                        .swiper-button-next.swiper-button-next--product
 
-                                        .container-product-thumbs-single
-                                            button.container-product-thumbs-toggle(type="button" data-toggle="collapse" data-target="#product-thumbs-toggle" aria-expanded="false" aria-controls="collapseExample") Zobrazit další 4 fotky    
+                                    .product-detail-gallery-responsive-thumbs
+                                        .product-detail-gallery-responsive-thumbs__container                                      
+                                            .swiper-wrapper.product-detail-gallery-responsive-thumbs__wrapper
+                                                
+                                                .swiper-slide.product-detail-gallery-responsive-thumbs__slide.swiper-slide-active
+                                                    .product-detail-gallery-responsive-thumbs__slide-single
+                                                        img.lazy.product-detail-gallery-responsive-thumbs__img(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
+                                                
+                                                .swiper-slide.product-detail-gallery-responsive-thumbs__slide.swiper-slide-active
+                                                    .product-detail-gallery-responsive-thumbs__slide-single
+                                                        img.lazy.product-detail-gallery-responsive-thumbs__img(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
+                                                
+                                                .swiper-slide.product-detail-gallery-responsive-thumbs__slide.swiper-slide-active
+                                                    .product-detail-gallery-responsive-thumbs__slide-single
+                                                        img.lazy.product-detail-gallery-responsive-thumbs__img(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
+                                                      
+                                                .swiper-slide.product-detail-gallery-responsive-thumbs__slide.swiper-slide-active
+                                                    .product-detail-gallery-responsive-thumbs__slide-single
+                                                        img.lazy.product-detail-gallery-responsive-thumbs__img(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
+                                                         
+                                                .swiper-slide.product-detail-gallery-responsive-thumbs__slide.swiper-slide-active
+                                                    .product-detail-gallery-responsive-thumbs__slide-single
+                                                        img.lazy.product-detail-gallery-responsive-thumbs__img(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
+                                                         
+                                                .swiper-slide.product-detail-gallery-responsive-thumbs__slide.swiper-slide-active
+                                                    .product-detail-gallery-responsive-thumbs__slide-single
+                                                        img.lazy.product-detail-gallery-responsive-thumbs__img(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
+                                                
 
-                                        .collapse.container-product-thumbs-hidden(id="product-thumbs-toggle")
-                                            .container-product-thumbs-hidden-wrap
-                                                .container-product-thumbs-single
-                                                    figure.find-them-all(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
-                                                        a(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="1920x1920")
-                                                            img(src=URLbase+"img/product-thumb-small.jpg" itemprop="thumbnail" alt="Image description" data-index="5")
-                                                        figcaption(itemprop="caption description") Popis obrázku 1
 
-                                                .container-product-thumbs-single
-                                                    figure.find-them-all(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
-                                                        a(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="1920x1920")
-                                                            img(src=URLbase+"img/product-thumb-small.jpg" itemprop="thumbnail" alt="Image description" data-index="6")
-                                                        figcaption(itemprop="caption description") Popis obrázku 1
+                                .product-detail-gallery-thumbs(itemscope itemtype="http://schema.org/ImageGallery")
+                                    .product-detail-gallery-thumbs__container
+
+                                        .product-detail-gallery-thumbs__single
+                                            figure.product-detail-gallery-thumbs__figure(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                                a.product-detail-gallery-thumbs__link(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="1920x1920")
+                                                    img.product-detail-gallery-thumbs__img(src=URLbase+"img/product-thumb-small.jpg" itemprop="thumbnail" alt="Image description" data-index="1")
+                                                figcaption.product-detail-gallery-thumbs__figcaption(itemprop="caption description") Popis obrázku 1
+
+                                        .product-detail-gallery-thumbs__single
+                                            figure.product-detail-gallery-thumbs__figure(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                                a.product-detail-gallery-thumbs__link(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="1920x1920")
+                                                    img.product-detail-gallery-thumbs__img(src=URLbase+"img/product-thumb-small.jpg" itemprop="thumbnail" alt="Image description" data-index="1")
+                                                figcaption.product-detail-gallery-thumbs__figcaption(itemprop="caption description") Popis obrázku 1
+
+                                        .product-detail-gallery-thumbs__single
+                                            figure.product-detail-gallery-thumbs__figure(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                                a.product-detail-gallery-thumbs__link(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="1920x1920")
+                                                    img.product-detail-gallery-thumbs__img(src=URLbase+"img/product-thumb-small.jpg" itemprop="thumbnail" alt="Image description" data-index="1")
+                                                figcaption.product-detail-gallery-thumbs__figcaption(itemprop="caption description") Popis obrázku 1
+
+                                        .product-detail-gallery-thumbs__single
+                                            figure.product-detail-gallery-thumbs__figure(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                                a.product-detail-gallery-thumbs__link(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="1920x1920")
+                                                    img.product-detail-gallery-thumbs__img(src=URLbase+"img/product-thumb-small.jpg" itemprop="thumbnail" alt="Image description" data-index="1")
+                                                figcaption.product-detail-gallery-thumbs__figcaption(itemprop="caption description") Popis obrázku 1
+
+                                        .product-detail-gallery-thumbs__single
+                                            button.product-detail-gallery-thumbs__toggle(type="button" data-toggle="collapse" data-target="#product-thumbs-toggle" aria-expanded="false" aria-controls="collapseExample") Zobrazit další 4 fotky    
+
+                                        .collapse.product-detail-gallery-thumbs__collapse(id="product-thumbs-toggle")
+                                            .product-detail-gallery-thumbs__collapse-wrap
+
+                                                .product-detail-gallery-thumbs__single
+                                                    figure.product-detail-gallery-thumbs__figure(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                                        a.product-detail-gallery-thumbs__link(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="1920x1920")
+                                                            img.product-detail-gallery-thumbs__img(src=URLbase+"img/product-thumb-small.jpg" itemprop="thumbnail" alt="Image description" data-index="1")
+                                                        figcaption.product-detail-gallery-thumbs__figcaption(itemprop="caption description") Popis obrázku 1
+
+                                                .product-detail-gallery-thumbs__single
+                                                    figure.product-detail-gallery-thumbs__figure(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                                        a.product-detail-gallery-thumbs__link(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="1920x1920")
+                                                            img.product-detail-gallery-thumbs__img(src=URLbase+"img/product-thumb-small.jpg" itemprop="thumbnail" alt="Image description" data-index="1")
+                                                        figcaption.product-detail-gallery-thumbs__figcaption(itemprop="caption description") Popis obrázku 1
 
 
                         .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6.product-detail__column
                             .product-detail-side-info
 
-                                .product-detail-side-info-price
-                                    .product-detail-side-info-price-old
-                                        small -20%
-                                        p #[span 14 290 Kč] (ušetříte 6 598 Kč)
+                                .product-detail-main__price-wrap
+                                    .product-detail-main__price-old
+                                        small.product-detail-main__price-old-percentage -20%
+                                        p.product-detail-main__price-old-text #[span.product-detail-main__price-old-span 14 290 Kč] (ušetříte 6 598 Kč)
 
-                                    .product-detail-side-info-price-main
-                                        h2 8 489 Kč
-                                    .product-detail-side-info-price-dph
-                                        p 7 016 Kč bez DPH   
+                                    .product-detail-main__price
+                                        h2.product-detail-main__price-title 8 489 Kč
+                                    .product-detail-main__price-dph
+                                        p.product-detail-main__price-dph-text 7 016 Kč bez DPH   
 
-                                .product-detail-side-info-stock
-                                    p #[span.fas.fa-check-circle] 10 kusů skladem
-                                    .product-detail-side-info-stock-note 
+                                .product-detail-main__stock
+                                    p.product-detail-main__stock-text #[span.fas.fa-check-circle] 10 kusů skladem
+                                    .product-detail-main__stock-note 
                                         span #[span.far.fa-clock] Zboží je skladem, může být dodáno následující pracovní den
 
                                 form(method="post" name="product_detail_form")
-                                    .product-detail-side-info-cta
-                                        .product-detail-side-info-cta-number-stepper
+                                    .product-detail-main__cta
+                                        .product-detail-main__cta-number-stepper
                                             .number-stepper
                                                 input.number-stepper__input(type="number" min="1" max="99" value="1" name="cart-item-single-qty" id="")
                                                 .number-stepper__btn-up
@@ -209,22 +223,22 @@ html(lang=lang)
                                                 .number-stepper__btn-down
                                                     span.number-stepper__icon-down
 
-                                        .product-detail-side-info-cta-button
-                                            button.btn(type="submit" name="buy-button") #[span.btn__icon.cart-icon] Přidat do košíku
-                                .essox-bar
+                                        .product-detail-main__cta-button-wrap
+                                            button.btn.product-detail-main__cta-button(type="submit" name="buy-button") #[span.btn__icon.cart-icon] Přidat do košíku
+                                a.essox-bar(onclick="window.open('https://e-smlouvy.essox.cz/?ESXCode=5&ESXAuth=PEZpbml0U2VydmljZVJlcXVlc3Q+DQoJPFZlcnNpb24+MS4wPC9WZXJzaW9uPg0KCTxTZXJ2aWNlTmFtZT5DYWxjdWxhdGlvbjwvU2VydmljZU5hbWU+DQoJPEJhc2VQYXJhbWV0ZXJzPg0KCQk8VXNlck5hbWU+MzAwMTEwMDAxZ3JhbW9mb255ZGU8L1VzZXJOYW1lPg0KCQk8UHJpY2U+MTI5OTA8L1ByaWNlPg0KCQk8VGltZXN0YW1wPjIwMTgwMzIzMTQyNjI0PC9UaW1lc3RhbXA+DQoJCTxIYXNoS2V5PjY1YWVlNDljNjBmM2JmMGVlMmZjOWFiY2EwYjAxZDAyZDUwM2E4NDM8L0hhc2hLZXk+DQoJPC9CYXNlUGFyYW1ldGVycz4NCjwvRmluaXRTZXJ2aWNlUmVxdWVzdD4=', '_blank', 'toolbar=0,resizable=1, status=1, width=700, height=650');")
                                     img.essox-bar__img(src=URLbase+"img/essox-logo.png")
                                     p.essox-bar__text Nákup na splátky s Essoxem
 
-                                .product-detail-side-info-description
-                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. #[a(href="#anchor-product-detail-description") Celý popis produktu #[span.fa.fa-angle-down]]
+                                .product-detail-main__description
+                                    p.product-detail-main__description-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. #[a(href="#anchor-product-detail-description") Celý popis produktu #[span.fa.fa-angle-down]]
 
                                 
-                                .product-detail-side-info-free-delivery
-                                    .product-detail-side-info-free-delivery-wrap
-                                        .product-detail-side-info-free-delivery-img
+                                .product-detail-main__free-delivery
+                                    .product-detail-main__free-delivery-wrap
+                                        .product-detail-main__free-delivery-img
                                             span.delivery-icon
-                                        .product-detail-side-info-free-delivery-text
-                                            p Při nákupu nad 5 000 Kč doprava zdarma
+                                        .product-detail-main__free-delivery-text-wrap
+                                            p.product-detail-main__free-delivery-text Při nákupu nad 5 000 Kč doprava zdarma
 
                                 
 
@@ -313,12 +327,24 @@ html(lang=lang)
                                                     tr
                                                         td Výstupní výkon
                                                         td 160 W/k (6 Ω, 1 kHz, 1%, 1 kanál řízený, IEC); 170 W/k (6 Ω, 1 kHz, 10%, 1 kanál řízený, JEITA)
+                                                    tr
+                                                        td Výstupní výkon
+                                                        td 160 W/k (6 Ω, 1 kHz, 1%, 1 kanál řízený, IEC); 170 W/k (6 Ω, 1 kHz, 10%, 1 kanál řízený, JEITA)
+                                                    tr
+                                                        td Výstupní výkon
+                                                        td 160 W/k (6 Ω, 1 kHz, 1%, 1 kanál řízený, IEC); 170 W/k (6 Ω, 1 kHz, 10%, 1 kanál řízený, JEITA)
+                                                    tr
+                                                        td Výstupní výkon
+                                                        td 160 W/k (6 Ω, 1 kHz, 1%, 1 kanál řízený, IEC); 170 W/k (6 Ω, 1 kHz, 10%, 1 kanál řízený, JEITA)
 
                             .tab-pane.product-description__tab-content(id="product-description-3" role="tabpanel" aria-expanded="false")
                                 a.product-description__collapse.collapsed(data-toggle="collapse" href="#product-description-c-3" aria-controls="product-description-c-3" aria-expanded="false") Přílohy produktu
                                 .panel-collapse.collapse.product-description__collapse-wrap(id="product-description-c-3")
                                     .product-description__content
-                                        p FireConnect zrcadlí síťový zvuk
+                                        a.product-description__file(href="#") #[span.fas.fa-download] [PDF] Příloha pro produkt (23KB)
+                                        a.product-description__file(href="#") #[span.fas.fa-download] [PDF] Příloha pro produkt (23KB)
+                                        a.product-description__file(href="#") #[span.fas.fa-download] [PDF] Příloha pro produkt (23KB)
+                                        a.product-description__file(href="#") #[span.fas.fa-download] [PDF] Příloha pro produkt (23KB)
 
                     .product-similar
                         h2.product-accessories__heading Obdobné produkty
@@ -338,11 +364,11 @@ html(lang=lang)
 
 
                 .product-detail-responsive
-                    .product-detail-responsive-name
-                        p #{ProductName}
-                        h3 #[span 16 989] Kč
-                    .product-detail-responsive-btn
-                        a.btn(href="#") Do košíku
+                    .product-detail-responsive__name
+                        p.product-detail-responsive__title #{ProductName}
+                        h3.product-detail-responsive__price #[span 16 989] Kč
+                    .product-detail-responsive__btn-wrap
+                        a.btn.product-detail-responsive__btn(href="#") Do košíku
 
 
 
@@ -354,7 +380,7 @@ html(lang=lang)
 
         script.
             //SWIPER PRODUCT
-            var carousel_product = new Swiper('.swiper-container-product', {
+            var carousel_product = new Swiper('.product-detail-gallery__container', {
               lazy: true,
               spaceBetween: 0,
               grabCursor: true,
@@ -369,7 +395,7 @@ html(lang=lang)
                 prevEl: '.swiper-button-prev--product',
                 }
             });
-            var galleryThumbs = new Swiper('.swiper-container-product-thumbs', {
+            var galleryThumbs = new Swiper('.product-detail-gallery-responsive-thumbs__container', {
               spaceBetween: 10,
               centeredSlides: true,
               slidesPerView: '4',
@@ -382,7 +408,7 @@ html(lang=lang)
                 
         script.
             initPhotoSwipeFromDOM('.product-detail-gallery');
-            initPhotoSwipeFromDOM2('.product-detail-gallery2');
+            initPhotoSwipeFromDOM2('.product-detail-gallery-thumbs');
          
              
             $( ".pswp__button--arrow--left" ).click(function() {

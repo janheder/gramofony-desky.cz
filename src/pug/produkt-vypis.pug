@@ -4,13 +4,12 @@ html(lang=lang)
     head
         meta(charset="utf-8")
         meta(content="IE=edge" http-equiv="X-UA-Compatible")
-        meta(content="width=device-width, initial-scale=1" name="viewport")
+        meta(content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport")
         title #{title}
         meta(content="index,follow,snippet,archive" name="robots")
         meta(content=metaDescription name="description")
         meta(content=metaKeywords lang="cs" name="keywords")
         meta(content=metaAuthor name="author")
-        meta(content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport")
 
         link(rel="canonical" href=metaURL)
         meta(property="og:locale" content="cs_CZ")
@@ -150,6 +149,12 @@ html(lang=lang)
 
 
                             button.btn.filter-main__button(type="submit") Filtrovat produkty
+
+                .filter-badges
+                    .filter-badges__single 
+                        p.filter-badges__title Advance Acoustic 
+                        .filter-badges__remove-wrap
+                            span.cross-icon.white.filter-badges__remove 
 
                 .filter-sort
                     ul.nav.nav-tabs

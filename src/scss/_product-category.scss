@@ -1,5 +1,5 @@
 .subcategories-grid{
-margin-bottom: 4rem;
+margin-bottom: 2rem;
 }
 .subcategories-grid__single{
     background: $dark-grey;
@@ -7,6 +7,7 @@ margin-bottom: 4rem;
     color: $white;
     padding: 1.5rem 2.5rem;
     margin: 10px 0;
+    border-radius: $border-radius-primary;
 
     &:hover, &:active, &:focus{
         color: $white;
