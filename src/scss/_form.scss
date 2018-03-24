@@ -96,6 +96,12 @@ select.form-control:not([size]):not([multiple]) {
 
     &.disabled{
         background: $bg-light;
+        color: $black-transparent-50;
+
+        & .form-check__price{
+            color: $text-primary;
+            opacity: 0.8;
+        }
     }
 }
 .form-check__box{
