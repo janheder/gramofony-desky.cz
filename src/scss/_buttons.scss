@@ -54,6 +54,11 @@
         }
     }
 }
+@media screen and (max-width: 400px){
+    .btn{
+        padding: 0 2rem;
+    }
+}
 
 .btn-white{
     background: $bg-white;
