@@ -248,13 +248,6 @@ $(function(){
 });
 
 
-//TESTING SEARCH HINT   
- var options = {
-  data: ["blue", "green", "pink", "red", "yellow"]
-};   
-
-$("#searchbox").easyAutocomplete(options);
-
 //SWIPER LOGOS
 var carousel_logos = new Swiper('.logos__swiper-wrap', {
     lazy: true,
