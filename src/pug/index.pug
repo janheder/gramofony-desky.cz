@@ -129,36 +129,110 @@ html(lang=lang)
                 .filter-sort
                     ul.nav.nav-tabs
                         li.nav-item
-                            a.nav-link.active(onclick="#") Akční nabídka
+                            a.nav-link.active(id="1-index-tab" data-toggle="tab" href="#1-index" role="tab" aria-controls="1-index" aria-selected="true") Akční nabídka
                         li.nav-item
-                            a.nav-link(onclick="#") Doporučené
+                            a.nav-link(id="2-index-tab" data-toggle="tab" href="#2-index" role="tab" aria-controls="2-index" aria-selected="false") Doporučené
                         li.nav-item
-                            a.nav-link(onclick="#") Novinky
+                            a.nav-link(id="3-index-tab" data-toggle="tab" href="#3-index" role="tab" aria-controls="3-index" aria-selected="false") Novinky
                         li.nav-item
-                            a.nav-link(onclick="#") Nejprodávanější
-                .swiper-container-5-products-wrap     
-                    .swiper-container-5-products
-                        .swiper-wrapper
-                            .swiper-slide
-                                include _single-product-cell-small.pug
-                            .swiper-slide
-                                include _single-product-cell-small.pug
-                            .swiper-slide
-                                include _single-product-cell-small.pug
-                            .swiper-slide
-                                include _single-product-cell-small.pug         
-                            .swiper-slide
-                                include _single-product-cell-small.pug
-                            .swiper-slide
-                                include _single-product-cell-small.pug
-                            .swiper-slide
-                                include _single-product-cell-small.pug
-                            .swiper-slide
-                                include _single-product-cell-small.pug
+                            a.nav-link(id="4-index-tab" data-toggle="tab" href="#4-index" role="tab" aria-controls="4-index" aria-selected="false") Nejprodávanější
 
-                    .swiper-pagination.swiper-pagination-white
-                    .swiper-button-prev.swiper-button-prev--5
-                    .swiper-button-next.swiper-button-next--5
+                .tab-content
+                    .tab-pane.fade.show.active(id="1-index" role="tabpanel" aria-labelledby="1-index-tab")            
+                        .swiper-container-5-products-wrap     
+                            .swiper-container-5-products
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug         
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug
+                            .swiper-pagination.swiper-pagination-white
+                            .swiper-button-prev.swiper-button-prev--5
+                            .swiper-button-next.swiper-button-next--5
+
+                    .tab-pane.fade(id="2-index" role="tabpanel" aria-labelledby="2-index-tab")    
+                        .swiper-container-5-products-wrap     
+                            .swiper-container-5-products
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug         
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug
+                            .swiper-pagination.swiper-pagination-white
+                            .swiper-button-prev.swiper-button-prev--5
+                            .swiper-button-next.swiper-button-next--5
+
+                    .tab-pane.fade(id="3-index" role="tabpanel" aria-labelledby="3-index-tab")    
+                        .swiper-container-5-products-wrap     
+                            .swiper-container-5-products
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug         
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug
+                            .swiper-pagination.swiper-pagination-white
+                            .swiper-button-prev.swiper-button-prev--5
+                            .swiper-button-next.swiper-button-next--5
+
+                    .tab-pane.fade(id="4-index" role="tabpanel" aria-labelledby="4-index-tab")    
+                        .swiper-container-5-products-wrap     
+                            .swiper-container-5-products
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug         
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug
+                                    .swiper-slide
+                                        include _single-product-cell-small.pug
+                            .swiper-pagination.swiper-pagination-white
+                            .swiper-button-prev.swiper-button-prev--5
+                            .swiper-button-next.swiper-button-next--5
 
         section.logos
             .container.logos__container

@@ -313,12 +313,15 @@ var carousel_4_products = new Swiper('.swiper-container-4-products', {
 });
 
 //SWIPER 5 PRODUCTS 
+
 var carousel_5_products = new Swiper('.swiper-container-5-products', {
   lazy: true,
   spaceBetween: 0,
   slidesPerView: 5,
   grabCursor: true,
   zoom: false,
+  observer: true,
+  observeParents: true,
   pagination: {
     el: '.swiper-pagination--5',
     clickable: true,
