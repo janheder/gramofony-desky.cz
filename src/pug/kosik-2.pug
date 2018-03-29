@@ -66,10 +66,6 @@ html(lang=lang)
                                             input.form-control(type="text" name="register_form_surname" id="register_form_surname" autocomplete="surname" required)
 
                                         .form-group
-                                            label(for="register_form_username") Uživatelské jméno
-                                            input.form-control(type="text" name="register_form_username" id="register_form_username" autocomplete="username" required)
-
-                                        .form-group
                                             label(for="register_form_email") Emailová adresa
                                             input.form-control(type="email" name="register_form_email" id="register_form_email" autocomplete="email" required)
 
@@ -193,10 +189,12 @@ html(lang=lang)
 
                                             .register-form-register__wrap
                                                 .form-group
+                                                    label(for="register_form_register_username") Uživatelské jméno
+                                                    input.form-control(type="text" name="register_form_register_username" id="register_form_register_username" autocomplete="off")
+                                                .form-group
                                                     label(for="register_form_register_password") Heslo
                                                     span(id="show_password_toggler" data-toggle="tooltip" data-placement="top" title="Zobrazit/Skrýt heslo") #[span.fa.fa-eye]
                                                     input.form-control(type="password" name="register_form_register_password" id="register_form_register_password" autocomplete="off")
-
 
 
                                         .form-group
@@ -222,8 +220,8 @@ html(lang=lang)
                                     a.login-form-toggler(data-toggle="collapse" href="#login-collapse" aria-expanded="false" aria-controls="login-collapse") Přihlásit se k existujícímu účtu #[span.register-form-toggler__icon]
                                     .collapse.login-form-collapse(id="login-collapse")
                                         .form-group
-                                            label(for="login_form_email") Emailová adresa
-                                            input.form-control(type="email" name="login_form_email" id="login_form_email" required)
+                                            label(for="login_form_username") Uživatelské jméno
+                                            input.form-control(type="text" name="login_form_username" id="login_form_username" required)
 
                                         .form-group
                                             label(for="login_form_password") Heslo
