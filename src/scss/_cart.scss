@@ -568,10 +568,12 @@
 			@include flex-grow(1);
 			font-size: 13px;
 			font-weight: 500;
+			padding-right: 10px;
 		} 
 		& span{
 			font-size: 14px;
-			font-weight: 500;  
+			font-weight: 500;
+			white-space: nowrap;  
 		}
 		& h4{
 			font-weight: 500;
@@ -580,6 +582,7 @@
 			margin: 0;
 			@include flex-grow(1);
 			text-align: right;
+			white-space: nowrap;
 		}
 	}
 }
