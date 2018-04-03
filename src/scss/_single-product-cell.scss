@@ -358,6 +358,9 @@
 }
 .product-tags__text.sale{
     background: $red-main;
+    &::after{
+        border-left: 11px solid $red-main;
+    }
 }
 .product-tags__text.new{
     background: $green-main;
