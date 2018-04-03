@@ -258,9 +258,39 @@ footer{
     }
 }
 
-/*------------------------------------*\
-    COYPRIGHT
-\*------------------------------------*/
+.forum-link{
+    display: block;
+    position: fixed;
+    padding: 10px;
+    background: $brand-primary;
+    color: $text-white;
+    right: 0;
+    top: 50%;
+    @include translate(0,-50%);
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(center);
+    z-index: 5;
+    border-top-left-radius: $border-radius-primary;
+    border-bottom-left-radius: $border-radius-primary;
+}
+.forum-link__icon{
+    font-size: 24px;
+}
+.forum-link__text{
+    color: $text-white;
+    margin: 0;
+}
+@media screen and (max-width:991px){
+    .forum-link{
+        display: none;
+    }
+}
+
+/* ========================================================================== */
+/* COYPRIGHT */
+/* ========================================================================== */
 
 .copyright{
     background: $darkest-grey;

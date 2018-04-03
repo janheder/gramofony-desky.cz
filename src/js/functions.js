@@ -154,11 +154,6 @@ setInterval(function(){
     });
   });
 
-  $('.register-form-address-alt').click(function() {
-      $(".form-address-wrap").slideDown("slow");
-      $(".form-address-wrap input").prop("disabled",false);
-      $("#autocomplete").prop("required",false);
-  });
 
   $('#show_password_toggler').click(function() {
       if($("#register_form_password, #register_form_register_password").prop("type") == "text"){
@@ -232,6 +227,7 @@ $(function () {
 })
 
 //NUMBER SPINNER 
+/*
 $(function(){
     $(".number-stepper__btn-up").click(function(){
         var SpinnerInput = $(this).closest('.number-stepper').find('.number-stepper__input');
@@ -246,7 +242,7 @@ $(function(){
         }
     });
 });
-
+*/
 
 //SWIPER LOGOS
 var carousel_logos = new Swiper('.logos__swiper-wrap', {
