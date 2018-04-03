@@ -274,6 +274,12 @@ footer{
     z-index: 5;
     border-top-left-radius: $border-radius-primary;
     border-bottom-left-radius: $border-radius-primary;
+
+    &:hover, &:active, &:focus{
+        color: $white;
+        text-decoration: none;
+        background: $bg-dark;
+    }
 }
 .forum-link__icon{
     font-size: 24px;
