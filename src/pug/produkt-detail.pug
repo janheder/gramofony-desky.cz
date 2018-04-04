@@ -213,7 +213,7 @@ html(lang=lang)
                                     .product-detail-main__stock-note 
                                         span #[span.far.fa-clock] Zboží je skladem, může být dodáno následující pracovní den
 
-                                form(method="post" name="product_detail_form")
+                                form(method="post" name="product_detail_form" id="product_detail_form")
                                     .product-detail-main__cta
                                         .product-detail-main__cta-number-stepper
                                             .number-stepper
@@ -368,7 +368,7 @@ html(lang=lang)
                         p.product-detail-responsive__title #{ProductName}
                         h3.product-detail-responsive__price #[span 16 989] Kč
                     .product-detail-responsive__btn-wrap
-                        a.btn.product-detail-responsive__btn(href="#") Do košíku
+                        a.btn.product-detail-responsive__btn(onclick="$('#product_detail_form').submit();") Do košíku
 
 
 

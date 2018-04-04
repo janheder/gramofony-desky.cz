@@ -711,7 +711,7 @@
                   <p class="product-detail-main__stock-text"><span class="fas fa-check-circle"></span> 10 kusů skladem</p>
                   <div class="product-detail-main__stock-note"> <span><span class="far fa-clock"></span> Zboží je skladem, může být dodáno následující pracovní den</span></div>
                 </div>
-                <form method="post" name="product_detail_form">
+                <form method="post" name="product_detail_form" id="product_detail_form">
                   <div class="product-detail-main__cta">
                     <div class="product-detail-main__cta-number-stepper">
                       <div class="number-stepper">
@@ -1630,7 +1630,7 @@
             <p class="product-detail-responsive__title">Onkyo TX-8270 + Focal Chorus 706</p>
             <h3 class="product-detail-responsive__price"><span>16 989</span> Kč</h3>
           </div>
-          <div class="product-detail-responsive__btn-wrap"><a class="btn product-detail-responsive__btn" href="#">Do košíku</a></div>
+          <div class="product-detail-responsive__btn-wrap"><a class="btn product-detail-responsive__btn" onclick="$('#product_detail_form').submit();">Do košíku</a></div>
         </div>
       </div>
     </main>

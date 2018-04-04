@@ -444,6 +444,7 @@
     }
     .product-detail-responsive__btn-wrap{
         @include flexbox();
+        color: $text-white;
     }
     .product-detail-responsive__btn{
         width: 100%;
