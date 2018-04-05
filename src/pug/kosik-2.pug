@@ -39,10 +39,10 @@ html(lang=lang)
                         p.page-heading--cart__title 4. Dokončení objednávky
 
         section.page-heading.page-heading--cart-responsive
-            a.page-heading--cart__control(href="#")
+            a.page-heading--cart__control(href="/kosik.html?krok=1")
                 span.caret-icon.left
             p.page-heading--cart__title 2/4 Osobní údaje
-            a.page-heading--cart__control(href="#")
+            a.page-heading--cart__control(onclick="responsive_check()")
                 span.caret-icon.right
         .page-heading--cart-responsive-push
 
@@ -70,8 +70,8 @@ html(lang=lang)
                                             input.form-control(type="email" name="register_form_email" id="register_form_email" autocomplete="email" required)
 
                                         .form-group
-                                            label(for="register_form_tel") Telefonní číslo #[span.label__muted (nepovinné)]
-                                            input.form-control(type="tel" name="register_form_tel" id="register_form_tel" autocomplete="tel")
+                                            label(for="register_form_tel") Telefonní číslo
+                                            input.form-control(type="tel" name="register_form_tel" id="register_form_tel" autocomplete="tel" required)
 
                                         .form-group
                                             label(for="register_form_address") Ulice
@@ -109,7 +109,7 @@ html(lang=lang)
                                                     input.form-control(type="text" name="register_form_billing_name" id="register_form_billing_name" autocomplete="name")
 
                                                 .form-group
-                                                    label(for="register_form_billing_company") Název firmy #[span.label__muted (nepovinné)]
+                                                    label(for="register_form_billing_company") Název firmy 
                                                     input.form-control(type="text" name="register_form_billing_company" id="register_form_billing_company" autocomplete="org")
 
                                                 .form-group
@@ -151,7 +151,7 @@ html(lang=lang)
 
                                             .register-form-shipping__wrap 
                                                 .form-group
-                                                    label(for="register_form_shipping_name") Jméno a příjmení #[span.label__muted (nepovinné)]
+                                                    label(for="register_form_shipping_name") Jméno a příjmení 
                                                     input.form-control(type="text" name="register_form_shipping_name" id="register_form_shipping_name" autocomplete="name")
 
                                                 .form-group
@@ -329,7 +329,7 @@ html(lang=lang)
                             email: true
                         },
                         register_form_tel: {
-                            required: false,
+                            required: true,
                             minlength: 9
                         },
                         register_form_register_password: {
@@ -349,7 +349,7 @@ html(lang=lang)
                             minlength: 1
                         },
                         register_form_billing_company: {
-                            required: false,
+                            required: true,
                             minlength: 1
                         },
                         register_form_billing_ico: {
@@ -362,7 +362,7 @@ html(lang=lang)
                             maxlength: 10
                         },
                         register_form_shipping_name: {
-                            required: false,
+                            required: true,
                             minlength: 1
                         },
                         register_form_shipping_company: {
@@ -380,6 +380,7 @@ html(lang=lang)
                         register_form_email: "Prosím zadejte platnou emailovou adresu",
 
                         register_form_tel: {
+                            required: "Prosím zadejte své telefonní číslo", 
                             minlength: "Telefonní číslo je neplatné, prosím zadejte alespoň 9 znaků"
                         },
 
@@ -401,6 +402,9 @@ html(lang=lang)
                             minlength: "Nesprávně zadané PSČ, zadejte jej prosím ve tvaru s mezerou (např. 102 00) nebo bez (např. 10200)", 
                             maxlength: "Nesprávně zadané PSČ, zadejte jej prosím ve tvaru s mezerou (např. 102 00) nebo bez (např. 10200)"
                         },
+                        register_form_billing_company: {
+                            required: "Prosím zadejte jméno firmy", 
+                        },
                         register_form_billing_postal_code: {
                             required: "Prosím zadejte Poštovní směrovací číslo", 
                             minlength: "Nesprávně zadané PSČ, zadejte jej prosím ve tvaru s mezerou (např. 102 00) nebo bez (např. 10200)", 
@@ -411,7 +415,6 @@ html(lang=lang)
                             minlength: "Nesprávně zadané PSČ, zadejte jej prosím ve tvaru s mezerou (např. 102 00) nebo bez (např. 10200)", 
                             maxlength: "Nesprávně zadané PSČ, zadejte jej prosím ve tvaru s mezerou (např. 102 00) nebo bez (např. 10200)"
                         },
-
                         register_form_billing_ico: { 
                             required: "Prosím zadejte Osobní identifikační číslo",
                             minlength: "Prosím zadejte IČO ve správném tvaru - 8 číslic (např. 25596641)",
@@ -422,7 +425,9 @@ html(lang=lang)
                             minlength: "Prosím zadejte DIČ ve správném tvaru - minimálně 8 číslic (např. CZ12345678)",
                             maxlength: "Prosím zadejte DIČ ve správném tvaru - maximálně 10 číslic (např. CZ1234567890)"
                         },
-
+                        register_form_shipping_name: {
+                            required: "Prosím zadejte celé jméno a příjmení",
+                        },
                         register_form_terms: "Musíte souhlasit se zpracováním osobních údajů"
                     },
                     // Make sure the form is submitted to the destination defined

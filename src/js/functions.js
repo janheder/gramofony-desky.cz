@@ -132,7 +132,7 @@ setInterval(function(){
 
   $('.billing-address-toggler input').click(function() {
     $('.register-form-billing__wrap').slideToggle("slow");
-    $('.register-form-billing__wrap input:not(#register_form_billing_name, #register_form_billing_company, #register_form_billing_dic)').each(function(){
+    $('.register-form-billing__wrap input:not(#register_form_billing_name, #register_form_billing_dic)').each(function(){
       if(!$(this).prop('required')){
           $(this).prop('required',true);
       }
@@ -144,7 +144,7 @@ setInterval(function(){
 
   $('.shipping-address-toggler input').click(function() {
     $('.register-form-shipping__wrap').slideToggle("slow");
-    $('.register-form-shipping__wrap input:not(#register_form_shipping_name , #register_form_shipping_company)').each(function(){
+    $('.register-form-shipping__wrap input:not(#register_form_shipping_company)').each(function(){
       if(!$(this).prop('required')){
           $(this).prop('required',true);
       }

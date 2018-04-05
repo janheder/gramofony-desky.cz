@@ -490,8 +490,8 @@
             <p class="page-heading--cart__title">4. Dokončení objednávky</p></a></div>
       </div>
     </section>
-    <section class="page-heading page-heading--cart-responsive"><a class="page-heading--cart__control" href="#"><span class="caret-icon left"></span></a>
-      <p class="page-heading--cart__title">2/4 Osobní údaje</p><a class="page-heading--cart__control" href="#"><span class="caret-icon right"></span></a>
+    <section class="page-heading page-heading--cart-responsive"><a class="page-heading--cart__control" href="/kosik.html?krok=1"><span class="caret-icon left"></span></a>
+      <p class="page-heading--cart__title">2/4 Osobní údaje</p><a class="page-heading--cart__control" onclick="responsive_check()"><span class="caret-icon right"></span></a>
     </section>
     <div class="page-heading--cart-responsive-push"></div>
     <main>
@@ -517,8 +517,8 @@
                       <input class="form-control" type="email" name="register_form_email" id="register_form_email" autocomplete="email" required>
                     </div>
                     <div class="form-group">
-                      <label for="register_form_tel">Telefonní číslo <span class="label__muted">(nepovinné)</span></label>
-                      <input class="form-control" type="tel" name="register_form_tel" id="register_form_tel" autocomplete="tel">
+                      <label for="register_form_tel">Telefonní číslo</label>
+                      <input class="form-control" type="tel" name="register_form_tel" id="register_form_tel" autocomplete="tel" required>
                     </div>
                     <div class="form-group">
                       <label for="register_form_address">Ulice</label>
@@ -557,7 +557,7 @@
                           <input class="form-control" type="text" name="register_form_billing_name" id="register_form_billing_name" autocomplete="name">
                         </div>
                         <div class="form-group">
-                          <label for="register_form_billing_company">Název firmy <span class="label__muted">(nepovinné)</span></label>
+                          <label for="register_form_billing_company">Název firmy </label>
                           <input class="form-control" type="text" name="register_form_billing_company" id="register_form_billing_company" autocomplete="org">
                         </div>
                         <div class="form-group">
@@ -601,7 +601,7 @@
                       </div>
                       <div class="register-form-shipping__wrap"> 
                         <div class="form-group">
-                          <label for="register_form_shipping_name">Jméno a příjmení <span class="label__muted">(nepovinné)</span></label>
+                          <label for="register_form_shipping_name">Jméno a příjmení </label>
                           <input class="form-control" type="text" name="register_form_shipping_name" id="register_form_shipping_name" autocomplete="name">
                         </div>
                         <div class="form-group">
@@ -919,7 +919,7 @@
                       email: true
                   },
                   register_form_tel: {
-                      required: false,
+                      required: true,
                       minlength: 9
                   },
                   register_form_register_password: {
@@ -939,7 +939,7 @@
                       minlength: 1
                   },
                   register_form_billing_company: {
-                      required: false,
+                      required: true,
                       minlength: 1
                   },
                   register_form_billing_ico: {
@@ -952,7 +952,7 @@
                       maxlength: 10
                   },
                   register_form_shipping_name: {
-                      required: false,
+                      required: true,
                       minlength: 1
                   },
                   register_form_shipping_company: {
@@ -970,6 +970,7 @@
                   register_form_email: "Prosím zadejte platnou emailovou adresu",
       
                   register_form_tel: {
+                      required: "Prosím zadejte své telefonní číslo", 
                       minlength: "Telefonní číslo je neplatné, prosím zadejte alespoň 9 znaků"
                   },
       
@@ -991,6 +992,9 @@
                       minlength: "Nesprávně zadané PSČ, zadejte jej prosím ve tvaru s mezerou (např. 102 00) nebo bez (např. 10200)", 
                       maxlength: "Nesprávně zadané PSČ, zadejte jej prosím ve tvaru s mezerou (např. 102 00) nebo bez (např. 10200)"
                   },
+                  register_form_billing_company: {
+                      required: "Prosím zadejte jméno firmy", 
+                  },
                   register_form_billing_postal_code: {
                       required: "Prosím zadejte Poštovní směrovací číslo", 
                       minlength: "Nesprávně zadané PSČ, zadejte jej prosím ve tvaru s mezerou (např. 102 00) nebo bez (např. 10200)", 
@@ -1001,7 +1005,6 @@
                       minlength: "Nesprávně zadané PSČ, zadejte jej prosím ve tvaru s mezerou (např. 102 00) nebo bez (např. 10200)", 
                       maxlength: "Nesprávně zadané PSČ, zadejte jej prosím ve tvaru s mezerou (např. 102 00) nebo bez (např. 10200)"
                   },
-      
                   register_form_billing_ico: { 
                       required: "Prosím zadejte Osobní identifikační číslo",
                       minlength: "Prosím zadejte IČO ve správném tvaru - 8 číslic (např. 25596641)",
@@ -1012,7 +1015,9 @@
                       minlength: "Prosím zadejte DIČ ve správném tvaru - minimálně 8 číslic (např. CZ12345678)",
                       maxlength: "Prosím zadejte DIČ ve správném tvaru - maximálně 10 číslic (např. CZ1234567890)"
                   },
-      
+                  register_form_shipping_name: {
+                      required: "Prosím zadejte celé jméno a příjmení",
+                  },
                   register_form_terms: "Musíte souhlasit se zpracováním osobních údajů"
               },
               // Make sure the form is submitted to the destination defined

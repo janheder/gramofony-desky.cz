@@ -517,7 +517,7 @@
                   <input class="form-control" type="password" name="register_form_password" id="register_form_password" autocomplete="off">
                 </div>
                 <div class="form-group">
-                  <label for="register_form_tel">Telefonní číslo <span class="label__muted">(nepovinné)</span></label>
+                  <label for="register_form_tel">Telefonní číslo</label>
                   <input class="form-control" type="tel" name="register_form_tel" id="register_form_tel" autocomplete="tel">
                 </div>
                 <div class="form-group">
@@ -838,7 +838,7 @@
                       email: true
                   },
                   register_form_tel: {
-                      required: false,
+                      required: true,
                       minlength: 9
                   },
                   register_form_password: {
@@ -858,7 +858,7 @@
                       minlength: 1
                   },
                   register_form_billing_company: {
-                      required: false,
+                      required: true,
                       minlength: 1
                   },
                   register_form_billing_ico: {
@@ -871,7 +871,7 @@
                       maxlength: 10
                   },
                   register_form_shipping_name: {
-                      required: false,
+                      required: true,
                       minlength: 1
                   },
                   register_form_shipping_company: {
@@ -889,6 +889,7 @@
                   register_form_email: "Prosím zadejte platnou emailovou adresu",
       
                   register_form_tel: {
+                      required: "Prosím zadejte své telefonní číslo", 
                       minlength: "Telefonní číslo je neplatné, prosím zadejte alespoň 9 znaků"
                   },
       
@@ -909,6 +910,9 @@
                       required: "Prosím zadejte Poštovní směrovací číslo", 
                       minlength: "Nesprávně zadané PSČ, zadejte jej prosím ve tvaru s mezerou (např. 102 00) nebo bez (např. 10200)", 
                       maxlength: "Nesprávně zadané PSČ, zadejte jej prosím ve tvaru s mezerou (např. 102 00) nebo bez (např. 10200)"
+                  },
+                  register_form_billing_company: {
+                      required: "Prosím zadejte jméno firmy", 
                   },
                   register_form_billing_postal_code: {
                       required: "Prosím zadejte Poštovní směrovací číslo", 
@@ -931,7 +935,9 @@
                       minlength: "Prosím zadejte DIČ ve správném tvaru - minimálně 8 číslic (např. CZ12345678)",
                       maxlength: "Prosím zadejte DIČ ve správném tvaru - maximálně 10 číslic (např. CZ1234567890)"
                   },
-      
+                  register_form_shipping_name: {
+                      required: "Prosím zadejte celé jméno a příjmení",
+                  },
                   register_form_terms: "Musíte souhlasit se zpracováním osobních údajů"
               },
               // Make sure the form is submitted to the destination defined
