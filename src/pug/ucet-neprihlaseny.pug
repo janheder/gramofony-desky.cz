@@ -187,6 +187,10 @@ html(lang=lang)
                                             span.form-check__box.checkbox
 
                                 .form-group
+                                    label(for="register_form_antispam") Kontrolní otázka: kolik je dva plus dva
+                                    input.form-control(type="number" name="register_form_antispam" id="register_form_antispam" placeholder="Napište číslo" required)
+
+                                .form-group
                                     button.form-control.btn(type="submit" name="register_form_submit" id="register_form_submit") Vytvořit účet
 
 
@@ -277,7 +281,7 @@ html(lang=lang)
                             minlength: 1
                         },
                         register_form_terms: {
-                           required: true 
+                           required: false
                         }
                         },
                     // Specify validation error messages
