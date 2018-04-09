@@ -25,3 +25,13 @@
         color: $white;
     }
 }
+.page-dots{
+    height: 100%;
+    position: relative;
+    padding: 0 7px;
+    font-weight: 700;
+    @include flexbox();
+    @include flex-direction(row);
+    @include justify-content(center);
+    @include align-items(center);
+}

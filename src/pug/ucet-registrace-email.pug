@@ -37,9 +37,11 @@ html(lang=lang)
                 .print-area
                     article.page
                         .page-message
-                            h3.page-message__title Aktivace Vašeho účtu proběhla úspěšně, můžete se přihlásit.
+                            h3.page-message__title Registrace byla úspěšná
+                            
 
                             form(method="post" action="" class="login-form page-message__login-form" name="login_form")
+                                .alert.alert-success Na Váš email jméno@adresa.cz, který jste uvedli při registraci, jsem Vám poslali aktivační odkaz. Kliknutím na něj aktivujete svůj účet a budete se moci přihlásit.
                                 .alert.alert-danger Zadali jste špatné údaje
                                 .form-group
                                     label(for="login_form_username") Uživatelské jméno

@@ -276,3 +276,28 @@
     background-repeat: no-repeat;
     background-position: center center;
 }
+
+.dots-icon{
+    display: block;
+    background: $bg-dark;
+    height: 4px;
+    width: 4px;
+    border-radius: $border-radius-round;
+
+
+    &::before, &::after{
+        content: "";
+        display: block;
+        background: $bg-dark;
+        height: 4px;
+        width: 4px;
+        border-radius: $border-radius-round;
+        position: absolute;
+    }
+    &::before{
+        left: 0;
+    }
+    &::after{
+        right: 0;
+    }
+}
