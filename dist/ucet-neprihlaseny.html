@@ -496,14 +496,15 @@
             <form class="register-form" method="post" action="" name="register_form" id="register_form">
               <h3>Vytvořit nový účet</h3><a class="register-form-toggler" data-toggle="collapse" href="#register-collapse" aria-expanded="true" aria-controls="register-collapse">Vytvořit nový účet <span class="register-form-toggler__icon"></span></a>
               <div class="collapse register-form-collapse show" id="register-collapse">
+                <div class="alert alert-danger">Chybně vyplněná kontrolní otázka</div>
                 <div class="alert alert-success">Nakupujte za lepší ceny! Stačí se zdarma zaregistrovat a automaticky získáváte členskou slevu 1% na veškeré zboží, které právě není ve slevě.</div>
                 <div class="form-group">
                   <label for="register_form_name">Jméno</label>
-                  <input class="form-control" type="text" name="register_form_name" id="register_form_name" autocomplete="name" required>
+                  <input class="form-control" type="text" name="register_form_name" id="register_form_name" autocomplete="given-name" required>
                 </div>
                 <div class="form-group">
                   <label for="register_form_surname">Příjmení</label>
-                  <input class="form-control" type="text" name="register_form_surname" id="register_form_surname" autocomplete="surname" required>
+                  <input class="form-control" type="text" name="register_form_surname" id="register_form_surname" autocomplete="family-name" required>
                 </div>
                 <div class="form-group">
                   <label for="register_form_username">Uživatelské jméno</label>
@@ -662,6 +663,7 @@
             <form class="login-form" method="post" action="" name="login_form">
               <h3>Přihlásit se k existujícímu účtu</h3><a class="login-form-toggler" data-toggle="collapse" href="#login-collapse" aria-expanded="false" aria-controls="login-collapse">Přihlásit se k existujícímu účtu <span class="register-form-toggler__icon"></span></a>
               <div class="collapse login-form-collapse" id="login-collapse">
+                <div class="alert alert-danger">Zadali jste špatné údaje</div>
                 <div class="form-group">
                   <label for="login_form_username">Uživatelské jméno</label>
                   <input class="form-control" type="text" name="login_form_username" id="login_form_username" required>

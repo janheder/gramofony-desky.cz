@@ -41,14 +41,15 @@ html(lang=lang)
                             a.register-form-toggler(data-toggle="collapse" href="#register-collapse" aria-expanded="true" aria-controls="register-collapse") Vytvořit nový účet #[span.register-form-toggler__icon]
                             .collapse.register-form-collapse.show(id="register-collapse")
 
+                                .alert.alert-danger Chybně vyplněná kontrolní otázka
                                 .alert.alert-success Nakupujte za lepší ceny! Stačí se zdarma zaregistrovat a automaticky získáváte členskou slevu 1% na veškeré zboží, které právě není ve slevě.
                                 .form-group
                                     label(for="register_form_name") Jméno
-                                    input.form-control(type="text" name="register_form_name" id="register_form_name" autocomplete="name" required)
+                                    input.form-control(type="text" name="register_form_name" id="register_form_name" autocomplete="given-name" required)
 
                                 .form-group
                                     label(for="register_form_surname") Příjmení
-                                    input.form-control(type="text" name="register_form_surname" id="register_form_surname" autocomplete="surname" required)
+                                    input.form-control(type="text" name="register_form_surname" id="register_form_surname" autocomplete="family-name" required)
 
                                 .form-group
                                     label(for="register_form_username") Uživatelské jméno
@@ -201,6 +202,7 @@ html(lang=lang)
                             h3 Přihlásit se k existujícímu účtu
                             a.login-form-toggler(data-toggle="collapse" href="#login-collapse" aria-expanded="false" aria-controls="login-collapse") Přihlásit se k existujícímu účtu #[span.register-form-toggler__icon]
                             .collapse.login-form-collapse(id="login-collapse")
+                                .alert.alert-danger Zadali jste špatné údaje
                                 .form-group
                                     label(for="login_form_username") Uživatelské jméno
                                     input.form-control(type="text" name="login_form_username" id="login_form_username" required)

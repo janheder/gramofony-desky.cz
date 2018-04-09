@@ -321,6 +321,8 @@
 }
 .product-detail-main__cta-button{
     width: 100%;
+    white-space: nowrap;
+    
     span{
         height: 18px;
         width: 18px;
@@ -433,8 +435,10 @@
     .product-detail-responsive__title{
         margin: 0;
         font-weight: 500;
-        line-height: 1;
+        line-height: 1.25;
         padding-bottom: 5px;
+        max-height: 35px;
+        overflow: hidden;
     }
     .product-detail-responsive__price{
         margin: 0;
@@ -448,6 +452,7 @@
     }
     .product-detail-responsive__btn{
         width: 100%;
+        white-space: nowrap;
     }
 }
 

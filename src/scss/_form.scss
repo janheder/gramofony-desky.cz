@@ -354,11 +354,9 @@ input[type=number]::-webkit-outer-spin-button {
         margin: 0;
     }
 }
-
 .tooltip{
     font-size: 12px;
 }
-
 .form-responsive-error{
     display: none;
     background: $bg-red;
@@ -366,4 +364,9 @@ input[type=number]::-webkit-outer-spin-button {
     color: $text-white;
     margin-top: 20px;
     border-radius: $border-radius-primary;
+}
+@media screen and (min-width: 991px){
+    .form-responsive-error{
+        display: none;
+    }
 }

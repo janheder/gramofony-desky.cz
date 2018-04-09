@@ -14,8 +14,8 @@ gulp.task('sass', function () {
   return gulp.src('./src/scss/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-    .pipe(sourcemaps.write('./maps'))
     .pipe(concat('style.min.css'))
+    .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest('./dist/css'));
 });
  
