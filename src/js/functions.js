@@ -36,6 +36,34 @@ $(function() {
 });
 
 
+//PRINT
+if ($(".print-area").length) {
+    $("<style>")
+    .prop("type", "text/css")
+    .html("\
+    @media print {\
+        body {\
+            position: relative;\
+        }\
+        body * {\
+            visibility: hidden;\
+            position: absolute;\
+            left: 0px;\
+            right: 0px;\
+            top: 0px;\
+            width: 100%;\
+        }\
+        .print-area, .print-area *{\
+            visibility: visible;\
+            position: relative;\
+            width: 100%;\
+        }\
+        @page {size: 100%;  margin: 0mm;}\
+    }")
+    .appendTo("body");
+}
+
+
 //EU COOKIE POLICY
 
 $(document).ready(function(){
@@ -344,8 +372,9 @@ var carousel_5_products = new Swiper('.swiper-container-5-products', {
 
 
 $(window).on('load',function(){
-    $('#modal-add-to-cart').modal('show');
+    $('#modal-info, #modal-add-to-cart').modal('show');
 });
+
 
 
 /* HTML5 Speech Recognition API */

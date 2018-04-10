@@ -2,7 +2,11 @@
 	background: $darkest-grey;
 }
 #cookie-bar .cb-enable {
-    background: $orange-main;
+    background: $brand-primary;
+
+    &:hover, &:active, &:focus{
+        background: $brand-secondary;
+    }
 }
 #cookie-bar .cb-policy {
     background: $medium-grey;
@@ -19,7 +23,7 @@
         border-radius: $border-radius-primary;
     }
     #cookie-bar .cb-enable {
-        background: $orange-main;
+        background: $brand-primary;
         display: inline-block;
         width: 45%;
     }

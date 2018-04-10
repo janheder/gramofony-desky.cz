@@ -104,6 +104,9 @@ html(lang=lang)
                             label(for="forum_form_text") Text dotazu
                             textarea.form-control(name="forum_form_text" id="forum_form_text" rows="5" autocomplete="question" required)
                         .form-group
+                            label(for="forum_form_antispam") Kontrolní otázka: kolik je dva plus dva
+                            input.form-control(type="number" name="forum_form_antispam" id="forum_form_antispam" placeholder="Napište číslo" required)
+                        .form-group
                             button.form-control.btn(type="submit" name="forum_form_submit" id="forum_form_submit") Odeslat dotaz
 
         include _news-section.pug
