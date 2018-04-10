@@ -206,8 +206,8 @@ setInterval(function(){
   });
 
 $(document).ready(function() {
-    $( "#eac-container-searchbox" ).click(function() {
-        $( "#search-form" ).submit();
+    $("#eac-container-searchbox").click(function() {
+        $("#search-form").submit();
     });
 });
 

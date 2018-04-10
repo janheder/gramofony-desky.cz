@@ -832,6 +832,11 @@
         border-radius: $border-radius-primary;
     }
 }
+@media screen and (max-width:330px){
+    .navbar-toggler, .navbar-user__link, .navbar-search-responsive-toggler, .navbar-cart__link{
+        width: 52px;
+    }
+}
 
 /* ========================================================================== */
 /* NAVIGATION MENU */
