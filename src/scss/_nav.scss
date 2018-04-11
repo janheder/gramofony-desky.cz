@@ -604,6 +604,13 @@
         height: 100%;
         background: transparent;
         order: 5;
+        position: relative;
+    }
+    .navbar-cart__toggle{
+        content: "";
+        @include absolute-position(0,0,0,0);
+        display: block;
+        z-index: 5; 
     }
     .navbar-cart__link{
         padding: 0rem;
@@ -668,6 +675,8 @@
         margin: 0;
         padding: 8px 0;
         order: 3;
+        display: block;
+        text-align: center;
     }
     .navbar-user{
         height: 100%;

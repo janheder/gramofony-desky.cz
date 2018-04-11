@@ -116,7 +116,7 @@
           			p.navbar-user__text Můj účet
           
           -->
-          <div class="navbar-cart"><a class="navbar-cart__link" href="#"><span class="cart-icon navbar-cart__cart-icon"><span class="navbar-cart__icon-number">3</span></span>
+          <div class="navbar-cart"><span class="navbar-cart__toggle"></span><a class="navbar-cart__link" href="#"><span class="cart-icon navbar-cart__cart-icon"><span class="navbar-cart__icon-number">3</span></span>
               <div class="navbar-cart__text-wrap">
                 <p class="navbar-cart__text">5 899Kč</p>
               </div><span class="caret-icon white navbar-cart__caret-icon"></span></a>
@@ -951,8 +951,13 @@
                       maxlength: 8
                   },
                   register_form_billing_dic: {
-                      minlength: 8,
-                      maxlength: 10
+                      minlength: 10,
+                      maxlength: 12
+                  },
+                  register_form_billing_postal_code: {
+                      required: true,
+                      minlength: 5,
+                      maxlength: 6
                   },
       
                   register_form_shipping_name: {
@@ -962,6 +967,11 @@
                   register_form_shipping_company: {
                       required: false,
                       minlength: 1
+                  },
+                  register_form_shipping_postal_code: {
+                      required: true,
+                      minlength: 5,
+                      maxlength: 6
                   },
       
                   register_form_register_password: {
@@ -1032,7 +1042,7 @@
                       required: "Prosím zadejte heslo", 
                       minlength: "Prosím zadejte heslo alespoň 5 znaků dlouhé"
                   },
-                  //registrace kosik
+                  //osobni udaje
                   register_form_terms: "Musíte souhlasit se zpracováním osobních údajů"
               },
               submitHandler: function(form) {

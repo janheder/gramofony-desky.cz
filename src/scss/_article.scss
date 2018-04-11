@@ -7,6 +7,7 @@ main article{
     padding: 4rem;
     display: block;
     background: $light-grey;
+    font-size: 1.6rem;
 }
 @media screen and (max-width:575px){
     main article{
@@ -43,8 +44,8 @@ article{
 article.post{
     & p, & b, & i, & u, & a, & strong{
         font-family: $font-family-main;
-        line-height: 3.4rem;
-        font-size: 1.8rem;
+        line-height: 3rem;
+        font-size: 1.6rem;
         font-weight: 400;
     }
     & b, & strong{
@@ -265,4 +266,48 @@ margin: 10px ;
     max-width: 100%;
     width: 620px;
     margin: 0 auto;
+}
+
+
+.photogallery{
+    @include flexbox();
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    margin-left: -5px;
+    margin-right: -5px;
+}
+.photogallery__single{
+    width: 20%;
+    padding: 10px 5px 0px 5px;
+}
+.photogallery__figure{
+    margin: 0;
+    position: relative;
+    padding-bottom: 100%;
+}
+.photogallery__link{
+    @include flexbox();
+    @include flex-direction(row);
+    @include justify-content(center);
+    @include align-items(center);
+    @include absolute-position(0,0,0,0);
+    background: $bg-white;
+}
+@media screen and (max-width: 991px){
+    .photogallery__single{
+        width: 25%;
+        padding: 10px 5px 0px 5px;
+    }
+}
+@media screen and (max-width: 768px){
+    .photogallery__single{
+        width: 33.333%;
+        padding: 10px 5px 0px 5px;
+    }
+}
+@media screen and (max-width: 500px){
+    .photogallery__single{
+        width: 50%;
+        padding: 10px 5px 0px 5px;
+    }
 }

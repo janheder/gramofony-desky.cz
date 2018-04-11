@@ -5,6 +5,7 @@
 .pagination{
     @include justify-content(center);
     margin: 2rem 0 4rem 0;
+    @include flex-wrap(wrap);
 }
 .page-item{
     padding: 5px;

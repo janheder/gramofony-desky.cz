@@ -222,7 +222,7 @@
                }
             }
             & .single-product-cell-price-wrap{
-                /*padding: 5px 0 0 0;*/
+                padding: 0px 0 10px 0;
 
                 & .single-product-cell-price{
                     width: 100%;
@@ -243,7 +243,8 @@
             } 
             & .single-product-cell-delivery-info{
                 display: block;
-                padding-top: 10px;
+                padding-top: 0px;
+                border: 0;
 
                 & .single-product-cell-delivery p{
                     text-align: left;

@@ -42,8 +42,8 @@ html {
 
 body {
     font-size: 1.5rem;
-    color: $dark-grey;
-    background: $white;
+    color: $text-primary;
+    background: $bg-white;
     font-family: $font-family-main, $font-family-system;
     overflow-x: hidden;
     position: relative;
@@ -63,23 +63,23 @@ body {
 
 /* selection */
 ::-moz-selection { /* Code for Firefox */
-    color: $white;
-    background: $orange-main;
+    color: $text-white;
+    background: $brand-primary;
 }
 
 ::selection {
-    color: $white;
-    background: $orange-main;
+    color: $text-white;
+    background: $brand-primary;
 }
 
 /* links */
 a {
-    color: $orange-main;
+    color: $brand-primary;
     font-weight: 500;
     font-size: 1.5rem;
 
     &:hover, &:focus, &:active{
-        color: $dark-grey;
+        color: $text-primary;
         outline: none;
     }
 }
@@ -140,14 +140,14 @@ div[class*=' col-']{
 }
 
 main{
-    background: $white;
+    background: $bg-white;
     padding:4rem 0;
 }
 
 @media screen and (max-width:768px){
     main{
-        background: $white;
-        padding:0;
+        background: $bg-white;
+        padding: 20px 0;
         /*
         .container{
             padding-right: 0px;
@@ -155,6 +155,15 @@ main{
         }
         */
     }
+}
+@media screen and (max-width:575px){
+    main{
+        padding: 0;
+    }
+}
+
+.pswp__bg{
+    background: rgba(0,0,0,0.9); 
 }
 
 /*------------------------------------*\

@@ -351,8 +351,13 @@ html(lang=lang)
                             maxlength: 8
                         },
                         register_form_billing_dic: {
-                            minlength: 8,
-                            maxlength: 10
+                            minlength: 10,
+                            maxlength: 12
+                        },
+                        register_form_billing_postal_code: {
+                            required: true,
+                            minlength: 5,
+                            maxlength: 6
                         },
 
                         register_form_shipping_name: {
@@ -362,6 +367,11 @@ html(lang=lang)
                         register_form_shipping_company: {
                             required: false,
                             minlength: 1
+                        },
+                        register_form_shipping_postal_code: {
+                            required: true,
+                            minlength: 5,
+                            maxlength: 6
                         },
 
                         register_form_register_password: {
@@ -432,7 +442,7 @@ html(lang=lang)
                             required: "Prosím zadejte heslo", 
                             minlength: "Prosím zadejte heslo alespoň 5 znaků dlouhé"
                         },
-                        //registrace kosik
+                        //osobni udaje
                         register_form_terms: "Musíte souhlasit se zpracováním osobních údajů"
                     },
                     submitHandler: function(form) {

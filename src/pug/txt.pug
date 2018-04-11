@@ -51,7 +51,6 @@ html(lang=lang)
                             li lorem
                             li ipsum
 
-
                         h4 Tabulky
                         table.table
                             tr
@@ -65,8 +64,49 @@ html(lang=lang)
 
                         img(src=URLbase+"img/news-thumb-large.jpg" alt="#" title="#")
 
+                        .my-gallery.photogallery(itemscope itemtype="http://schema.org/ImageGallery")
+
+                            .photogallery__single
+                                figure.photogallery__figure(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                    a.photogallery__link(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="750x750")
+                                        img.lazy.photogallery__img(src=URLbase+"img/placeholder-280x280.png" data-src=URLbase+"img/product-thumb-medium.jpg" itemprop="thumbnail" alt="Popis obrázku" data-index="1")
+                                    figcaption.photogallery__figcaption(itemprop="caption description") Popis obrázku
+
+                            .photogallery__single
+                                figure.photogallery__figure(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                    a.photogallery__link(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="750x750")
+                                        img.lazy.photogallery__img(src=URLbase+"img/placeholder-280x280.png" data-src=URLbase+"img/product-thumb-medium.jpg" itemprop="thumbnail" alt="Popis obrázku" data-index="1")
+                                    figcaption.photogallery__figcaption(itemprop="caption description") Popis obrázku
+
+                            .photogallery__single
+                                figure.photogallery__figure(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                    a.photogallery__link(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="750x750")
+                                        img.lazy.photogallery__img(src=URLbase+"img/placeholder-280x280.png" data-src=URLbase+"img/product-thumb-medium.jpg" itemprop="thumbnail" alt="Popis obrázku" data-index="1")
+                                    figcaption.photogallery__figcaption(itemprop="caption description") Popis obrázku
+
+                            .photogallery__single
+                                figure.photogallery__figure(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                    a.photogallery__link(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="750x750")
+                                        img.lazy.photogallery__img(src=URLbase+"img/placeholder-280x280.png" data-src=URLbase+"img/product-thumb-medium.jpg" itemprop="thumbnail" alt="Popis obrázku" data-index="1")
+                                    figcaption.photogallery__figcaption(itemprop="caption description") Popis obrázku
+                                    
+                            .photogallery__single
+                                figure.photogallery__figure(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                    a.photogallery__link(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="750x750")
+                                        img.lazy.photogallery__img(src=URLbase+"img/placeholder-280x280.png" data-src=URLbase+"img/product-thumb-medium.jpg" itemprop="thumbnail" alt="Popis obrázku" data-index="1")
+                                    figcaption.photogallery__figcaption(itemprop="caption description") Popis obrázku
+
+                            .photogallery__single
+                                figure.photogallery__figure(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                                    a.photogallery__link(href=URLbase+"img/product-thumb-large.jpg" itemprop="contentUrl" data-size="750x750")
+                                        img.lazy.photogallery__img(src=URLbase+"img/placeholder-280x280.png" data-src=URLbase+"img/product-thumb-medium.jpg" itemprop="thumbnail" alt="Popis obrázku" data-index="1")
+                                    figcaption.photogallery__figcaption(itemprop="caption description") Popis obrázku
         include _news-section.pug
         
         include _footer.pug
 
         include _js-include.pug
+
+        script.
+            initPhotoSwipeFromDOM('.my-gallery');
+   

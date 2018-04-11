@@ -240,31 +240,27 @@ html(lang=lang)
         include _js-include.pug
 
         script.
-            // Wait for the DOM to be ready
             $(function() {
-                // Initialize form validation on the registration form.
-                // It has the name attribute "registration"
                 $("form[name='register_form']").validate({
-                    // Specify validation rules
                     errorElement: 'span',
                     rules: {
-                        // The key name on the left side is the name attribute
-                        // of an input field. Validation rules are defined
-                        // on the right side
                         register_form_name:{
+                            required: true
+                        },
+                        register_form_surname:{
                             required: true
                         },
                         register_form_email: {
                             required: true,
                             email: true
                         },
-                        register_form_tel: {
-                            required: true,
-                            minlength: 9
-                        },
                         register_form_password: {
                             required: true,
                             minlength: 5
+                        },
+                        register_form_tel: {
+                            required: true,
+                            minlength: 9
                         },
                         register_form_address: {
                             required: true
@@ -274,6 +270,7 @@ html(lang=lang)
                             minlength: 5,
                             maxlength: 6
                         },
+
                         register_form_billing_name: {
                             required: false,
                             minlength: 1
@@ -291,6 +288,12 @@ html(lang=lang)
                             minlength: 8,
                             maxlength: 10
                         },
+                        register_form_billing_postal_code: {
+                            required: true,
+                            minlength: 5,
+                            maxlength: 6
+                        },
+
                         register_form_shipping_name: {
                             required: true,
                             minlength: 1
@@ -298,67 +301,78 @@ html(lang=lang)
                         register_form_shipping_company: {
                             required: false,
                             minlength: 1
+                        },
+                        register_form_shipping_postal_code: {
+                            required: true,
+                            minlength: 5,
+                            maxlength: 6
+                        },
+                        
+                        register_form_terms: {
+                           required: false
                         }
                         },
-                    // Specify validation error messages
                     messages: {
+                        //udaje zaklad
                         register_form_name: "Prosím zadejte své jméno",
-
+                        register_form_surname: "Prosím zadejte své příjmení",
+                        register_form_username: "Prosím zvolte si uživatelské jméno",
                         register_form_email: "Prosím zadejte platnou emailovou adresu",
-
-                        register_form_tel: {
-                            required: "Prosím zadejte své telefonní číslo", 
-                            minlength: "Telefonní číslo je neplatné, prosím zadejte alespoň 9 znaků"
-                        },
-
                         register_form_password: {
                             required: "Prosím zadejte heslo", 
                             minlength: "Prosím zadejte heslo alespoň 5 znaků dlouhé"
                         },
-
+                        register_form_tel: {
+                            required: "Prosím zadejte své telefonní číslo", 
+                            minlength: "Telefonní číslo je neplatné, prosím zadejte alespoň 9 znaků"
+                        },
                         register_form_address: "Prosím zadejte svou adresu",
-                        register_form_billing_address: "Prosím zadejte svou adresu",
-                        register_form_shipping_address: "Prosím zadejte svou adresu",
-
+                        register_form_descriptive: "Prosím zadejte číslo popisné",
                         register_form_locality: "Prosím zadejte město",
-                        register_form_billing_locality: "Prosím zadejte město",
-                        register_form_shipping_locality: "Prosím zadejte město",
-
                         register_form_postal_code: {
                             required: "Prosím zadejte Poštovní směrovací číslo", 
                             minlength: "Nesprávně zadané PSČ, zadejte jej prosím ve tvaru s mezerou (např. 102 00) nebo bez (např. 10200)", 
                             maxlength: "Nesprávně zadané PSČ, zadejte jej prosím ve tvaru s mezerou (např. 102 00) nebo bez (např. 10200)"
                         },
+
+                        //fakturacni
                         register_form_billing_company: {
                             required: "Prosím zadejte jméno firmy", 
                         },
+                        register_form_billing_ico: { 
+                            required: "Prosím zadejte Osobní identifikační číslo",
+                            minlength: "Prosím zadejte IČO ve správném tvaru - 8 číslic (např. 25596641)",
+                            maxlength: "Prosím zadejte IČO ve správném tvaru - 8 číslic (např. 25596641)"
+                        },
+                        register_form_billing_dic: { 
+                            minlength: "Prosím zadejte DIČ ve správném tvaru - minimálně 8 číslic (např. CZ12345678)",
+                            maxlength: "Prosím zadejte DIČ ve správném tvaru - maximálně 10 číslic (např. CZ1234567890)"
+                        },
+                        register_form_billing_address: "Prosím zadejte svou adresu",
+                        register_form_billing_descriptive: "Prosím zadejte číslo popisné",
+                        register_form_billing_locality: "Prosím zadejte město",
                         register_form_billing_postal_code: {
                             required: "Prosím zadejte Poštovní směrovací číslo", 
                             minlength: "Nesprávně zadané PSČ, zadejte jej prosím ve tvaru s mezerou (např. 102 00) nebo bez (např. 10200)", 
                             maxlength: "Nesprávně zadané PSČ, zadejte jej prosím ve tvaru s mezerou (např. 102 00) nebo bez (např. 10200)"
                         },
+
+                        //dodaci
+                        register_form_shipping_name: {
+                            required: "Prosím zadejte celé jméno a příjmení",
+                        },
+                        register_form_shipping_address: "Prosím zadejte svou adresu",
+                        register_form_shipping_descriptive: "Prosím zadejte číslo popisné",
+                        register_form_shipping_locality: "Prosím zadejte město",
                         register_form_shipping_postal_code: {
                             required: "Prosím zadejte Poštovní směrovací číslo", 
                             minlength: "Nesprávně zadané PSČ, zadejte jej prosím ve tvaru s mezerou (např. 102 00) nebo bez (např. 10200)", 
                             maxlength: "Nesprávně zadané PSČ, zadejte jej prosím ve tvaru s mezerou (např. 102 00) nebo bez (např. 10200)"
                         },
 
-                        register_form_billing_ico: { 
-                            required: "Prosím zadejte Osobní identifikační číslo",
-                            minlength: "Prosím zadejte IČO ve správném tvaru - 8 číslic (např. 25596641)",
-                            maxlength: "Prosím zadejte IČO ve správném tvaru - 8 číslic (např. 25596641)"
-                        },
-
-                        register_form_billing_dic: { 
-                            minlength: "Prosím zadejte DIČ ve správném tvaru - minimálně 8 číslic (např. CZ12345678)",
-                            maxlength: "Prosím zadejte DIČ ve správném tvaru - maximálně 10 číslic (např. CZ1234567890)"
-                        },
-                        register_form_shipping_name: {
-                            required: "Prosím zadejte celé jméno a příjmení",
-                        }
+                        //osobni udaje
+                        register_form_terms: "Musíte souhlasit se zpracováním osobních údajů"
                     },
-                    // Make sure the form is submitted to the destination defined
-                    // in the "action" attribute of the form when valid
                     submitHandler: function(form) {
                     form.submit();
                     }
