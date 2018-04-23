@@ -332,16 +332,3 @@ html(lang=lang)
                 carousel_main.slideTo(4);
             })
 
-            $(".hero__tab-single").click(function() {
-                if ($(".hero__tab-single").removeClass("active")) {
-                    $(this).removeClass("active");
-                }
-                $(this).addClass("active");
-            });
-
-            $(".hero__tab-single").each(function(i) {
-                var x=0;
-                $(this).attr('data-slide-to', i + x);
-                x++;
-            });
-

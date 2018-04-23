@@ -200,7 +200,7 @@ html(lang=lang)
                                         .form-group
                                             .form-check
                                                 label.form-check__label
-                                                    input.form-check__input(type="checkbox" name="register_form_email_marketing" checked)
+                                                    input.form-check__input(type="checkbox" name="register_form_email_marketing")
                                                     | Zasílat novinky a propagační materiály na email
                                                     span.form-check__box.checkbox
 
@@ -244,51 +244,54 @@ html(lang=lang)
 
                     .col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3
                         .cart-sidebar.sticky-top
-                            h3 Souhrn objednávky
-                            .cart-sidebar-item-single
-                                .cart-sidebar-item-single-img
-                                    img.lazy(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
-                                .cart-sidebar-item-single-desc-wrap
-                                    .cart-sidebar-item-single-name
-                                        p #{ProductName}
-                                    .cart-sidebar-item-single-qty 
-                                        p Počet kusů: 2
-                                    .cart-sidebar-item-single-price-wrap
-                                        .cart-sidebar-item-single-stock Skladem
-                                        .cart-sidebar-item-single-price 8 489 Kč
-                            .cart-sidebar-item-single
-                                .cart-sidebar-item-single-img
-                                    img.lazy(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
-                                .cart-sidebar-item-single-desc-wrap
-                                    .cart-sidebar-item-single-name
-                                        p #{ProductName}
-                                    .cart-sidebar-item-single-qty 
-                                        p Počet kusů: 2
-                                    .cart-sidebar-item-single-price-wrap
-                                        .cart-sidebar-item-single-stock Skladem
-                                        .cart-sidebar-item-single-price 8 489 Kč
-                            .cart-sidebar-item-single
-                                .cart-sidebar-item-single-img
-                                    img.lazy(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
-                                .cart-sidebar-item-single-desc-wrap
-                                    .cart-sidebar-item-single-name
-                                        p #{ProductName}
-                                    .cart-sidebar-item-single-qty 
-                                        p Počet kusů: 2
-                                    .cart-sidebar-item-single-price-wrap
-                                        .cart-sidebar-item-single-stock Skladem
-                                        .cart-sidebar-item-single-price 8 489 Kč
+                            h3.cart-sidebar__title Souhrn objednávky
 
-                            .cart-sidebar-price-sort
-                                .cart-sidebar-price-sort-row
-                                    p Česká pošta
-                                    span 80 Kč
-                                .cart-sidebar-price-sort-row
-                                    p Dobírka
-                                    span 30 Kč                   
-                                .cart-sidebar-price-sort-row
-                                    p Celková cena s DPH
-                                    h4 24 989 Kč
+                            .cart-sidebar__item
+                                .cart-sidebar__img-wrap
+                                    img.lazy.cart-sidebar__img(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
+                                .cart-sidebar__info-wrap
+                                    .cart-sidebar__name-wrap
+                                        p.cart-sidebar__name #{ProductName}
+                                    .cart-sidebar__qty-wrap
+                                        p.cart-sidebar__qty Počet kusů: 2
+                                    .cart-sidebar__price-wrap
+                                        .cart-sidebar__stock Skladem
+                                        .cart-sidebar__price 8 489 Kč
+
+                            .cart-sidebar__item
+                                .cart-sidebar__img-wrap
+                                    img.lazy.cart-sidebar__img(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
+                                .cart-sidebar__info-wrap
+                                    .cart-sidebar__name-wrap
+                                        p.cart-sidebar__name #{ProductName}
+                                    .cart-sidebar__qty-wrap
+                                        p.cart-sidebar__qty Počet kusů: 2
+                                    .cart-sidebar__price-wrap
+                                        .cart-sidebar__stock Skladem
+                                        .cart-sidebar__price 8 489 Kč
+
+                            .cart-sidebar__item
+                                .cart-sidebar__img-wrap
+                                    img.lazy.cart-sidebar__img(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
+                                .cart-sidebar__info-wrap
+                                    .cart-sidebar__name-wrap
+                                        p.cart-sidebar__name #{ProductName}
+                                    .cart-sidebar__qty-wrap
+                                        p.cart-sidebar__qty Počet kusů: 2
+                                    .cart-sidebar__price-wrap
+                                        .cart-sidebar__stock Skladem
+                                        .cart-sidebar__price 8 489 Kč
+
+                            .cart-sidebar__sum
+                                .cart-sidebar__sum-row
+                                    p.cart-sidebar__sum-text Česká pošta
+                                    span.cart-sidebar__sum-price 80 Kč
+                                .cart-sidebar__sum-row
+                                    p.cart-sidebar__sum-text Dobírka
+                                    span.cart-sidebar__sum-price 30 Kč                   
+                                .cart-sidebar__sum-row
+                                    p.cart-sidebar__sum-text Celková cena s DPH
+                                    h4.cart-sidebar__sum-title 24 989 Kč
 
 
 
@@ -351,8 +354,8 @@ html(lang=lang)
                             maxlength: 8
                         },
                         register_form_billing_dic: {
-                            minlength: 10,
-                            maxlength: 12
+                            minlength: 1,
+                            maxlength: 99
                         },
                         register_form_billing_postal_code: {
                             required: true,

@@ -102,6 +102,7 @@ a {
 img {
     max-width: 100%;
     vertical-align: bottom;
+    height: auto;
 }
 
 /* images transition */
@@ -245,16 +246,16 @@ main{
 @import "_swiper-lazyload";
 
 /*------------------------------------*\
-    SINGLE PRODUCT CELL
-\*------------------------------------*/
-
-@import "_single-product-cell";
-
-/*------------------------------------*\
     PRODUCT GRID
 \*------------------------------------*/
 
 @import "_product-grid";
+
+/*------------------------------------*\
+    SINGLE PRODUCT CELL
+\*------------------------------------*/
+
+@import "_single-product-cell";
 
 /*------------------------------------*\
     SECTIONS (HERO...)

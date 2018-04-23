@@ -10,7 +10,7 @@
     padding: 0 30px !important;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767px){
     .product-detail__row{
         margin-left: -20px;
         margin-right: -20px;
@@ -230,7 +230,7 @@
     @include flex-direction(row);
     @include flex-wrap(wrap);
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767px){
     .product-detail-gallery-thumbs{
         display: none;
     }
@@ -558,7 +558,7 @@
     font-family: $font-family-alt;
     font-weight: 600;
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767px){
     .product-similar{
         margin: 4rem 0;
     }  

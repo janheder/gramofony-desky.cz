@@ -13,107 +13,103 @@
         @include flex-wrap(wrap);
         border-left: 0;
         border-right: 0;
+    }
+    .single-product-cell{
+        position: relative;
+        float: left;
 
-        & .single-product-cell{
-            position: relative;
-            float: left;
-
-            &::before{
-                content: "";
-                @include absolute-position(0,0,0,0);
-                background: $white;
-                z-index: -1;
-            }
+        &::before{
+            content: "";
+            @include absolute-position(0,0,0,0);
+            background: $white;
+            z-index: -1;
         }
     }
-    @media screen and (min-width:992px){
-        .product-grid{
-            & .single-product-cell{
-                max-width: 25%;
-                width: 100%;
 
+    @media screen and (min-width:992px){
+        .single-product-cell{
+            max-width: 25%;
+            width: 100%;
+
+            &::before{
+                border-top: 0;
+                border-right: 0px solid $border-grey;
+                border-bottom: 0px solid $border-grey;
+                border-left: 0;
+            }
+            &:nth-child(4n+1){
                 &::before{
-                    border-top: 0;
-                    border-right: 0px solid $border-grey;
-                    border-bottom: 0px solid $border-grey;
-                    border-left: 0;
-                }
-                &:nth-child(4n+1){
-                    &::before{
-                        border-left: 0px solid $border-grey;
-                    }
-                }
-                &:nth-child(-n+4){
-                    &::before{
-                        border-top: 0px solid $border-grey;
-                    }
+                    border-left: 0px solid $border-grey;
                 }
             }
-            & .single-product-cell-small{
-            	max-width: 20%;
-            } 
-        }  
+            &:nth-child(-n+4){
+                &::before{
+                    border-top: 0px solid $border-grey;
+                }
+            }
+        }
+        .single-product-cell-small{
+            max-width: 20%;
+        } 
     }
     @media screen and (max-width:991px){
         .product-grid{
             margin: 0 -20px;
         }
     }
+
     @media (min-width:601px) and (max-width:991px){
-        .product-grid{
-            & .single-product-cell{
-                max-width: 33.333%;
-                width: 100%;
+        & .single-product-cell{
+            max-width: 33.333%;
+            width: 100%;
 
+            &::before{
+                border-top: 0;
+                border-right: 0px solid $border-grey;
+                border-bottom: 0px solid $border-grey;
+                border-left: 0;
+            }
+            &:nth-child(3n+1){
                 &::before{
-                    border-top: 0;
-                    border-right: 0px solid $border-grey;
-                    border-bottom: 0px solid $border-grey;
-                    border-left: 0;
-                }
-                &:nth-child(3n+1){
-                    &::before{
-                        border-left: 0px solid $border-grey;
-                    }
-                }
-                &:nth-child(-n+3){
-                    &::before{
-                        border-top: 0px solid $border-grey;
-                    }
+                    border-left: 0px solid $border-grey;
                 }
             }
-            & .single-product-cell-small{
-            	max-width: 25%;
-            } 
+            &:nth-child(-n+3){
+                &::before{
+                    border-top: 0px solid $border-grey;
+                }
+            }
         }
+        & .single-product-cell-small{
+            max-width: 25%;
+        } 
     }
-    @media screen and (max-width:600px){
-        .product-grid{
-            & .single-product-cell{
-                max-width: 50%;
-                width: 100%;
 
+    @media screen and (max-width:600px){
+        .single-product-cell{
+            max-width: 50%;
+            width: 100%;
+
+            &::before{
+                border-top: 0;
+                border-right: 1px solid $border-grey;
+                border-bottom: 1px solid $border-grey;
+                border-left: 0;
+            }
+            &:nth-child(2n+1){
                 &::before{
-                    border-top: 0;
-                    border-right: 1px solid $border-grey;
-                    border-bottom: 1px solid $border-grey;
-                    border-left: 0;
-                }
-                &:nth-child(2n+1){
-                    &::before{
-                        border-left: 1px solid $border-grey;
-                    }
-                }
-                &:nth-child(-n+2){
-                    &::before{
-                        border-top: 1px solid $border-grey;
-                    }
+                    border-left: 1px solid $border-grey;
                 }
             }
-            & .single-product-cell-small{
-            	max-width: 50%;
-            } 
+            &:nth-child(-n+2){
+                &::before{
+                    border-top: 1px solid $border-grey;
+                }
+            }
         }
+        .single-product-cell-small{
+            max-width: 50%;
+        } 
     }
 /*} *//*no grid @support*/
 
@@ -182,9 +178,9 @@
     .swiper-container-5-products{
         border-left: 0;
         border-right: 0;
-
         width: auto;
         padding-bottom: 30px;
+        
         & .swiper-button-prev, & .swiper-button-next{
             display: none;
         }

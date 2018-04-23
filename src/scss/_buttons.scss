@@ -105,6 +105,11 @@
             color: $text-white;
             background: $bg-white;
         }
+        .btn__icon.arrow-icon::before{
+            border-top: 2px solid $bg-white;
+            border-right: 2px solid $bg-white;
+            background: transparent;
+        }
     }
     &::before{
         content: "";

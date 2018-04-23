@@ -178,14 +178,14 @@ html(lang=lang)
                                 .form-group
                                     .form-check
                                         label.form-check__label
-                                            input.form-check__input(type="checkbox" name="register_form_email_marketing" checked)
+                                            input.form-check__input(type="checkbox" name="register_form_email_marketing")
                                             | Zasílat novinky a propagační materiály na email
                                             span.form-check__box.checkbox
 
                                 .form-group
                                     .form-check
                                         label.form-check__label
-                                            input.form-check__input(type="checkbox" name="register_form_terms" required)
+                                            input.form-check__input(type="checkbox" name="register_form_terms")
                                             | Souhlasím se zpracováním osobních údajů
                                             span.form-check__box.checkbox
 
@@ -270,8 +270,8 @@ html(lang=lang)
                             maxlength: 8
                         },
                         register_form_billing_dic: {
-                            minlength: 10,
-                            maxlength: 12
+                            minlength: 1,
+                            maxlength: 99
                         },
                         register_form_billing_postal_code: {
                             required: true,

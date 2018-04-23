@@ -171,6 +171,21 @@ html(lang=lang)
                                             select.form-control(type="text" name="register_form_shipping_country" id="register_form_shipping_country")
                                                 option(value="cz") Česká republika
                                                 option(value="sk") Slovensko
+                                                
+                                .form-group
+                                    .form-check
+                                        label.form-check__label
+                                            input.form-check__input(type="checkbox" name="register_form_email_marketing")
+                                            | Zasílat novinky a propagační materiály na email
+                                            span.form-check__box.checkbox
+
+                                .form-group
+                                    .form-check
+                                        label.form-check__label
+                                            input.form-check__input(type="checkbox" name="register_form_terms")
+                                            | Souhlasím se zpracováním osobních údajů
+                                            span.form-check__box.checkbox
+
 
                                 .form-group
                                     button.form-control.btn(type="submit" name="register_form_submit" id="register_form_submit") Potvrdit úpravy
