@@ -17,10 +17,10 @@ $(function() {
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
         if (scroll >= 0) {
-            header.removeClass('no-scroll').addClass("scroll");
+            header.removeClass("no-scroll").addClass("scroll");
         }
         if (scroll <= 0) {
-            header.removeClass("scroll").addClass('no-scroll');
+            header.removeClass("scroll").addClass("no-scroll");
         }
     });
 });
@@ -171,8 +171,8 @@ $("#search-toggler-responsive-close").click(function() {
     $("body").toggleClass("stop-scroll");
 });
 
-$('#search-toggler-responsive').click(function() {
-    $('#searchbox').focus();
+$("#search-toggler-responsive").click(function() {
+    $("#searchbox").focus();
 });
 
 // =============================================================================
@@ -280,7 +280,7 @@ $('a[href*="#anchor"]').not('[href="#"]').not('[href="#0"]').click(function(even
 // =============================================================================
 
 $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
+  $("[data-toggle='tooltip']").tooltip()
 })
 
 // ============================================================================
@@ -308,8 +308,8 @@ $(function(){
 // MODAL AUTO DISPLAY
 // =============================================================================
 
-$(window).on('load',function(){
-    $('#modal-info, #modal-add-to-cart').modal('show');
+$(window).on("load",function(){
+    $("#modal-info, #modal-add-to-cart").modal("show");
 });
 
 // =============================================================================

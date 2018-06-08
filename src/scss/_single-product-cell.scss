@@ -34,6 +34,7 @@
     @include flexbox();
     @include justify-content(center);
     @include align-items(center);
+    overflow: hidden;
 }
 
 .lazy.single-product-cell__img{
@@ -366,3 +367,37 @@
     bottom: auto;
 }           
 
+/* ========================================================================== */
+/* LAZY LOAD ANIMATION */
+/* ========================================================================== */
+
+.lazy.single-product-cell__preloader{
+    height: 100%;
+    width: 120px;
+    opacity: 0.4;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 60%, rgba(255,255,255,0) 100%); 
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 40%,rgba(255,255,255,1) 50%,rgba(255,255,255,1) 60%,rgba(255,255,255,0) 100%);
+    background: linear-gradient(to left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 40%,rgba(255,255,255,1) 50%,rgba(255,255,255,1) 60%,rgba(255,255,255,0) 100%); 
+    animation-name: lazy-product;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes lazy-product {
+    from{
+        left: -120px;
+        right: 100%;
+    }
+    to{
+        left: 100%;
+        right: 0;
+    }
+}
+.single-product-cell__img.loaded + .lazy.single-product-cell__preloader{
+    display: none;
+    animation-name: none;
+}
